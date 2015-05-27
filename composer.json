@@ -1,0 +1,60 @@
+{
+    "name": "hiqdev/yii2-theme-adminlte",
+    "type": "yii2-extension",
+    "description": "AdminLte Theme for hiqdev/yii2-thememanager",
+    "keywords": [
+        "adminlte",
+        "theme",
+        "extension",
+        "yii2"
+    ],
+    "homepage": "https://hiqdev.com/yii2-theme-adminlte",
+    "license": "BSD-3-Clause",
+    "support": {
+        "email": "support@hiqdev.com",
+        "source": "https://github.com/hiqdev/yii2-theme-adminlte",
+        "issues": "https://github.com/hiqdev/yii2-theme-adminlte/issues",
+        "wiki": "https://github.com/hiqdev/yii2-theme-adminlte/wiki",
+        "forum": "https://forum.hiqdev.com/yii2"
+    },
+    "authors": [
+        {
+            "name": "Andrii Vasyliev",
+            "role": "Project lead",
+            "email": "sol@hiqdev.com",
+            "homepage": "https://hipanel.com/"
+        },
+        {
+            "name": "Dmitry Naumenko",
+            "role": "Lead backend developer",
+            "email": "silverfire@hiqdev.com",
+            "homepage": "http://silverfire.me/"
+        },
+        {
+            "name": "Andrey Klochok",
+            "role": "Lead frontend developer",
+            "email": "tafid@hiqdev.com",
+            "homepage": "https://hiqdev.com/"
+        },
+        {
+            "name": "Yuriy Myronchuk",
+            "role": "QA Lead",
+            "email": "bladeroot@hiqdev.com",
+            "homepage": "https://hiqdev.com/"
+        }
+    ],
+    "require": {
+        "hiqdev/yii2-asset-adminlte": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "hiqdev\\themes\\adminlte\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
