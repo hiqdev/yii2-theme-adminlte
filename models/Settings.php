@@ -5,7 +5,7 @@
  * @copyright   Copyright (c) 2015 HiQDev
  */
 
-namespace hipanel\themes\adminlte\models;
+namespace hiqdev\themes\adminlte\models;
 
 use Yii;
 
