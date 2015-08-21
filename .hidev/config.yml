@@ -1,6 +1,3 @@
-parent:
-    github:         hiqdev/hidev-config
-
 package:
     name:           yii2-theme-adminlte
     namespace:      hiqdev\themes\adminlte
@@ -9,10 +6,6 @@ package:
     keywords:       adminlte, theme, extension, yii2
     year:           2014
 
-composer.json:
-    require:
-        hiqdev/yii2-asset-adminlte:     "~2.1"
-    extra:
-        asset-installer-paths:
-            npm-asset-library:          vendor/npm
-            bower-asset-library:        vendor/bower
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-php:    "*"
