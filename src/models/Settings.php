@@ -1,8 +1,12 @@
 <?php
-/**
- * @link        http://hiqdev.com/hipanel-theme-adminlte
- * @license     BSD 3-clause
- * @copyright   Copyright (c) 2015 HiQDev
+
+/*
+ * AdminLte Theme for hiqdev/yii2-thememanager
+ *
+ * @link      https://github.com/hiqdev/yii2-theme-adminlte
+ * @package   yii2-theme-adminlte
+ * @license   BSD-3-Clause
+ * @copyright Copyright (c) 2014-2015, HiQDev (https://hiqdev.com/)
  */
 
 namespace hiqdev\themes\adminlte\models;
@@ -12,29 +16,32 @@ use Yii;
 class Settings extends \hiqdev\thememanager\models\Settings
 {
     protected $_defaults = [
-        'skin'  => 'skin-blue',
+        'skin' => 'skin-blue',
     ];
 
     /**
-     * Can have values: fixed, layout-boxed
+     * Can have values: fixed, layout-boxed.
+     *
      * @var string
      */
     public $layout;
 
     /**
-     * Can have values: skin-blue, skin-yellow, skin-purple, skin-green, skin-red, skin-black, skin-ebony
+     * Can have values: skin-blue, skin-yellow, skin-purple, skin-green, skin-red, skin-black, skin-ebony.
+     *
      * @var string
      */
     public $skin;
 
     /**
-     * Can have value: table-condensed, blank
-     * @var boolean
+     * Can have value: table-condensed, blank.
+     *
+     * @var bool
      */
     public $table_condensed;
 
     /**
-     * @var boolean
+     * @var bool
      */
     public $collapsed_sidebar;
 
@@ -54,9 +61,9 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public function formLayoutData()
     {
         return [
-            'none'          => Yii::t('app', 'Default'),
-            'fixed'         => Yii::t('app', 'Fixed layout'),
-            'layout-boxed'  => Yii::t('app', 'Boxed Layout'),
+            'none'         => Yii::t('app', 'Default'),
+            'fixed'        => Yii::t('app', 'Fixed layout'),
+            'layout-boxed' => Yii::t('app', 'Boxed Layout'),
         ];
     }
 
@@ -78,57 +85,59 @@ class Settings extends \hiqdev\thememanager\models\Settings
         return [
             [
                 'attribute' => 'skin-blue',
-                'label' => Yii::t('app', 'Skin Blue'),
-                'color' => '#367fa9',
-                'bg' => 'bg-light-blue'
+                'label'     => Yii::t('app', 'Skin Blue'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-light-blue',
             ],
             [
                 'attribute' => 'skin-black',
-                'label' => Yii::t('app', 'Skin Black'),
-                'color' => '#fff',
-                'bg' => 'bg-black'
+                'label'     => Yii::t('app', 'Skin Black'),
+                'color'     => '#fff',
+                'bg'        => 'bg-black',
             ],
             [
                 'attribute' => 'skin-purple',
-                'label' => Yii::t('app', 'Skin Purple'),
-                'color' => '#367fa9',
-                'bg' => 'bg-purple'
+                'label'     => Yii::t('app', 'Skin Purple'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-purple',
             ],
             [
                 'attribute' => 'skin-green',
-                'label' => Yii::t('app', 'Skin Green'),
-                'color' => '#367fa9',
-                'bg' => 'bg-green'
+                'label'     => Yii::t('app', 'Skin Green'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-green',
             ],
             [
                 'attribute' => 'skin-red',
-                'label' => Yii::t('app', 'Skin Red'),
-                'color' => '#367fa9',
-                'bg' => 'bg-red'
+                'label'     => Yii::t('app', 'Skin Red'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-red',
             ],
             [
                 'attribute' => 'skin-yellow',
-                'label' => Yii::t('app', 'Skin Yellow'),
-                'color' => '#367fa9',
-                'bg' => 'bg-yellow'
+                'label'     => Yii::t('app', 'Skin Yellow'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-yellow',
             ],
             [
                 'attribute' => 'skin-ebony',
-                'label' => Yii::t('app', 'Skin Ebony'),
-                'color' => '#fff',
-                'bg' => 'bg-black'
+                'label'     => Yii::t('app', 'Skin Ebony'),
+                'color'     => '#fff',
+                'bg'        => 'bg-black',
             ],
         ];
     }
 
-
     /**
      * Provides css class by given attribute name and value.
+     *
      * @param $name  string         attribute name
      * @param $value boolean|string attribute value
+     *
      * @return string css class
      */
-    public static function cssClassProvider($name, $value) {
+    public static function cssClassProvider($name, $value)
+    {
         switch ($name) {
             case 'table_condensed':
                 return $value ? 'table-condensed' : '';

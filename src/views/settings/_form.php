@@ -1,9 +1,9 @@
 <?php
 
-use yii\widgets\Pjax;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\web\JsExpression;
+use yii\widgets\Pjax;
 
 /// JEST' !!!
 $h4class = 'text-light-blue';
@@ -66,7 +66,7 @@ JS
 <?php Pjax::begin(\Yii::$app->params['pjax']); ?>
 <?php $form = ActiveForm::begin(['options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
     <?= Html::tag('h4', Yii::t('app', 'Layout'), ['class' => $h4class]) ?>
-    <?= $form->field($model, 'layout')->radioList($model->formLayoutData(), ['item' => function($index, $label, $name, $checked, $value) {
+    <?= $form->field($model, 'layout')->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {
         return '<div class="radio">' . Html::radio($name, $checked, ['label' => $label, 'value' => $value, 'onchange' => new JsExpression('change_layout(this.value);')]) . '</div>';
     }]); ?>
 

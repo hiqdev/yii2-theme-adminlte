@@ -3,7 +3,6 @@
 /**
  * Head layout.
  */
-
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -24,18 +23,18 @@ $this->manager->registerAssets();
 
 $this->registerMetaTag(
     [
-        'charset' => Yii::$app->charset
+        'charset' => Yii::$app->charset,
     ]
 );
 $this->registerMetaTag(
     [
-        'name' => 'viewport',
-        'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+        'name'    => 'viewport',
+        'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
     ]
 );
 $this->registerLinkTag(
     [
-        'rel' => 'canonical',
-        'href' => Url::canonical()
+        'rel'  => 'canonical',
+        'href' => Url::canonical(),
     ]
 ); ?>
