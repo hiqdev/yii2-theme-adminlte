@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte commits history
 ## Under development
 
 - Changed: moved to src
+    - 3cf2af2 2015-08-21 moved to src (sol@hiqdev.com)
     - a0f6d7c 2015-08-21 rehideved (sol@hiqdev.com)
 - Added views/layouts
     - 8f5b795 2015-06-12 started adding views/layouts (sol@hiqdev.com)
