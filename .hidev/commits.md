@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte commits history
 ## Under development
 
 - Changed: moved to src
+    - b3512ad 2015-08-21 php-cs-fixed (sol@hiqdev.com)
     - 40cc101 2015-08-21 php-cs-fixed (sol@hiqdev.com)
     - 82074e1 2015-08-21 php-cs-fixed (sol@hiqdev.com)
     - 3cf2af2 2015-08-21 moved to src (sol@hiqdev.com)
