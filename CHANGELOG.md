@@ -3,9 +3,9 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- added views/layouts
-- hideved
-- inited
+- Changed: moved to src
+- Added views/layouts
+- Inited
 
 ## Development started May 27, 2015
 

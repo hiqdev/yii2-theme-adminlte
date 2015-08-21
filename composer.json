@@ -48,7 +48,7 @@
     },
     "autoload": {
         "psr-4": {
-            "hiqdev\\themes\\adminlte\\": ""
+            "hiqdev\\themes\\adminlte\\": "src"
         }
     },
     "extra": {
