@@ -13,9 +13,9 @@ namespace hiqdev\themes\adminlte;
 
 /**
  * Class for this theme.
- * It's empty cause inheritance does all the tricks.
+ * It's almost empty cause inheritance does all the tricks.
  */
-class Theme extends \hiqdev\thememanager\Theme
+class AdminLteTheme extends \hiqdev\thememanager\Theme
 {
     public $label = 'AdminLte';
 
