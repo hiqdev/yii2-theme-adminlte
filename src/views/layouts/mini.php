@@ -47,14 +47,14 @@ JS
 <!-- /.login-box -->
 
 <div style="position:fixed;bottom:0;width:100%">
-    <div class="text-center"><small>
+    <div class="text-center small">
         <? if (Yii::$app->params['poweredByName']) { ?>
             Powered by <a href="<?= Yii::$app->params['poweredByUrl'] ?>"><?= Yii::$app->params['poweredByName'] ?></a>
             <? if (Yii::$app->params['poweredByVersion']) { ?>
                 version <?= Yii::$app->params['poweredByVersion'] ?>
             <? } ?>
         <? } ?>
-    </small></div>
+    </div>
 </div>
 
 <?php $this->endBody(); ?>
