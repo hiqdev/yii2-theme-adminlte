@@ -35,7 +35,6 @@ JS
 <body>
 <?php endif; ?>
 
-
 <?php $this->beginBody(); ?>
 <body class="login-page">
 <div class="login-box">
