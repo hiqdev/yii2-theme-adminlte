@@ -3,7 +3,10 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Changed: renamed to AdminLteTheme
+    - e0f127a 2015-08-22 renamed Theme to AdminLteTheme (sol@hiqdev.com)
 - Added views and layouts to make this theme generally usable
+    - 9c3db63 2015-08-22 * mini layout: + powered by (sol@hiqdev.com)
     - 2c6ada6 2015-08-22 + main layout views (sol@hiqdev.com)
     - 581ac34 2015-08-21 + login, lockscreen, recovery views for hiam (sol@hiqdev.com)
     - 1d7c848 2015-08-21 Add mini layout (sol@hiqdev.com)
