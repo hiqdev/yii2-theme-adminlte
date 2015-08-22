@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte commits history
 ## Under development
 
 - Added views and layouts to make this theme generally usable
+    - 2c6ada6 2015-08-22 + main layout views (sol@hiqdev.com)
     - 581ac34 2015-08-21 + login, lockscreen, recovery views for hiam (sol@hiqdev.com)
     - 1d7c848 2015-08-21 Add mini layout (sol@hiqdev.com)
     - 65cc6e1 2015-08-21 + local Gravatar widget (sol@hiqdev.com)
