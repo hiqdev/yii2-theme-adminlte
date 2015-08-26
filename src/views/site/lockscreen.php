@@ -1,7 +1,6 @@
 <?php
 
 use hiqdev\themes\adminlte\widgets\Gravatar;
-use Yii;
 use yii\helpers\Html;
 
 $this->blocks['bodyClass'] = 'lockscreen';

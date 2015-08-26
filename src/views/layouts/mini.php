@@ -7,7 +7,6 @@
  * @var string $content Content
  */
 
-use Yii;
 use yii\helpers\Html;
 
 $this->registerJs(<<<'JS'

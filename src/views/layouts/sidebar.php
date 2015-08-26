@@ -6,7 +6,6 @@
  * @copyright Copyright (c) 2015 HiQDev
  */
 use hipanel\widgets\Menu;
-use Yii;
 
 ?>
 <aside class="main-sidebar">

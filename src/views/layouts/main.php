@@ -7,7 +7,6 @@
  * @var string                   Content
  */
 use hipanel\widgets\Alert;
-use Yii;
 use yii\helpers\Html;
 use yii\helpers\JsonHelper;
 use yii\widgets\Breadcrumbs;
