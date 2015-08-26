@@ -3,6 +3,8 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Fixed PHP warnings
+    - b607552 2015-08-26 Fixed PHP warnings (sol@hiqdev.com)
 - Changed: renamed to AdminLteTheme
     - e0f127a 2015-08-22 renamed Theme to AdminLteTheme (sol@hiqdev.com)
 - Added views and layouts to make this theme generally usable
