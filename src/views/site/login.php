@@ -77,7 +77,7 @@ CSS
                 <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div><!-- /.col -->
         </div>
-    <?php $form::end(); ?>
+    <?php $form->end(); ?>
 
     <?php $authAuthChoice = AuthChoice::begin([
         'baseAuthUrl' => ['site/auth'],
