@@ -85,5 +85,5 @@ JS
     <?= $form->field($model, 'skin')->hiddenInput()->label(false); ?>
     <div class="clearfix"></div>
     <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-default']); ?>
-<?php $form::end(); ?>
+<?php $form->end(); ?>
 <?php Pjax::end(); ?>
