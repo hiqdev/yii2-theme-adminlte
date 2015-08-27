@@ -21,5 +21,6 @@ class AdminLteTheme extends \hiqdev\thememanager\Theme
 
     public $assets = [
         'hiqdev\assets\adminlte\AdminLteAsset',
+        'hiqdev\themes\adminlte\assets\AdminLteAsset',
     ];
 }
