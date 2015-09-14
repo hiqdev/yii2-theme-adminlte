@@ -37,7 +37,7 @@ use hipanel\widgets\Menu;
             'options' => [
                 'class' => 'sidebar-menu',
             ],
-            'items' => Yii::$app->menuManager->sidebar->getItemsArray(),
+            'items' => Yii::$app->menuManager->sidebar->getItems(),
         ]) ?>
     </section>
     <!-- /.sidebar -->
