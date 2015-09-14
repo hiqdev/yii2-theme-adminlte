@@ -5,6 +5,7 @@ AdminLte Theme for hiqdev/yii2-thememanager
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/yii2-theme-adminlte/v/stable.png)](https://packagist.org/packages/hiqdev/yii2-theme-adminlte)
 [![Total Downloads](https://poser.pugx.org/hiqdev/yii2-theme-adminlte/downloads.png)](https://packagist.org/packages/hiqdev/yii2-theme-adminlte)
+[![Dependency Status](https://www.versioneye.com/php/hiqdev:yii2-theme-adminlte/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:yii2-theme-adminlte/dev-master)
 
 ## Installation
 

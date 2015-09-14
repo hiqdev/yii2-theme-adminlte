@@ -3,6 +3,8 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
+- Fixed getting menu items
+- Added css style for Pace widget
 - Fixed PHP warnings
 - Changed: renamed to AdminLteTheme
 - Added views and layouts to make this theme generally usable

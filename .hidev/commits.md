@@ -3,7 +3,12 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Fixed getting menu items
+    - 62990c0 2015-09-14 fixed getting menu items (sol@hiqdev.com)
+- Added css style for Pace widget
+    - 94c953c 2015-08-27 Add PACE (andreyklochok@gmail.com)
 - Fixed PHP warnings
+    - 40de700 2015-08-27 Fixed deprecated method calling syntax (d.naumenko.a@gmail.com)
     - b607552 2015-08-26 Fixed PHP warnings (sol@hiqdev.com)
 - Changed: renamed to AdminLteTheme
     - e0f127a 2015-08-22 renamed Theme to AdminLteTheme (sol@hiqdev.com)
