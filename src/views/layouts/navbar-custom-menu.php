@@ -43,7 +43,7 @@ use yii\helpers\Url;
         </a>
         <ul class="dropdown-menu">
             <li class="header"><?= Html::a(Yii::t('app', 'English'), Url::current(['language' => 'en']), ['class' => mb_stristr(Yii::$app->language, 'en') ? 'text-bold' : '']) ?></li>
-            <li class="header"><?= Html::a(Yii::t('app', 'Russian'), Url::current(['language' => 'ru']), ['class' => mb_stristr(Yii::$app->language, 'ru') ? 'text-bold' : '']) ?></li>
+            <li class="header"><?= Html::a(Yii::t('app', 'Русский'), Url::current(['language' => 'ru']), ['class' => mb_stristr(Yii::$app->language, 'ru') ? 'text-bold' : '']) ?></li>
         </ul>
     </li>
     <?php /*
