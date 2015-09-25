@@ -90,12 +90,12 @@ JS
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <? if (Yii::$app->params['poweredByName']) { ?>
+            <?php if (Yii::$app->params['poweredByName']) { ?>
                 Powered by <a href="<?= Yii::$app->params['poweredByUrl'] ?>"><?= Yii::$app->params['poweredByName'] ?></a>
-                <? if (Yii::$app->params['poweredByVersion']) { ?>
+                <?php if (Yii::$app->params['poweredByVersion']) { ?>
                     version <?= Yii::$app->params['poweredByVersion'] ?>
-                <? } ?>
-            <? } ?>
+                <?php } ?>
+            <?php } ?>
         </div>
         <strong>Copyright &copy; 2014-2015 <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']); ?>.</strong> All rights reserved.
     </footer>

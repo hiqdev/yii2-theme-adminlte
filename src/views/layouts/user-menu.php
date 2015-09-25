@@ -9,9 +9,9 @@ use yii\helpers\Html;
         <?= $this->render('//layouts/gravatar', ['size' => 90]); ?>
         <p>
             <?= Yii::$app->user->identity->username; ?>
-            <? if (Yii::$app->user->can('support')) { ?>
+            <?php if (Yii::$app->user->can('support')) { ?>
                 - <?= Yii::$app->user->identity->type; ?>
-            <? } ?>
+            <?php } ?>
             <small>Member since Nov. 2014</small>
         </p>
     </li>
