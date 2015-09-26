@@ -1,16 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tofid
- * Date: 01.04.15
- * Time: 18:02
- */
+
 $this->blocks['bodyClass'] = 'login-page';
 $this->title = 'Recovery';
 ?>
 
 <div class="login-box-body">
-    <p class="login-box-msg">Recovery</p>
+    <p class="login-box-msg">Yii::t('app', 'Password Recovery')</p>
     <form action="../../index2.html" method="post">
         <div class="form-group has-feedback">
             <input type="text" class="form-control" placeholder="Email"/>
