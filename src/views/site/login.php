@@ -80,10 +80,10 @@ CSS
     <?php $form->end(); ?>
 
     <?php $authAuthChoice = AuthChoice::begin([
-        'baseAuthUrl' => ['site/auth'],
+        'baseAuthUrl' => ['auth'],
         'options' => ['class' => 'social-auth-links text-center'],
     ]); ?>
-        <p>-- OR SIGN IN WITH --</p>
+        <p>-- <?= Yii::t('app', 'OR SIGN IN WITH') ?> --</p>
     <div class="social-button-login">
         <div class="row">
         <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
@@ -94,9 +94,9 @@ CSS
         <?php endforeach ?>
         </div>
     </div>
-    <?php AuthChoice::end(); ?>
+    <?php AuthChoice::end() ?>
 
-    <?= Html::a('I forgot my password', ['/site/recovery']); ?><br>
-    <?= Html::a('Register a new membership', ['/site/signup']); ?>
+    <?= Html::a(Yii::t('app', 'I forgot my password'), ['recovery']) ?><br>
+    <?= Html::a(Yii::t('app', 'Register a new membership'), ['signup']) ?>
 
 </div><!-- /.login-box-body -->
