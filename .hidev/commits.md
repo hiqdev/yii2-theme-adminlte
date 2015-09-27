@@ -3,6 +3,10 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Added more basic pages
+    - 22ab2eb 2015-09-27 + signup page template (sol@hiqdev.com)
+    - d5435a0 2015-09-25 fixed all PHP short tags to proper tags (sol@hiqdev.com)
+    - 5a8e5c3 2015-09-16 * change label in view (bladeroot@gmail.com)
 - Fixed getting menu items
     - 62990c0 2015-09-14 fixed getting menu items (sol@hiqdev.com)
 - Added css style for Pace widget
