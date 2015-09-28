@@ -47,7 +47,7 @@ $buttonOptions = [
 ];
 
 $this->blocks['bodyClass'] = 'login-page';
-$this->title = 'Sign in';
+$this->title = Yii::t('app', 'Sign in');
 $this->registerCss(<<<'CSS'
     .checkbox label {
         padding-left: 0px;
@@ -57,32 +57,32 @@ CSS
 ?>
 
 <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
-    <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+    <p class="login-box-msg"><?= Yii::t('app', 'Sign in to start your session') ?></p>
+    <?php $form = ActiveForm::begin(['id' => 'login-form']) ?>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'username')->textInput(['placeholder' => 'Login or Email', 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false); ?>
+            <?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('app', 'Login or Email'), 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Password', 'class' => 'form-control'])->label(false); ?>
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => Yii::t('app', 'Password'), 'class' => 'form-control'])->label(false) ?>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
             <div class="col-xs-8">
                 <div class="checkbox icheck">
-                    <?= $form->field($model, 'rememberMe')->checkbox([])->label(false); ?>
+                    <?= $form->field($model, 'rememberMe')->checkbox([])->label(false) ?>
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('app', 'Sign In') ?></button>
             </div><!-- /.col -->
         </div>
-    <?php $form->end(); ?>
+    <?php $form->end() ?>
 
     <?php $authAuthChoice = AuthChoice::begin([
         'baseAuthUrl' => ['auth'],
         'options' => ['class' => 'social-auth-links text-center'],
-    ]); ?>
+    ]) ?>
         <p>-- <?= Yii::t('app', 'OR SIGN IN WITH') ?> --</p>
     <div class="social-button-login">
         <div class="row">
