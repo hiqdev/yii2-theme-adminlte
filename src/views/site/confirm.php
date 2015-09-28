@@ -32,7 +32,7 @@ $this->title = Yii::t('app', 'Confirm connect social');
     <?php $form::end() ?>
 
     <br>
-    <?= Html::a(Yii::t('app', 'I forgot my password'), ['recovery']) ?><br>
+    <?= Html::a(Yii::t('app', 'I forgot my password'), ['request-password-reset']) ?><br>
     <?= Html::a(Yii::t('app', 'Register a new membership'), ['signup']) ?>
 
 </div><!-- /.login-box-body -->
