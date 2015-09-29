@@ -1,6 +1,6 @@
 <?php
 
-use hiam\frontend\assets\PictonicAsset;
+use hiqdev\assets\pictonic\PictonicAsset;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\authclient\widgets\AuthChoice;
@@ -8,18 +8,17 @@ use yii\authclient\widgets\AuthChoice;
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $model \frontend\models\ResetPasswordForm */
+
 PictonicAsset::register($this);
 $this->registerCss(<<<'CSS'
-.social-button-login > a:nth-child(n+3){
-    display:none;
-}​
-
-.social-button-login:hover > a:nth-child(n+1) {
-    display:block;
-}
+    .social-button-login > a:nth-child(n+3){
+        display:none;
+    }
+    .social-button-login:hover > a:nth-child(n+1) {
+        display:block;
+    }
 CSS
 );
-
 
 // Social Pictonic associative
 $buttonOptions = [
