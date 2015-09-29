@@ -3,7 +3,8 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- Added more basic pages
+- Added use of yii2-asset-pictonic
+- Added more login related pages
 - Fixed getting menu items
 - Added css style for Pace widget
 - Fixed PHP warnings

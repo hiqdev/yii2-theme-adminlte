@@ -3,7 +3,18 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
-- Added more basic pages
+- Added use of yii2-asset-pictonic
+    - 82e3a42 2015-09-29 used hiqdev\assets\pictonic\PictonicAsset (sol@hiqdev.com)
+    - ca99f63 2015-09-28 + require yii2-asset-pictonic (sol@hiqdev.com)
+- Added more login related pages
+    - 6d6944e 2015-09-28 renamed recovery to request-password-reset to be yii2 canonical (sol@hiqdev.com)
+    - 817de93 2015-09-28 + resetPassword template (sol@hiqdev.com)
+    - cc5db0c 2015-09-28 + simple error page, to be redone to theme (sol@hiqdev.com)
+    - 418803e 2015-09-28 redone and renamed recovery to requestPasswordResetToken to be yii2 canonical (sol@hiqdev.com)
+    - 3a080c8 2015-09-28 redone and renamed recovery to requestPasswordResetToken to be yii2 canonical (sol@hiqdev.com)
+    - 22aad6c 2015-09-28 + confirm template (sol@hiqdev.com)
+    - 02af038 2015-09-28 + translation (sol@hiqdev.com)
+    - 14c279e 2015-09-27 + translation (sol@hiqdev.com)
     - 22ab2eb 2015-09-27 + signup page template (sol@hiqdev.com)
     - d5435a0 2015-09-25 fixed all PHP short tags to proper tags (sol@hiqdev.com)
     - 5a8e5c3 2015-09-16 * change label in view (bladeroot@gmail.com)
