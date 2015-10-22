@@ -46,6 +46,7 @@ use yii\helpers\Url;
             <li class="header"><?= Html::a(Yii::t('app', 'Русский'), Url::current(['language' => 'ru']), ['class' => mb_stristr(Yii::$app->language, 'ru') ? 'text-bold' : '']) ?></li>
         </ul>
     </li>
+    <?= \hipanel\modules\cart\widgets\PanelTopCart::widget() ?>
     <?php /*
     <li class="dropdown notifications-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
