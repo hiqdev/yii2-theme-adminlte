@@ -3,6 +3,8 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Added TopCart widget
+    - 7017b08 2015-10-22 Add TopCart widget (andreyklochok@gmail.com)
 - Added use of yii2-asset-pictonic
     - 82e3a42 2015-09-29 used hiqdev\assets\pictonic\PictonicAsset (sol@hiqdev.com)
     - ca99f63 2015-09-28 + require yii2-asset-pictonic (sol@hiqdev.com)

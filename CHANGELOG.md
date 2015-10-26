@@ -3,6 +3,7 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
+- Added TopCart widget
 - Added use of yii2-asset-pictonic
 - Added more login related pages
 - Fixed getting menu items
