@@ -21,7 +21,7 @@ use yii\helpers\Html;
             <?= Html::a(Yii::t('app', 'Theme Settings'), ['/thememanager/settings']); ?>
         </div>
         <div class="col-xs-4 text-center">
-            <?= Html::a(Yii::t('app', 'Recharge Account'), ['@bill/deposit']); ?>
+            <?= Html::a(Yii::t('app', 'Recharge Account'), ['@pay/deposit']); ?>
         </div>
         <div class="col-xs-4 text-center">
             <?= Html::a(Yii::t('app', 'Create Ticket'), ['@ticket/create']); ?>
