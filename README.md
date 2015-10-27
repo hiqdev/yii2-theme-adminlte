@@ -1,5 +1,5 @@
 AdminLte Theme for hiqdev/yii2-thememanager
--------------------------------------------
+===========================================
 
 AdminLte Theme for hiqdev/yii2-thememanager
 

@@ -3,6 +3,7 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
+- Changed deposit link to @pay/deposit <- @bill/deposit
 - Added TopCart widget
 - Added use of yii2-asset-pictonic
 - Added more login related pages
@@ -12,8 +13,7 @@ hiqdev/yii2-theme-adminlte changelog
 - Changed: renamed to AdminLteTheme
 - Added views and layouts to make this theme generally usable
 - Changed: moved to src
-- Added views/layouts
-- Inited
+- Added basics
 
 ## Development started May 27, 2015
 

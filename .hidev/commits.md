@@ -3,6 +3,8 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Changed deposit link to @pay/deposit <- @bill/deposit
+    - 1ff8710 2015-10-27 * deposit link to @pay/deposit <- @bill/deposit (sol@hiqdev.com)
 - Added TopCart widget
     - 7017b08 2015-10-22 Add TopCart widget (andreyklochok@gmail.com)
 - Added use of yii2-asset-pictonic
@@ -42,10 +44,9 @@ hiqdev/yii2-theme-adminlte commits history
     - 82074e1 2015-08-21 php-cs-fixed (sol@hiqdev.com)
     - 3cf2af2 2015-08-21 moved to src (sol@hiqdev.com)
     - a0f6d7c 2015-08-21 rehideved (sol@hiqdev.com)
-- Added views/layouts
+- Added basics
     - 8f5b795 2015-06-12 started adding views/layouts (sol@hiqdev.com)
     - 4f83402 2015-06-09 hideved (sol@hiqdev.com)
-- Inited
     - 4148ff6 2015-05-27 fixed namespaces (sol@hiqdev.com)
     - 2f70899 2015-05-27 inited (sol@hiqdev.com)
 
