@@ -3,8 +3,8 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- Changed deposit link to @pay/deposit <- @bill/deposit
 - Added TopCart widget
+- Changed deposit link to @pay/deposit <- @bill/deposit
 - Added use of yii2-asset-pictonic
 - Added more login related pages
 - Fixed getting menu items

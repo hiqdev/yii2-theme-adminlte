@@ -3,11 +3,12 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Added TopCart widget
+    - 7017b08 2015-10-22 Add TopCart widget (andreyklochok@gmail.com)
+    - d1cc393 2015-11-12 improved package description (sol@hiqdev.com)
     - 922f537 2015-11-12 redone yii2-cart <- hipanel-module-cart (sol@hiqdev.com)
 - Changed deposit link to @pay/deposit <- @bill/deposit
     - 1ff8710 2015-10-27 * deposit link to @pay/deposit <- @bill/deposit (sol@hiqdev.com)
-- Added TopCart widget
-    - 7017b08 2015-10-22 Add TopCart widget (andreyklochok@gmail.com)
 - Added use of yii2-asset-pictonic
     - 82e3a42 2015-09-29 used hiqdev\assets\pictonic\PictonicAsset (sol@hiqdev.com)
     - ca99f63 2015-09-28 + require yii2-asset-pictonic (sol@hiqdev.com)
