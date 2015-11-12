@@ -3,6 +3,7 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+    - 922f537 2015-11-12 redone yii2-cart <- hipanel-module-cart (sol@hiqdev.com)
 - Changed deposit link to @pay/deposit <- @bill/deposit
     - 1ff8710 2015-10-27 * deposit link to @pay/deposit <- @bill/deposit (sol@hiqdev.com)
 - Added TopCart widget

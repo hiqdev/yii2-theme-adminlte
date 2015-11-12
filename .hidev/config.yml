@@ -1,6 +1,7 @@
 package:
     name:           yii2-theme-adminlte
     namespace:      hiqdev\themes\adminlte
+    headline:       Yii2 AdmniLte Theme
     title:          AdminLte Theme for hiqdev/yii2-thememanager
     type:           yii2-extension
     keywords:       adminlte, theme, extension, yii2
