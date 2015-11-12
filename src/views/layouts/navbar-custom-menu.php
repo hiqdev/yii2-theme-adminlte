@@ -1,7 +1,8 @@
 <?php
 
-use \yii\helpers\Html;
+use yii\helpers\Html;
 use yii\helpers\Url;
+use hiqdev\yii2\cart\widgets\PanelTopCart;
 
 ?>
 
@@ -46,7 +47,7 @@ use yii\helpers\Url;
             <li class="header"><?= Html::a(Yii::t('app', 'Русский'), Url::current(['language' => 'ru']), ['class' => mb_stristr(Yii::$app->language, 'ru') ? 'text-bold' : '']) ?></li>
         </ul>
     </li>
-    <?= \hipanel\modules\cart\widgets\PanelTopCart::widget() ?>
+    <?= PanelTopCart::widget() ?>
     <?php /*
     <li class="dropdown notifications-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
