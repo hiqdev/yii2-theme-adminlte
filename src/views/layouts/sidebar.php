@@ -20,7 +20,7 @@ use yii\helpers\Url;
         <!-- search form -->
         <form action="<?= Url::to(['@domain/check-domain']) ?>" method="get" class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="Domain[domain]" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
+                <input type="text" name="domain-check" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
                 <span class="input-group-btn">
                     <button type='submit' name='seach' id='search-btn' class="btn btn-flat">
                         <i class="fa fa-search"></i>
