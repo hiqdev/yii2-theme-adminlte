@@ -14,7 +14,7 @@ $alertColorClass = $code < 500 ? 'alert-warning' : 'alert-danger';
 ?>
 
 <div class="error-page">
-    <h2 class="headline <?= $textColorClass ?>"> 404</h2>
+    <h2 class="headline <?= $textColorClass ?>"> <?= $code ?></h2>
     <div class="error-content">
         <h3><i class="fa fa-warning <?= $textColorClass ?>"></i> <?= Html::encode($this->title) ?></h3>
         <div class="alert <?= $alertColorClass ?>">
