@@ -17,6 +17,12 @@ $(".sidebar-toggle").on("click", function() {
     var collapsed_sidebar = $('body').hasClass('sidebar-collapse') ? 1 : 0;
     $.post( "/thememanager/settings/collapsed-sidebar", {collapsed_sidebar: collapsed_sidebar});
 });
+$(document).on('click', 'a[data-toggle="control-sidebar"]', function(event) {
+    $.get( "/thememanager/settings", function( data ) {
+        $( ".control-sidebar-content" ).html( data );
+    });
+    $( this ).off( event );
+});
 JS
 );
 ?>
@@ -32,8 +38,10 @@ JS
 <div class="wrapper">
     <!-- The Right Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-        <div style="padding: 0 1rem;">
-            <?= $this->render('//settings/_form', ['model' => Yii::$app->themeManager->getSettings()]); ?>
+        <div class="control-sidebar-content" style="padding: 0 1rem;">
+            <p class="text-center" style="padding-top: 3rem;">
+                <i class="fa fa-cog fa-spin fa-3x fa-fw margin-bottom"></i>
+            </p>
         </div>
     </aside>
     <!-- The sidebar's background -->

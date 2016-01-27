@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 
 /// JEST' !!!
 $h4class = 'text-light-blue';
-
+//$model = Yii::$app->themeManager->getSettings();
 /// move to asset
 //$this->registerCss(<<<CSS
 //.skin-form h4 {
@@ -63,7 +63,7 @@ JS
 , \yii\web\View::POS_END);
 ?>
 
-<?php Pjax::begin(\Yii::$app->params['pjax']); ?>
+<?php Pjax::begin(array_merge(\Yii::$app->params['pjax'], ['enablePushState' => false])); ?>
 <?php $form = ActiveForm::begin(['action' => '/thememanager/settings', 'options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
     <?= Html::tag('h4', Yii::t('app', 'Layout'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'layout')->label(false)->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {

@@ -17,13 +17,10 @@ use yii\helpers\Html;
     </li>
     <!-- Menu Body -->
     <li class="user-body">
-        <div class="col-xs-4 text-center">
-            <?= Html::a(Yii::t('app', 'Theme Settings'), ['/thememanager/settings']); ?>
-        </div>
-        <div class="col-xs-4 text-center">
+        <div class="col-xs-6 text-center">
             <?= Html::a(Yii::t('app', 'Recharge Account'), ['@pay/deposit']); ?>
         </div>
-        <div class="col-xs-4 text-center">
+        <div class="col-xs-6 text-center">
             <?= Html::a(Yii::t('app', 'Create Ticket'), ['@ticket/create']); ?>
         </div>
     </li>
