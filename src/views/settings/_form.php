@@ -9,30 +9,30 @@ use yii\widgets\Pjax;
 $h4class = 'text-light-blue';
 
 /// move to asset
-$this->registerCss(<<<CSS
-.skin-form h4 {
-    margin: 0 0 5px 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-}
-
-.skin-form li {
-    float:left;
-    width: 50%;
-    padding: 5px;
-}
-
-.skin-form li > span {
-    display: block;
-    box-shadow: -1px 1px 2px rgba(0,0,0,0.0);
-    cursor: pointer;
-}
-
-.skin-form .bg-black-active, .skin-form .bg-black {
-    background-color: #fff !important;
-}
-CSS
-);
+//$this->registerCss(<<<CSS
+//.skin-form h4 {
+//    margin: 0 0 5px 0;
+//    border-bottom: 1px solid #ddd;
+//    padding-bottom: 15px;
+//}
+//
+//.skin-form li {
+//    float:left;
+//    width: 50%;
+//    padding: 5px;
+//}
+//
+//.skin-form li > span {
+//    display: block;
+//    box-shadow: -1px 1px 2px rgba(0,0,0,0.0);
+//    cursor: pointer;
+//}
+//
+//.skin-form .bg-black-active, .skin-form .bg-black {
+//    background-color: #fff !important;
+//}
+//CSS
+//);
 
 /// move to asset
 $this->registerJs(<<<JS
@@ -60,30 +60,30 @@ function change_skin(cls) {
     return false;
 }
 JS
-    , \yii\web\View::POS_END);
+, \yii\web\View::POS_END);
 ?>
 
 <?php Pjax::begin(\Yii::$app->params['pjax']); ?>
-<?php $form = ActiveForm::begin(['options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
-    <?= Html::tag('h4', Yii::t('app', 'Layout'), ['class' => $h4class]) ?>
-    <?= $form->field($model, 'layout')->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {
+<?php $form = ActiveForm::begin(['action' => '/thememanager/settings', 'options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
+    <?= Html::tag('h4', Yii::t('app', 'Layout'), ['class' => 'control-sidebar-heading']) ?>
+    <?= $form->field($model, 'layout')->label(false)->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {
         return '<div class="radio">' . Html::radio($name, $checked, ['label' => $label, 'value' => $value, 'onchange' => new JsExpression('change_layout(this.value);')]) . '</div>';
     }]); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Table height'), ['class' => $h4class]) ?>
+    <?= Html::tag('h4', Yii::t('app', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'table_condensed')->checkbox(); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Collapsed Sidebar'), ['class' => $h4class]) ?>
+    <?= Html::tag('h4', Yii::t('app', 'Collapsed Sidebar'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'collapsed_sidebar')->checkbox(['onchange' => new JsExpression('change_layout("sidebar-collapse");')]); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Skins'), ['class' => $h4class]) ?>
-    <ul class="list-unstyled">
+    <?= Html::tag('h4', Yii::t('app', 'Skins'), ['class' => 'control-sidebar-heading']) ?>
+    <ul class="list-unstyled clearfix">
         <?php foreach ($model->skinSampleArray() as $itemData) : ?>
             <?= $this->render('_skin-sample', ['data' => $itemData]); ?>
         <?php endforeach; ?>
     </ul>
     <?= $form->field($model, 'skin')->hiddenInput()->label(false); ?>
     <div class="clearfix"></div>
-    <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-default']); ?>
+    <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-primary btn-block']); ?>
 <?php $form->end(); ?>
 <?php Pjax::end(); ?>

@@ -30,7 +30,15 @@ JS
 <?php $this->beginBody(); ?>
 <!-- Site wrapper -->
 <div class="wrapper">
-
+    <!-- The Right Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <div style="padding: 0 1rem;">
+            <?= $this->render('//settings/_form', ['model' => Yii::$app->themeManager->getSettings()]); ?>
+        </div>
+    </aside>
+    <!-- The sidebar's background -->
+    <!-- This div must placed right after the sidebar for it to work-->
+    <div class="control-sidebar-bg"></div>
     <!-- header logo: style can be found in header.less -->
     <header class="main-header">
         <a href="<?= Yii::$app->homeUrl ?>" class="logo">

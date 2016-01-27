@@ -109,4 +109,7 @@ use hiqdev\yii2\cart\widgets\PanelTopCart;
         </a>
         <?= $this->render('//layouts/user-menu') ?>
     </li>
+    <li>
+        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+    </li>
 </ul>
