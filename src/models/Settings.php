@@ -61,9 +61,10 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public function formLayoutData()
     {
         return [
-            'none'         => Yii::t('app', 'Default'),
+            'none'         => Yii::t('app', 'Default layout'),
             'fixed'        => Yii::t('app', 'Fixed layout'),
-            'layout-boxed' => Yii::t('app', 'Boxed Layout'),
+            // working incorectly temporary disabled
+            // 'layout-boxed' => Yii::t('app', 'Boxed layout'),
         ];
     }
 
@@ -74,6 +75,8 @@ class Settings extends \hiqdev\thememanager\models\Settings
     {
         return [
             'verifyCode' => 'Verification Code',
+            'table_condensed' => Yii::t('app', 'Table Condensed'),
+            'collapsed_sidebar' => Yii::t('app', 'Collapsed Sidebar'),
         ];
     }
 

@@ -73,7 +73,7 @@ JS
     <?= Html::tag('h4', Yii::t('app', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'table_condensed')->checkbox(); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Collapsed Sidebar'), ['class' => 'control-sidebar-heading']) ?>
+    <?= Html::tag('h4', Yii::t('app', 'Sidebar'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'collapsed_sidebar')->checkbox(['onchange' => new JsExpression('change_layout("sidebar-collapse");')]); ?>
 
     <?= Html::tag('h4', Yii::t('app', 'Skins'), ['class' => 'control-sidebar-heading']) ?>
