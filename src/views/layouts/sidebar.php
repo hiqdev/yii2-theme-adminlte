@@ -1,8 +1,22 @@
 <?php
 
+use hipanel\modules\client\models\Client;
 use hipanel\widgets\Menu;
 use yii\helpers\Url;
 
+$userBalance = Client::findOne(Yii::$app->user->identity->id)->balance;
+$balanceColor = '';
+switch ($userBalance) {
+    case $userBalance > 0:
+        $balanceColor = 'text-success';
+        break;
+    case $userBalance < 0:
+        $balanceColor = 'text-danger';
+        break;
+    case $userBalance == 0:
+        $balanceColor = 'text-muted';
+        break;
+}
 ?>
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -13,8 +27,13 @@ use yii\helpers\Url;
                 <?= $this->render('//layouts/gravatar', ['size' => 45]); ?>
             </div>
             <div class="pull-left info">
-                <p><?= Yii::$app->user->identity->username ?></p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p>
+                    <?= Yii::$app->user->identity->username ?>
+                    <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) print ' / ' . Yii::$app->user->identity->seller ?>
+                </p>
+                <a href="#">
+                    <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('app', 'Balance') . ': ' ?><?= Yii::$app->formatter->asCurrency($userBalance, 'USD') ?>
+                </a>
             </div>
         </div>
         <!-- search form -->

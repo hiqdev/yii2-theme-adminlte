@@ -9,10 +9,15 @@ use yii\helpers\Html;
         <?= $this->render('//layouts/gravatar', ['size' => 90]); ?>
         <p>
             <?= Yii::$app->user->identity->username; ?>
-            <?php if (Yii::$app->user->can('support')) { ?>
-                - <?= Yii::$app->user->identity->type; ?>
-            <?php } ?>
-            <small>Member since Nov. 2014</small>
+
+            <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) {
+                print ' / ' . Yii::$app->user->identity->seller;
+            } ?>
+
+            <?php if (Yii::$app->user->can('support')) : ?>
+                <small><?= Yii::$app->user->identity->type; ?></small>
+            <?php endif; ?>
+
         </p>
     </li>
     <!-- Menu Body -->
