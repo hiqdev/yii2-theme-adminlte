@@ -31,7 +31,7 @@ switch ($userBalance) {
                     <?= Yii::$app->user->identity->username ?>
                     <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) print ' / ' . Yii::$app->user->identity->seller ?>
                 </p>
-                <a href="#">
+                <a href="<?= Url::to('@pay/deposit') ?>">
                     <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('app', 'Balance') . ': ' ?><?= Yii::$app->formatter->asCurrency($userBalance, 'USD') ?>
                 </a>
             </div>
