@@ -1,9 +1,9 @@
 <?php
 
 use hiqdev\assets\pictonic\PictonicAsset;
+use yii\authclient\widgets\AuthChoice;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\authclient\widgets\AuthChoice;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
@@ -88,7 +88,7 @@ CSS
         <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
             <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
             <?php $text = sprintf("<i class='%s'></i>&nbsp;%s", $buttonOptions[$name]['icon'], $client->getTitle()); ?>
-            <?php $authAuthChoice->clientLink($client,$text,['class' => "btn btn-block btn-social btn-$name"]) ?>
+            <?php $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$name"]) ?>
             </div>
         <?php endforeach ?>
         </div>

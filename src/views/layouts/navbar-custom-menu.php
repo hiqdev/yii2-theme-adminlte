@@ -1,8 +1,8 @@
 <?php
 
+use hiqdev\yii2\cart\widgets\PanelTopCart;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use hiqdev\yii2\cart\widgets\PanelTopCart;
 
 ?>
 

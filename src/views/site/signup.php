@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -18,11 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php $form = ActiveForm::begin(['id' => 'form-signup']) ?>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'first_name')->textInput(['placeholder' => 'First Name','class'=>'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
+            <?= $form->field($model, 'first_name')->textInput(['placeholder' => 'First Name', 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'last_name')->textInput(['placeholder' => 'Last Name','class'=>'form-control'])->label(false) ?>
+            <?= $form->field($model, 'last_name')->textInput(['placeholder' => 'Last Name', 'class' => 'form-control'])->label(false) ?>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
@@ -30,11 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'password')->passwordInput(['placeholder'=>'Password','class'=>'form-control'])->label(false) ?>
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Password', 'class' => 'form-control'])->label(false) ?>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'password_retype')->passwordInput(['placeholder'=>'Retype password', 'class'=>'form-control'])->label(false) ?>
+            <?= $form->field($model, 'password_retype')->passwordInput(['placeholder' => 'Retype password', 'class' => 'form-control'])->label(false) ?>
             <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
         </div>
         <div class="row">

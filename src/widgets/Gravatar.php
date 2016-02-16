@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * AdminLte Theme for hiqdev/yii2-thememanager
+ *
+ * @link      https://github.com/hiqdev/yii2-theme-adminlte
+ * @package   yii2-theme-adminlte
+ * @license   BSD-3-Clause
+ * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ */
+
 namespace hiqdev\themes\adminlte\widgets;
 
 class Gravatar extends \cebe\gravatar\Gravatar
@@ -36,7 +45,7 @@ class Gravatar extends \cebe\gravatar\Gravatar
         return $this->_emailHash ?: self::hashEmail($this->email);
     }
 
-    static public function hashEmail($email)
+    public static function hashEmail($email)
     {
         $email = strtolower(trim($email));
         return strpos($email, '@') === false ? $email : md5($email);

@@ -8,7 +8,6 @@
  */
 use hipanel\widgets\Alert;
 use yii\helpers\Html;
-use yii\helpers\JsonHelper;
 use yii\widgets\Breadcrumbs;
 
 // Collapse Side bar
@@ -106,12 +105,12 @@ JS
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <?php if (Yii::$app->params['poweredByName']) { ?>
+            <?php if (Yii::$app->params['poweredByName']) : ?>
                 Powered by <a href="<?= Yii::$app->params['poweredByUrl'] ?>"><?= Yii::$app->params['poweredByName'] ?></a>
-                <?php if (Yii::$app->params['poweredByVersion']) { ?>
+                <?php if (Yii::$app->params['poweredByVersion']) : ?>
                     version <?= Yii::$app->params['poweredByVersion'] ?>
-                <?php } ?>
-            <?php } ?>
+                <?php endif ?>
+            <?php endif ?>
         </div>
         <strong>Copyright &copy; 2014-2015 <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']); ?>.</strong> All rights reserved.
     </footer>

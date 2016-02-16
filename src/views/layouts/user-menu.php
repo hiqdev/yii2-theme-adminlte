@@ -10,14 +10,13 @@ use yii\helpers\Html;
         <p>
             <?= Yii::$app->user->identity->username; ?>
 
-            <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) {
-                print ' / ' . Yii::$app->user->identity->seller;
-            } ?>
+            <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) : ?>
+                <?= ' / ' . Yii::$app->user->identity->seller ?>
+            <?php endif ?>
 
             <?php if (Yii::$app->user->can('support')) : ?>
-                <small><?= Yii::$app->user->identity->type; ?></small>
-            <?php endif; ?>
-
+                <small><?= Yii::$app->user->identity->type ?></small>
+            <?php endif ?>
         </p>
     </li>
     <!-- Menu Body -->

@@ -13,7 +13,7 @@ switch ($userBalance) {
     case $userBalance < 0:
         $balanceColor = 'text-danger';
         break;
-    case $userBalance == 0:
+    case $userBalance === 0:
         $balanceColor = 'text-muted';
         break;
 }
@@ -29,7 +29,9 @@ switch ($userBalance) {
             <div class="pull-left info">
                 <p>
                     <?= Yii::$app->user->identity->username ?>
-                    <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) print ' / ' . Yii::$app->user->identity->seller ?>
+                    <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) : ?>
+                        <?= ' / ' . Yii::$app->user->identity->seller ?>
+                    <?php endif ?>
                 </p>
                 <a href="<?= Url::to('@pay/deposit') ?>">
                     <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('app', 'Balance') . ': ' ?><?= Yii::$app->formatter->asCurrency($userBalance, 'USD') ?>
