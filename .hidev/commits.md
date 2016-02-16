@@ -3,6 +3,20 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+    - 96008fc 2016-02-16 rehideving (sol@hiqdev.com)
+    - 01f5231 2016-02-16 + passwordResetPage app parameter to change 'I forgot my password' link (sol@hiqdev.com)
+    - 80deae2 2016-02-11 Add link to rechange account to sidebar balance link (andreyklochok@gmail.com)
+    - 9d24d33 2016-02-11 Minor fix. Change link to button (andreyklochok@gmail.com)
+    - e86f566 2016-02-10 Redisigne left side bar user view (andreyklochok@gmail.com)
+    - 4807bfb 2016-01-29 added tranlations (sol@hiqdev.com)
+    - 02139bd 2016-01-28 search when no domains still to be done (sol@hiqdev.com)
+    - 8873cf0 2016-01-27 Add load Layout options form to control sidebar panel by ajax (andreyklochok@gmail.com)
+    - fdc3a5c 2016-01-27 Add control sidebar with theme settings (andreyklochok@gmail.com)
+    - 6ba64c1 2016-01-26 Minor issues fix (andreyklochok@gmail.com)
+    - 41e1949 2016-01-26 Redesigne error page (andreyklochok@gmail.com)
+    - ca2c451 2016-01-18 Search form for Domain check (andreyklochok@gmail.com)
+    - fa4bc51 2015-12-24 Fix get params (andreyklochok@gmail.com)
+    - 02ed3db 2015-12-24 Change search field in sidebar to check domain field (andreyklochok@gmail.com)
 - Added TopCart widget
     - 7017b08 2015-10-22 Add TopCart widget (andreyklochok@gmail.com)
     - d1cc393 2015-11-12 improved package description (sol@hiqdev.com)
