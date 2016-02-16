@@ -95,7 +95,7 @@ CSS
     </div>
     <?php AuthChoice::end() ?>
 
-    <?= Html::a(Yii::t('app', 'I forgot my password'), ['request-password-reset']) ?><br>
+    <?= Html::a(Yii::t('app', 'I forgot my password'), Yii::$app->params['passwordResetPage'] ?: ['request-password-reset']) ?><br>
     <?= Html::a(Yii::t('app', 'Register a new membership'), ['signup']) ?>
 
 </div><!-- /.login-box-body -->
