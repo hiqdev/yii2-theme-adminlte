@@ -3,6 +3,9 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
+- Added passwordResetPage app parameter to change 'I forgot my password' link
+- Added balance recharge button
+- Changed (redesigned) user menu, error page, searching
 - Added TopCart widget
 - Changed deposit link to @pay/deposit <- @bill/deposit
 - Added use of yii2-asset-pictonic

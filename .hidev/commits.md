@@ -3,10 +3,16 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Added passwordResetPage app parameter to change 'I forgot my password' link
+    - 39688ee 2016-02-16 inited tests and CI (sol@hiqdev.com)
+    - 1702b5b 2016-02-16 phpcsfixed (sol@hiqdev.com)
+    - 13136d3 2016-02-16 rehideved (sol@hiqdev.com)
     - 96008fc 2016-02-16 rehideving (sol@hiqdev.com)
     - 01f5231 2016-02-16 + passwordResetPage app parameter to change 'I forgot my password' link (sol@hiqdev.com)
+- Added balance recharge button
     - 80deae2 2016-02-11 Add link to rechange account to sidebar balance link (andreyklochok@gmail.com)
     - 9d24d33 2016-02-11 Minor fix. Change link to button (andreyklochok@gmail.com)
+- Changed (redesigned) user menu, error page, searching
     - e86f566 2016-02-10 Redisigne left side bar user view (andreyklochok@gmail.com)
     - 4807bfb 2016-01-29 added tranlations (sol@hiqdev.com)
     - 02139bd 2016-01-28 search when no domains still to be done (sol@hiqdev.com)
