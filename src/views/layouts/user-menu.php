@@ -8,7 +8,7 @@ use yii\helpers\Html;
     <li class="user-header">
         <?= $this->render('//layouts/gravatar', ['size' => 90]); ?>
         <p>
-            <?= Yii::$app->user->identity->username; ?>
+            <b><?= Yii::$app->user->identity->username ?></b>
 
             <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) : ?>
                 <?= ' / ' . Yii::$app->user->identity->seller ?>
@@ -16,6 +16,12 @@ use yii\helpers\Html;
 
             <?php if (Yii::$app->user->can('support')) : ?>
                 <small><?= Yii::$app->user->identity->type ?></small>
+            <?php else : ?>
+                <br>
+            <?php endif ?>
+
+            <?php if (Yii::$app->user->identity->name) : ?>
+                <?= Yii::$app->user->identity->name ?>
             <?php endif ?>
         </p>
     </li>

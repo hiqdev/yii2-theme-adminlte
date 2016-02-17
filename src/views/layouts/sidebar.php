@@ -30,7 +30,7 @@ switch ($userBalance) {
                 <p>
                     <?= Yii::$app->user->identity->username ?>
                     <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) : ?>
-                        <?= ' / ' . Yii::$app->user->identity->seller ?>
+                        <span style="font-weight:normal"><?= ' / ' . Yii::$app->user->identity->seller ?></span>
                     <?php endif ?>
                 </p>
                 <a href="<?= Url::to('@pay/deposit') ?>">
