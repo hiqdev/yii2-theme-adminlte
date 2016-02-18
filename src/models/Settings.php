@@ -87,22 +87,10 @@ class Settings extends \hiqdev\thememanager\models\Settings
     {
         return [
             [
-                'attribute' => 'skin-blue',
-                'label'     => Yii::t('app', 'Blue'),
+                'attribute' => 'skin-red',
+                'label'     => Yii::t('app', 'Red'),
                 'color'     => '#367fa9',
-                'bg'        => 'bg-light-blue',
-            ],
-            [
-                'attribute' => 'skin-black',
-                'label'     => Yii::t('app', 'Black'),
-                'color'     => '#fff',
-                'bg'        => 'bg-black',
-            ],
-            [
-                'attribute' => 'skin-purple',
-                'label'     => Yii::t('app', 'Purple'),
-                'color'     => '#367fa9',
-                'bg'        => 'bg-purple',
+                'bg'        => 'bg-red',
             ],
             [
                 'attribute' => 'skin-green',
@@ -111,10 +99,16 @@ class Settings extends \hiqdev\thememanager\models\Settings
                 'bg'        => 'bg-green',
             ],
             [
-                'attribute' => 'skin-red',
-                'label'     => Yii::t('app', 'Red'),
+                'attribute' => 'skin-blue',
+                'label'     => Yii::t('app', 'Blue'),
                 'color'     => '#367fa9',
-                'bg'        => 'bg-red',
+                'bg'        => 'bg-light-blue',
+            ],
+            [
+                'attribute' => 'skin-purple',
+                'label'     => Yii::t('app', 'Purple'),
+                'color'     => '#367fa9',
+                'bg'        => 'bg-purple',
             ],
             [
                 'attribute' => 'skin-yellow',
@@ -122,12 +116,18 @@ class Settings extends \hiqdev\thememanager\models\Settings
                 'color'     => '#367fa9',
                 'bg'        => 'bg-yellow',
             ],
+            /*[
+                'attribute' => 'skin-black',
+                'label'     => Yii::t('app', 'Black'),
+                'color'     => '#fff',
+                'bg'        => 'bg-black',
+            ],
             [
                 'attribute' => 'skin-ebony',
                 'label'     => Yii::t('app', 'Ebony'),
                 'color'     => '#fff',
                 'bg'        => 'bg-black',
-            ],
+            ],*/
         ];
     }
 
