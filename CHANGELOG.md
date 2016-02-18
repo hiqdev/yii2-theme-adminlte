@@ -3,7 +3,7 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- Added passwordResetPage app parameter to change 'I forgot my password' link
+- Added passwordResetPage and signupPage parameters to change 'I forgot my password' and 'Register' links
 - Added balance recharge button
 - Changed (redesigned) user menu, error page, searching
 - Added TopCart widget
