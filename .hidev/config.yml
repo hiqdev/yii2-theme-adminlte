@@ -1,10 +1,10 @@
 package:
     type:           yii2-extension
     name:           yii2-theme-adminlte
-    namespace:      hiqdev\themes\adminlte
-    headline:       Yii2 AdmniLte Theme
     title:          AdminLte Theme for hiqdev/yii2-thememanager
+    headline:       Yii2 AdmniLte Theme
     keywords:       adminlte, theme, extension, yii2
+    namespace:      hiqdev\themes\adminlte
 
 require:
     hiqdev/hidev-php:    "*"
