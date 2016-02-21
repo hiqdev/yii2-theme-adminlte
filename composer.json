@@ -45,7 +45,7 @@
     ],
     "require": {
         "cebe/yii2-gravatar": "*",
-        "hiqdev/yii2-asset-adminlte": "~2.1",
+        "hiqdev/yii2-asset-adminlte": "*",
         "hiqdev/yii2-asset-pictonic": "*"
     },
     "autoload": {
