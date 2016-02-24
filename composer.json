@@ -57,6 +57,7 @@
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
-        }
+        },
+        "yii2-extraconfig": "src/yii2-extraconfig.php"
     }
 }
