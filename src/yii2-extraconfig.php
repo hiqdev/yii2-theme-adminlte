@@ -12,10 +12,8 @@
 return [
     'components' => [
         'thememanager' => [
-            'themes' => [
-                'adminlte' => [
-                    'class' => 'hiqdev\themes\adminlte\AdminLteTheme',
-                ],
+            'adminlte' => [
+                'class' => 'hiqdev\themes\adminlte\AdminLteTheme',
             ],
         ],
     ],
