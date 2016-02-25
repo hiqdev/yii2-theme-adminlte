@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte commits history
 ## Under development
 
 - Added yii2-extraconfig
+    - 55e9326 2016-02-24 fixed yii2-extraconfig (sol@hiqdev.com)
     - b230763 2016-02-24 + yii2-extraconfig (sol@hiqdev.com)
     - c8ce706 2016-02-21 fixing dependencies for hidev initialization (sol@hiqdev.com)
 - Added passwordResetPage and signupPage parameters to change 'I forgot my password' and 'Register' links
