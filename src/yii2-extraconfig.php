@@ -11,7 +11,7 @@
 
 return [
     'components' => [
-        'thememanager' => [
+        'themeManager' => [
             'adminlte' => [
                 'class' => 'hiqdev\themes\adminlte\AdminLteTheme',
             ],
