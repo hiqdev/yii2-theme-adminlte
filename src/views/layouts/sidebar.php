@@ -4,20 +4,18 @@ use hipanel\modules\client\models\Client;
 use hipanel\widgets\Menu;
 use yii\helpers\Url;
 
-$userBalance = Client::findOne(Yii::$app->user->identity->id)->balance;
-$balanceColor = '';
-switch ($userBalance) {
-    case $userBalance > 0:
-        $balanceColor = 'text-success';
-        break;
-    case $userBalance < 0:
-        $balanceColor = 'text-danger';
-        break;
-    case $userBalance === 0:
-        $balanceColor = 'text-muted';
-        break;
+$client = Client::findOne(Yii::$app->user->identity->id);
+
+if ($client->balance > 0) {
+    $balanceColor = 'text-success';
+} elseif ($client->balance < 0) {
+    $balanceColor = 'text-danger';
+} else {
+    $balanceColor = 'text-muted';
 }
+
 ?>
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -27,15 +25,15 @@ switch ($userBalance) {
                 <?= $this->render('//layouts/gravatar', ['size' => 45]); ?>
             </div>
             <div class="pull-left info">
-                <p>
-                    <?= Yii::$app->user->identity->username ?>
-                    <?php if (Yii::$app->user->can('support') && Yii::$app->user->identity->seller !== null) : ?>
-                        <span style="font-weight:normal"><?= ' / ' . Yii::$app->user->identity->seller ?></span>
-                    <?php endif ?>
-                </p>
                 <a href="<?= Url::to('@pay/deposit') ?>">
-                    <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('app', 'Balance') . ': ' ?><?= Yii::$app->formatter->asCurrency($userBalance, 'USD') ?>
+                    <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('hipanel', 'Balance: {balance}', ['balance' => Yii::$app->formatter->asCurrency($client->balance, 'USD')]) ?>
                 </a>
+                <?php if ($client->credit > 0) { ?>
+                    <br />
+                    <a href="<?= Url::to('@pay/deposit') ?>">
+                        <i class="fa fa-circle"></i> <?= Yii::t('hipanel', 'Credit: {credit}', ['credit' => Yii::$app->formatter->asCurrency($client->credit, 'USD')]) ?>
+                    </a>
+                <?php } ?>
             </div>
         </div>
         <!-- search form -->
