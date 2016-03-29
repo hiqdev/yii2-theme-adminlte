@@ -37,7 +37,7 @@ if ($client->balance > 0) {
             </div>
         </div>
         <!-- search form -->
-        <?php $searchUrl = Yii::getAlias('@domain', false) ? Url::to('@domain/check-domain') : '/' ?>
+        <?php $searchUrl = Yii::getAlias('@domain', false) ? Url::to('@domainchecker/check-domain') : '/' ?>
         <form action="<?= $searchUrl ?>" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="Domain[domain]" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
