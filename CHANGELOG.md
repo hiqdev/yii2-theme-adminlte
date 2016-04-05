@@ -3,7 +3,9 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- Added yii2-extraconfig
+- Fixed build with asset-packagist
+- Fixed bugs
+- Added `extension-config`
 - Added passwordResetPage and signupPage parameters to change 'I forgot my password' and 'Register' links
 - Added balance recharge button
 - Changed (redesigned) user menu, error page, searching
