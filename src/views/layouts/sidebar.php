@@ -28,12 +28,12 @@ if ($client->balance > 0) {
                 <a href="<?= Url::to('@pay/deposit') ?>">
                     <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('hipanel', 'Balance: {balance}', ['balance' => Yii::$app->formatter->asCurrency($client->balance, 'USD')]) ?>
                 </a>
-                <?php if ($client->credit > 0) { ?>
+                <?php if ($client->credit > 0) : ?>
                     <br />
                     <a href="<?= Url::to('@pay/deposit') ?>">
                         <i class="fa fa-circle"></i> <?= Yii::t('hipanel', 'Credit: {credit}', ['credit' => Yii::$app->formatter->asCurrency($client->credit, 'USD')]) ?>
                     </a>
-                <?php } ?>
+                <?php endif ?>
             </div>
         </div>
         <!-- search form -->
