@@ -53,6 +53,12 @@
             "hiqdev\\themes\\adminlte\\": "src"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.hiqdev.com"
+        }
+    ],
     "extra": {
         "extension-config": "src/extension-config.php"
     }
