@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte commits history
 ## Under development
 
 - Added hisite compatibility
+    - 5f140fd 2016-04-29 used local hidev and plugins (sol@hiqdev.com)
     - 523dc0a 2016-04-29 redone `extension-config.php` to `hisite-config.php` (sol@hiqdev.com)
 - Fixed build with asset-packagist
     - f793db0 2016-04-05 phpcsfixed (sol@hiqdev.com)

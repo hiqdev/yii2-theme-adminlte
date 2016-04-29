@@ -3,6 +3,7 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
+- Added hisite compatibility
 - Fixed build with asset-packagist
 - Fixed bugs
 - Added `extension-config`
