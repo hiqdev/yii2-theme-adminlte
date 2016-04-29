@@ -3,11 +3,14 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
+- Added hisite compatibility
+    - 523dc0a 2016-04-29 redone `extension-config.php` to `hisite-config.php` (sol@hiqdev.com)
 - Fixed build with asset-packagist
     - f793db0 2016-04-05 phpcsfixed (sol@hiqdev.com)
     - b80165c 2016-04-05 inited tests (sol@hiqdev.com)
     - 176fea2 2016-04-05 fixed build with asset-packagist (sol@hiqdev.com)
 - Fixed bugs
+    - 7b79567 2016-04-29 Fix collapsed sidebar (andreyklochok@gmail.com)
     - df8a62b 2016-04-05 Changed domain seach input name in order to match controllers expectations (d.naumenko.a@gmail.com)
     - a5b323f 2016-03-29 fixed link to check domain (sol@hiqdev.com)
     - 732878d 2016-03-29 Fix form action attribute from domain to domainchecker (andreyklochok@gmail.com)

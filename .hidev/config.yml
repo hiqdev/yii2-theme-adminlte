@@ -5,7 +5,3 @@ package:
     headline:       Yii2 AdmniLte Theme
     keywords:       adminlte, theme, extension, yii2
     namespace:      hiqdev\themes\adminlte
-
-require:
-    hiqdev/hidev-php:    "*"
-    hiqdev/hidev-vendor: "*"
