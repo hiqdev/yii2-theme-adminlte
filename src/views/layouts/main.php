@@ -31,7 +31,6 @@ JS
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
-<?php \yii\helpers\VarDumper::dump($this->bodyClasses, 10, true);?>
 <body class="sidebar-mini <?= $this->bodyClasses ?>">
 <?php $this->beginBody(); ?>
 <!-- Site wrapper -->
