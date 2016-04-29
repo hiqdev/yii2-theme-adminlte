@@ -13,7 +13,7 @@ use yii\widgets\Breadcrumbs;
 // Collapse Side bar
 $this->registerJs(<<<'JS'
 $(".sidebar-toggle").on("click", function() {
-    var collapsed_sidebar = $('body').hasClass('sidebar-collapse') ? 1 : 0;
+    var collapsed_sidebar = $('body').hasClass('sidebar-collapse') ? 0 : 1;
     $.post( "/thememanager/settings/collapsed-sidebar", {collapsed_sidebar: collapsed_sidebar});
 });
 $(document).on('click', 'a[data-toggle="control-sidebar"]', function(event) {
@@ -31,6 +31,7 @@ JS
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
+<?php \yii\helpers\VarDumper::dump($this->bodyClasses, 10, true);?>
 <body class="sidebar-mini <?= $this->bodyClasses ?>">
 <?php $this->beginBody(); ?>
 <!-- Site wrapper -->
