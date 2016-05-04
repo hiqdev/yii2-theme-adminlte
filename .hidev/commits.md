@@ -6,6 +6,10 @@ hiqdev/yii2-theme-adminlte commits history
 - Added hisite compatibility
     - 5f140fd 2016-04-29 used local hidev and plugins (sol@hiqdev.com)
     - 523dc0a 2016-04-29 redone `extension-config.php` to `hisite-config.php` (sol@hiqdev.com)
+    - 07e495f 2016-03-30 redone to `extension-config` <- `yii2-extraconfig` (sol@hiqdev.com)
+    - 55e9326 2016-02-24 fixed yii2-extraconfig (sol@hiqdev.com)
+    - b230763 2016-02-24 + yii2-extraconfig (sol@hiqdev.com)
+    - c8ce706 2016-02-21 fixing dependencies for hidev initialization (sol@hiqdev.com)
 - Fixed build with asset-packagist
     - f793db0 2016-04-05 phpcsfixed (sol@hiqdev.com)
     - b80165c 2016-04-05 inited tests (sol@hiqdev.com)
@@ -18,11 +22,6 @@ hiqdev/yii2-theme-adminlte commits history
     - ccfaf5f 2016-03-24 Removed client login from sidebar (d.naumenko.a@gmail.com)
     - b7ef75e 2016-03-17 Translations update, minor (d.naumenko.a@gmail.com)
     - d1d65b1 2016-02-29 fixed typo (sol@hiqdev.com)
-- Added `extension-config`
-    - 07e495f 2016-03-30 redone to `extension-config` <- `yii2-extraconfig` (sol@hiqdev.com)
-    - 55e9326 2016-02-24 fixed yii2-extraconfig (sol@hiqdev.com)
-    - b230763 2016-02-24 + yii2-extraconfig (sol@hiqdev.com)
-    - c8ce706 2016-02-21 fixing dependencies for hidev initialization (sol@hiqdev.com)
 - Added passwordResetPage and signupPage parameters to change 'I forgot my password' and 'Register' links
     - 2b6afa2 2016-02-16 + signupPage parameter (sol@hiqdev.com)
     - 39688ee 2016-02-16 inited tests and CI (sol@hiqdev.com)
