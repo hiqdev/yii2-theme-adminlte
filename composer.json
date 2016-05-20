@@ -49,7 +49,6 @@
         "hiqdev/yii2-asset-pictonic": "*"
     },
     "require-dev": {
-        "hiqdev/hidev": "dev-master",
         "hiqdev/hidev-php": "<2.0",
         "hiqdev/hidev-vendor": "<2.0"
     },
@@ -66,7 +65,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://asset-packagist.hiqdev.com"
+            "url": "https://asset-packagist.org"
         }
     ]
 }
