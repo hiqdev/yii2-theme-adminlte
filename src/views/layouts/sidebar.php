@@ -37,17 +37,19 @@ if ($client->balance > 0) {
             </div>
         </div>
         <!-- search form -->
-        <?php $searchUrl = Yii::getAlias('@domainchecker', false) ? Url::to('@domainchecker/check-domain') : '/' ?>
-        <form action="<?= $searchUrl ?>" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="domain" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
-                <span class="input-group-btn">
-                    <button type='submit' id='search-btn' class="btn btn-flat">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
-            </div>
-        </form>
+        <?php if (Yii::getAlias('@domainchecker', false)) : ?>
+            <?php $searchUrl = Yii::getAlias('@domainchecker', false) ? Url::to('@domainchecker/check-domain') : '/' ?>
+            <form action="<?= $searchUrl ?>" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="domain" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
+                    <span class="input-group-btn">
+                        <button type='submit' id='search-btn' class="btn btn-flat">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        <?php endif ?>
         <!-- /.search form -->
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
