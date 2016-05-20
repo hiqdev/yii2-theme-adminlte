@@ -3,7 +3,12 @@ hiqdev/yii2-theme-adminlte commits history
 
 ## Under development
 
-- Added hisite compatibility
+- Changed: redone with composer-config-plugin
+    - 871ef44 2016-05-20 fixed dependencies (sol@hiqdev.com)
+    - 55a3405 2016-05-20 csfixed (sol@hiqdev.com)
+    - e0eb61b 2016-05-20 hidded search form when no domainchecker (sol@hiqdev.com)
+    - 78e6366 2016-05-18 added gravatar (sol@hiqdev.com)
+    - 1c5c515 2016-05-18 redone config for composer-config-plugin (sol@hiqdev.com)
     - 5f140fd 2016-04-29 used local hidev and plugins (sol@hiqdev.com)
     - 523dc0a 2016-04-29 redone `extension-config.php` to `hisite-config.php` (sol@hiqdev.com)
     - 07e495f 2016-03-30 redone to `extension-config` <- `yii2-extraconfig` (sol@hiqdev.com)

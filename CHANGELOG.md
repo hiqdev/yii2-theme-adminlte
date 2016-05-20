@@ -3,7 +3,7 @@ hiqdev/yii2-theme-adminlte changelog
 
 ## Under development
 
-- Added hisite compatibility
+- Changed: redone with composer-config-plugin
 - Fixed build with asset-packagist
 - Fixed bugs
 - Added passwordResetPage and signupPage parameters to change 'I forgot my password' and 'Register' links
