@@ -6,6 +6,8 @@
  * @var frontend\components\View View
  * @var string $content Content
  */
+
+use hiqdev\pnotify\Alert;
 use yii\helpers\Html;
 
 $this->registerJs(<<<'JS'
@@ -35,6 +37,9 @@ JS
 
 <?php $this->beginBody(); ?>
 <body class="login-page">
+
+<?= Alert::widget() ?>
+
 <div class="login-box">
     <div class="login-logo">
         <b><?= Html::a(Yii::$app->params['orgName'], ['/']) ?></b>
