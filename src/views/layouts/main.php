@@ -112,7 +112,7 @@ JS
                 <?php endif ?>
             <?php endif ?>
         </div>
-        <strong>Copyright &copy; 2014-2015 <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']); ?>.</strong> All rights reserved.
+        <strong>Copyright &copy; <?= $this->render('//layouts/copyrightYears') ?> <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']); ?>.</strong> All rights reserved.
     </footer>
 </div><!-- ./wrapper -->
 <?php $this->endBody(); ?>
