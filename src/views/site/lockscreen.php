@@ -24,7 +24,7 @@ $this->title = 'Lockscreen';
     <!-- /.lockscreen-image -->
 
     <!-- lockscreen credentials (contains the form) -->
-    <form class="lockscreen-credentials">
+    <form class="lockscreen-credentials" action="<?= Yii::$app->params['hipanelUrl'] ?>">
         <input type="submit" class="form-control btn" value="Return to HiPanel" />
     </form><!-- /.lockscreen credentials -->
 
