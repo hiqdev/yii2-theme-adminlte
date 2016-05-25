@@ -6,7 +6,6 @@
  * @var frontend\components\View View
  * @var string $content Content
  */
-
 use hiqdev\pnotify\Alert;
 use yii\helpers\Html;
 
