@@ -1,8 +1,9 @@
 hiqdev/yii2-theme-adminlte changelog
 ------------------------------------
 
-## Under development
+## dev 2016-05-23
 
+- Fixed login and password reset pages
 - Changed: redone with composer-config-plugin
 - Fixed build with asset-packagist
 - Fixed bugs

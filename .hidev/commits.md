@@ -1,8 +1,15 @@
 hiqdev/yii2-theme-adminlte commits history
 ------------------------------------------
 
-## Under development
+## dev 2016-05-23
 
+- Fixed login and password reset pages
+    - e51869b 2016-05-25 csfixed (sol@hiqdev.com)
+    - 483c500 2016-05-25 added passing username through login to password reset (sol@hiqdev.com)
+    - af6be14 2016-05-23 + configurable copyright rendering (sol@hiqdev.com)
+    - 888a832 2016-05-23 fixed resetPassword page to look like others (sol@hiqdev.com)
+    - 0a34826 2016-05-23 used `hiqdev\pnotify\Alert` at mini layout (sol@hiqdev.com)
+    - 5c0c7fd 2016-05-23 + hipanelUrl at lockscreen page (sol@hiqdev.com)
 - Changed: redone with composer-config-plugin
     - 871ef44 2016-05-20 fixed dependencies (sol@hiqdev.com)
     - 55a3405 2016-05-20 csfixed (sol@hiqdev.com)
