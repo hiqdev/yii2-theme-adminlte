@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <p class="login-box-msg"><?= Yii::t('app', 'Please fill out the following fields to signup') ?>:</p>
 
-    <?php $form = ActiveForm::begin(['id' => 'form-signup']) ?>
+    <?php $form = ActiveForm::begin(['id' => 'form-signup', 'enableAjaxValidation' => true, 'validationUrl' => '/site/signup-validate']) ?>
         <div class="form-group has-feedback">
             <?= $form->field($model, 'first_name')->textInput(['placeholder' => 'First Name', 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
