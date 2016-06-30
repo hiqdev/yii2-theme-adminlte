@@ -38,15 +38,24 @@ use yii\helpers\Url;
     </li>
     */ ?>
     <!-- Notifications: style can be found in dropdown.less -->
-    <li class="dropdown language-menu">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <?= strtoupper(substr(Yii::$app->language, 0, 2)) ?>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header"><?= Html::a(Yii::t('hipanel', 'en'), Url::current(['language' => 'en']), ['class' => mb_stristr(Yii::$app->language, 'en') ? 'text-bold' : '']) ?></li>
-            <li class="header"><?= Html::a(Yii::t('hipanel', 'ru'), Url::current(['language' => 'ru']), ['class' => mb_stristr(Yii::$app->language, 'ru') ? 'text-bold' : '']) ?></li>
-        </ul>
-    </li>
+    <?php if (Yii::$app->get('languageSwitcher', false) !== null): ?>
+        <li class="dropdown language-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <?= strtoupper(substr(Yii::$app->language, 0, 2)) ?>
+            </a>
+            <ul class="dropdown-menu">
+                <?php foreach (Yii::$app->get('languageSwitcher')->languages as $code => $language):?>
+                    <li class="header">
+                        <?= Html::a(
+                            Yii::t('hipanel', $language),
+                            Url::to(['/site/language', 'language' => $code]),
+                            ['class' => mb_stristr(Yii::$app->language, $code) ? 'text-bold' : '']
+                        ) ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </li>
+    <?php endif; ?>
     <?= PanelTopCart::widget() ?>
     <?php /*
     <li class="dropdown notifications-menu">
