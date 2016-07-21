@@ -8,13 +8,16 @@ use yii\helpers\Html;
 /* @var $exception Exception */
 
 $this->title = $name;
-$code = substr($name, strpos($name, '#') + 1, 3);
+$code = ($exception->statusCode);
 $textColorClass = $code < 500 ? 'text-yellow' : 'text-red';
 $alertColorClass = $code < 500 ? 'alert-warning' : 'alert-danger';
+$message = $exception->getMessage() ? : $message;
 ?>
 
 <div class="error-page">
-    <h2 class="headline <?= $textColorClass ?>"> <?= $code ?></h2>
+    <?php if ($code) : ?>
+        <h2 class="headline <?= $textColorClass ?>"> <?= $code ?></h2>
+    <?php endif; ?>
     <div class="error-content">
         <h3><i class="fa fa-warning <?= $textColorClass ?>"></i> <?= Html::encode($this->title) ?></h3>
         <div class="alert <?= $alertColorClass ?>">
