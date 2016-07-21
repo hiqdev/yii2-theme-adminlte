@@ -1,5 +1,6 @@
 <?php
 
+use hipanel\widgets\ReminderTop;
 use hiqdev\yii2\cart\widgets\PanelTopCart;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -57,6 +58,7 @@ use yii\helpers\Url;
         </li>
     <?php endif; ?>
     <?= PanelTopCart::widget() ?>
+    <?= ReminderTop::widget() ?>
     <?php /*
     <li class="dropdown notifications-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
