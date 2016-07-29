@@ -59,11 +59,19 @@ CSS
     <p class="login-box-msg"><?= Yii::t('app', 'Sign in to start your session') ?></p>
     <?php $form = ActiveForm::begin(['id' => 'login-form']) ?>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('app', 'Login or Email'), 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
+            <?= $form->field($model, 'username')->textInput([
+                    'placeholder' => Yii::t('app', 'Login or Email'),
+                    'class' => 'form-control',
+                    'autofocus' => empty($model->username) ? 'autofocus' : false,
+            ])->label(false) ?>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'password')->passwordInput(['placeholder' => Yii::t('app', 'Password'), 'class' => 'form-control'])->label(false) ?>
+            <?= $form->field($model, 'password')->passwordInput([
+                    'placeholder' => Yii::t('app', 'Password'),
+                    'class' => 'form-control',
+                    'autofocus' => (empty($model->password) && !empty($model->username)) ? 'autofocus' : false,
+            ])->label(false) ?>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
