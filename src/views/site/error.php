@@ -24,8 +24,8 @@ $message = $exception->getMessage() ? : $message;
             <?= nl2br(Html::encode($message)) ?>
         </div>
         <p>
-            <?= Yii::t('app', 'The above error occurred while the Web server was processing your request.'); ?><br>
-            <?= Yii::t('app', 'Please contact us if you think this is a server error. Thank you.'); ?>
+            <?= Yii::t('adminlte', 'The above error occurred while the Web server was processing your request.'); ?><br>
+            <?= Yii::t('adminlte', 'Please contact us if you think this is a server error. Thank you.'); ?>
         </p>
     </div>
     <!-- /.error-content -->

@@ -28,19 +28,19 @@ use yii\helpers\Html;
     <!-- Menu Body -->
     <li class="user-body">
         <div class="col-xs-6 text-center">
-            <?= Html::a(Yii::t('hipanel', 'Recharge account'), ['@pay/deposit'], ['class' => 'btn btn-default btn-xs btn-flat']); ?>
+            <?= Html::a(Yii::t('adminlte', 'Recharge account'), ['@pay/deposit'], ['class' => 'btn btn-default btn-xs btn-flat']); ?>
         </div>
         <div class="col-xs-6 text-center">
-            <?= Html::a(Yii::t('hipanel', 'Create ticket'), ['@ticket/create'], ['class' => 'btn btn-default btn-xs btn-flat']); ?>
+            <?= Html::a(Yii::t('adminlte', 'Create ticket'), ['@ticket/create'], ['class' => 'btn btn-default btn-xs btn-flat']); ?>
         </div>
     </li>
     <!-- Menu Footer-->
     <li class="user-footer">
         <div class="pull-left">
-            <?= Html::a(Yii::t('hipanel', 'Profile'), ['/site/profile'], ['class' => 'btn btn-primary btn-flat']); ?>
+            <?= Html::a(Yii::t('adminlte', 'Profile'), ['/site/profile'], ['class' => 'btn btn-primary btn-flat']); ?>
         </div>
         <div class="pull-right">
-            <?= Html::a(Yii::t('hipanel', 'Sign out'), ['/site/logout'], ['class' => 'btn btn-danger btn-flat']); ?>
+            <?= Html::a(Yii::t('adminlte', 'Sign out'), ['/site/logout'], ['class' => 'btn btn-danger btn-flat']); ?>
         </div>
     </li>
 </ul>

@@ -61,10 +61,10 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public function formLayoutData()
     {
         return [
-            'none'         => Yii::t('app', 'Default layout'),
-            'fixed'        => Yii::t('app', 'Fixed layout'),
+            'none'         => Yii::t('adminlte', 'Default layout'),
+            'fixed'        => Yii::t('adminlte', 'Fixed layout'),
             // working incorectly temporary disabled
-            // 'layout-boxed' => Yii::t('app', 'Boxed layout'),
+            // 'layout-boxed' => Yii::t('adminlte', 'Boxed layout'),
         ];
     }
 
@@ -75,8 +75,8 @@ class Settings extends \hiqdev\thememanager\models\Settings
     {
         return [
             'verifyCode' => 'Verification Code',
-            'table_condensed' => Yii::t('app', 'Table Condensed'),
-            'collapsed_sidebar' => Yii::t('app', 'Collapsed Sidebar'),
+            'table_condensed' => Yii::t('adminlte', 'Table Condensed'),
+            'collapsed_sidebar' => Yii::t('adminlte', 'Collapsed Sidebar'),
         ];
     }
 
@@ -88,43 +88,43 @@ class Settings extends \hiqdev\thememanager\models\Settings
         return [
             [
                 'attribute' => 'skin-red',
-                'label'     => Yii::t('app', 'Red'),
+                'label'     => Yii::t('adminlte', 'Red'),
                 'color'     => '#367fa9',
                 'bg'        => 'bg-red',
             ],
             [
                 'attribute' => 'skin-green',
-                'label'     => Yii::t('app', 'Green'),
+                'label'     => Yii::t('adminlte', 'Green'),
                 'color'     => '#367fa9',
                 'bg'        => 'bg-green',
             ],
             [
                 'attribute' => 'skin-blue',
-                'label'     => Yii::t('app', 'Blue'),
+                'label'     => Yii::t('adminlte', 'Blue'),
                 'color'     => '#367fa9',
                 'bg'        => 'bg-light-blue',
             ],
             [
                 'attribute' => 'skin-purple',
-                'label'     => Yii::t('app', 'Purple'),
+                'label'     => Yii::t('adminlte', 'Purple'),
                 'color'     => '#367fa9',
                 'bg'        => 'bg-purple',
             ],
             [
                 'attribute' => 'skin-yellow',
-                'label'     => Yii::t('app', 'Yellow'),
+                'label'     => Yii::t('adminlte', 'Yellow'),
                 'color'     => '#367fa9',
                 'bg'        => 'bg-yellow',
             ],
             /*[
                 'attribute' => 'skin-black',
-                'label'     => Yii::t('app', 'Black'),
+                'label'     => Yii::t('adminlte', 'Black'),
                 'color'     => '#fff',
                 'bg'        => 'bg-black',
             ],
             [
                 'attribute' => 'skin-ebony',
-                'label'     => Yii::t('app', 'Ebony'),
+                'label'     => Yii::t('adminlte', 'Ebony'),
                 'color'     => '#fff',
                 'bg'        => 'bg-black',
             ],*/

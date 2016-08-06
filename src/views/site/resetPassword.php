@@ -6,13 +6,13 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ResetPasswordForm */
 
-$this->title = Yii::t('app', 'Reset password');
+$this->title = Yii::t('adminlte', 'Reset password');
 $this->blocks['bodyClass'] = 'register-page';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="register-box-body">
-    <p class="login-box-msg"><?= Yii::t('app', 'Please choose your new password') ?>:</p>
+    <p class="login-box-msg"><?= Yii::t('adminlte', 'Please choose your new password') ?>:</p>
 
     <?php $form = ActiveForm::begin(['id' => 'form-signup']) ?>
         <div class="form-group has-feedback">

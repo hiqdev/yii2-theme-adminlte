@@ -46,7 +46,7 @@ $buttonOptions = [
 ];
 
 $this->blocks['bodyClass'] = 'login-page';
-$this->title = Yii::t('app', 'Sign in');
+$this->title = Yii::t('adminlte', 'Sign in');
 $this->registerCss(<<<'CSS'
     .checkbox label {
         padding-left: 0px;
@@ -56,11 +56,11 @@ CSS
 ?>
 
 <div class="login-box-body">
-    <p class="login-box-msg"><?= Yii::t('app', 'Sign in to start your session') ?></p>
+    <p class="login-box-msg"><?= Yii::t('adminlte', 'Sign in to start your session') ?></p>
     <?php $form = ActiveForm::begin(['id' => 'login-form']) ?>
         <div class="form-group has-feedback">
             <?= $form->field($model, 'username')->textInput([
-                    'placeholder' => Yii::t('app', 'Login or Email'),
+                    'placeholder' => Yii::t('adminlte', 'Login or Email'),
                     'class' => 'form-control',
                     'autofocus' => empty($model->username) ? 'autofocus' : false,
             ])->label(false) ?>
@@ -68,7 +68,7 @@ CSS
         </div>
         <div class="form-group has-feedback">
             <?= $form->field($model, 'password')->passwordInput([
-                    'placeholder' => Yii::t('app', 'Password'),
+                    'placeholder' => Yii::t('adminlte', 'Password'),
                     'class' => 'form-control',
                     'autofocus' => (empty($model->password) && !empty($model->username)) ? 'autofocus' : false,
             ])->label(false) ?>
@@ -81,7 +81,7 @@ CSS
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('app', 'Sign In') ?></button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('adminlte', 'Sign in') ?></button>
             </div><!-- /.col -->
         </div>
     <?php $form->end() ?>
@@ -90,7 +90,7 @@ CSS
         'baseAuthUrl' => ['auth'],
         'options' => ['class' => 'social-auth-links text-center'],
     ]) ?>
-        <p>-- <?= Yii::t('app', 'OR SIGN IN WITH') ?> --</p>
+        <p>-- <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> --</p>
     <div class="social-button-login">
         <div class="row">
         <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
@@ -103,7 +103,7 @@ CSS
     </div>
     <?php AuthChoice::end() ?>
 
-    <?= Html::a(Yii::t('app', 'I forgot my password'),      Yii::$app->params['passwordResetPage'] ?: ['request-password-reset', 'username' => $model->username]) ?><br>
-    <?= Html::a(Yii::t('app', 'Register a new membership'), Yii::$app->params['signupPage'] ?: ['signup']) ?>
+    <?= Html::a(Yii::t('adminlte', 'I forgot my password'),      Yii::$app->params['passwordResetPage'] ?: ['request-password-reset', 'username' => $model->username]) ?><br>
+    <?= Html::a(Yii::t('adminlte', 'Register a new membership'), Yii::$app->params['signupPage'] ?: ['signup']) ?>
 
 </div><!-- /.login-box-body -->

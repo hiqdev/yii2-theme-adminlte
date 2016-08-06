@@ -13,7 +13,18 @@ return [
     'components' => [
         'themeManager' => [
             'adminlte' => [
-                'class' => 'hiqdev\themes\adminlte\AdminLteTheme',
+                'class' => \hiqdev\themes\adminlte\AdminLteTheme::class,
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'adminlte' => [
+                    'class' => \yii\i18n\PhpMessageSource::class,
+                    'basePath' => '@hipanel/themes/adminlte/messages',
+                    'fileMap' => [
+                        'adminlte' => 'adminlte.php',
+                    ],
+                ],
             ],
         ],
     ],

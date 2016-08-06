@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $model \frontend\models\ResetPasswordForm */
 
 $this->blocks['bodyClass'] = 'login-page';
-$this->title = Yii::t('app', 'Confirm connect social');
+$this->title = Yii::t('adminlte', 'Confirm connect social');
 
 ?>
 
@@ -16,22 +16,22 @@ $this->title = Yii::t('app', 'Confirm connect social');
     <p class="login-box-msg"><?= $this->title ?></p>
     <?php $form = ActiveForm::begin(['id' => 'login-form']) ?>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('app', 'Login or Email'), 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
+            <?= $form->field($model, 'username')->textInput(['placeholder' => Yii::t('adminlte', 'Login or Email'), 'class' => 'form-control', 'autofocus' => 'autofocus'])->label(false) ?>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <?= $form->field($model, 'password')->passwordInput(['placeholder' => Yii::t('app', 'Password'), 'class' => 'form-control'])->label(false) ?>
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => Yii::t('adminlte', 'Password'), 'class' => 'form-control'])->label(false) ?>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('app', 'Confirm') ?></button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('adminlte', 'Confirm') ?></button>
             </div><!-- /.col -->
         </div>
     <?php $form::end() ?>
 
     <br>
-    <?= Html::a(Yii::t('app', 'I forgot my password'), ['request-password-reset']) ?><br>
-    <?= Html::a(Yii::t('app', 'Register a new membership'), ['signup']) ?>
+    <?= Html::a(Yii::t('adminlte', 'I forgot my password'), ['request-password-reset']) ?><br>
+    <?= Html::a(Yii::t('adminlte', 'Register a new membership'), ['signup']) ?>
 
 </div><!-- /.login-box-body -->

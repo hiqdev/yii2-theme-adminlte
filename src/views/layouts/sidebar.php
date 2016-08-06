@@ -22,16 +22,16 @@ if ($client->balance > 0) {
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <?= $this->render('//layouts/gravatar', ['size' => 45]); ?>
+                <?= $this->render('//layouts/gravatar', ['size' => 45]) ?>
             </div>
             <div class="pull-left info">
                 <a href="<?= Url::to('@pay/deposit') ?>">
-                    <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('hipanel', 'Balance: {balance}', ['balance' => Yii::$app->formatter->asCurrency($client->balance, 'USD')]) ?>
+                    <i class="fa fa-circle <?= $balanceColor ?>"></i> <?= Yii::t('adminlte', 'Balance: {balance}', ['balance' => Yii::$app->formatter->asCurrency($client->balance, 'USD')]) ?>
                 </a>
                 <?php if ($client->credit > 0) : ?>
                     <br />
                     <a href="<?= Url::to('@pay/deposit') ?>">
-                        <i class="fa fa-circle"></i> <?= Yii::t('hipanel', 'Credit: {credit}', ['credit' => Yii::$app->formatter->asCurrency($client->credit, 'USD')]) ?>
+                        <i class="fa fa-circle"></i> <?= Yii::t('adminlte', 'Credit: {credit}', ['credit' => Yii::$app->formatter->asCurrency($client->credit, 'USD')]) ?>
                     </a>
                 <?php endif ?>
             </div>
@@ -41,7 +41,7 @@ if ($client->balance > 0) {
             <?php $searchUrl = Yii::getAlias('@domainchecker', false) ? Url::to('@domainchecker/check-domain') : '/' ?>
             <form action="<?= $searchUrl ?>" method="get" class="sidebar-form">
                 <div class="input-group">
-                    <input type="text" name="domain" class="form-control" placeholder="<?= Yii::t('app', 'Check domain') ?>..."/>
+                    <input type="text" name="domain" class="form-control" placeholder="<?= Yii::t('adminlte', 'Check domain') ?>..."/>
                     <span class="input-group-btn">
                         <button type='submit' id='search-btn' class="btn btn-flat">
                             <i class="fa fa-search"></i>

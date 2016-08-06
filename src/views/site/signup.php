@@ -7,14 +7,14 @@ use yii\helpers\Html;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\SignupForm */
 
-$this->title = Yii::t('app', 'Signup');
+$this->title = Yii::t('adminlte', 'Signup');
 $this->blocks['bodyClass'] = 'register-page';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="register-box-body">
     <h1><?= Html::encode($this->title) ?></h1>
-    <p class="login-box-msg"><?= Yii::t('app', 'Please fill out the following fields to signup') ?>:</p>
+    <p class="login-box-msg"><?= Yii::t('adminlte', 'Please fill out the following fields to signup') ?>:</p>
 
     <?php $form = ActiveForm::begin(['id' => 'form-signup', 'enableAjaxValidation' => true, 'validationUrl' => '/site/signup-validate']) ?>
         <div class="form-group has-feedback">
@@ -41,15 +41,15 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input type="checkbox"> <?= Yii::t('app', 'I agree to the') . ' ' . Html::a(Yii::t('app', 'terms'), ['terms']) ?></a>
+                        <input type="checkbox"> <?= Yii::t('adminlte', 'I agree to the') . ' ' . Html::a(Yii::t('adminlte', 'terms'), ['terms']) ?></a>
                     </label>
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('app', 'Signup') ?></button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('adminlte', 'Signup') ?></button>
             </div><!-- /.col -->
         </div>
     <?php ActiveForm::end(); ?>
 
-    <?= Html::a(Yii::t('app', 'I already have a membership'), ['confirm']) ?>
+    <?= Html::a(Yii::t('adminlte', 'I already have a membership'), ['confirm']) ?>
 </div><!-- /.register-box-body -->

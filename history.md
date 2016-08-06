@@ -4,6 +4,7 @@ hiqdev/yii2-theme-adminlte
 ## [Under development]
 
 - Fixed translations
+    - [8a31654] 2016-08-04 switched to bumping with `chkipper` [sol@hiqdev.com]
     - [e4f8eb3] 2016-06-24 Updated navbar-custom-menu to use `hipanel` dictionary [d.naumenko.a@gmail.com]
     - [b500e8f] 2016-06-30 Added language switching using langiageSwitcher component [d.naumenko.a@gmail.com]
 - Fixed login and password reset pages
@@ -207,3 +208,4 @@ hiqdev/yii2-theme-adminlte
 [b500e8f]: https://github.com/hiqdev/yii2-theme-adminlte/commit/b500e8f
 [e4f8eb3]: https://github.com/hiqdev/yii2-theme-adminlte/commit/e4f8eb3
 [80cbd75]: https://github.com/hiqdev/yii2-theme-adminlte/commit/80cbd75
+[8a31654]: https://github.com/hiqdev/yii2-theme-adminlte/commit/8a31654

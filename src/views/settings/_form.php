@@ -63,20 +63,20 @@ JS
 , \yii\web\View::POS_END);
 ?>
 
-<?php Pjax::begin(array_merge(\Yii::$app->params['pjax'], ['enablePushState' => false])); ?>
+<?php Pjax::begin(array_merge(Yii::$app->params['pjax'], ['enablePushState' => false])); ?>
 <?php $form = ActiveForm::begin(['action' => '/thememanager/settings', 'options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
-    <?= Html::tag('h4', Yii::t('app', 'Layout'), ['class' => 'control-sidebar-heading']) ?>
+    <?= Html::tag('h4', Yii::t('adminlte', 'Layout'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'layout')->label(false)->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {
         return '<div class="radio">' . Html::radio($name, $checked, ['label' => $label, 'value' => $value, 'onchange' => new JsExpression('change_layout(this.value);')]) . '</div>';
     }]); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
+    <?= Html::tag('h4', Yii::t('adminlte', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'table_condensed')->checkbox(); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Sidebar'), ['class' => 'control-sidebar-heading']) ?>
+    <?= Html::tag('h4', Yii::t('adminlte', 'Sidebar'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'collapsed_sidebar')->checkbox(['onchange' => new JsExpression('change_layout("sidebar-collapse");')]); ?>
 
-    <?= Html::tag('h4', Yii::t('app', 'Skins'), ['class' => 'control-sidebar-heading']) ?>
+    <?= Html::tag('h4', Yii::t('adminlte', 'Skins'), ['class' => 'control-sidebar-heading']) ?>
     <ul class="list-unstyled clearfix">
         <?php foreach ($model->skinSampleArray() as $itemData) : ?>
             <?= $this->render('_skin-sample', ['data' => $itemData]); ?>
@@ -84,6 +84,6 @@ JS
     </ul>
     <?= $form->field($model, 'skin')->hiddenInput()->label(false); ?>
     <div class="clearfix"></div>
-    <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-primary btn-block']); ?>
+    <?= Html::submitButton(Yii::t('adminlte', 'Save'), ['class' => 'btn btn-primary btn-block']); ?>
 <?php $form->end(); ?>
 <?php Pjax::end(); ?>

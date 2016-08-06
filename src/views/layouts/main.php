@@ -87,7 +87,7 @@ JS
             </h1>
             <?= Breadcrumbs::widget([
                 'homeLink' => [
-                    'label' => '<i class="fa fa-dashboard"></i> ' . Yii::t('app', 'Home'),
+                    'label' => '<i class="fa fa-dashboard"></i> ' . Yii::t('adminlte', 'Home'),
                     'url'   => '/',
                 ],
                 'encodeLabels' => false,

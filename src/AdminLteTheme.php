@@ -20,7 +20,7 @@ class AdminLteTheme extends \hiqdev\thememanager\Theme
     public $label = 'AdminLte';
 
     public $assets = [
-        'hiqdev\assets\adminlte\AdminLteAsset',
-        'hiqdev\themes\adminlte\assets\AdminLteAsset',
+        \hiqdev\assets\adminlte\AdminLteAsset::class,
+        \hiqdev\themes\adminlte\assets\AdminLteAsset::class,
     ];
 }
