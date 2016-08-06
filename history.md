@@ -4,6 +4,9 @@ hiqdev/yii2-theme-adminlte
 ## [Under development]
 
 - Fixed translations
+    - [076af08] 2016-08-06 redoing translations [sol@hiqdev.com]
+    - [2bbfb44] 2016-08-06 redone with LanguageMenu widget [sol@hiqdev.com]
+    - [15ef08e] 2016-08-05 removed old junk Plugin.php [sol@hiqdev.com]
     - [8a31654] 2016-08-04 switched to bumping with `chkipper` [sol@hiqdev.com]
     - [e4f8eb3] 2016-06-24 Updated navbar-custom-menu to use `hipanel` dictionary [d.naumenko.a@gmail.com]
     - [b500e8f] 2016-06-30 Added language switching using langiageSwitcher component [d.naumenko.a@gmail.com]
@@ -209,3 +212,6 @@ hiqdev/yii2-theme-adminlte
 [e4f8eb3]: https://github.com/hiqdev/yii2-theme-adminlte/commit/e4f8eb3
 [80cbd75]: https://github.com/hiqdev/yii2-theme-adminlte/commit/80cbd75
 [8a31654]: https://github.com/hiqdev/yii2-theme-adminlte/commit/8a31654
+[076af08]: https://github.com/hiqdev/yii2-theme-adminlte/commit/076af08
+[2bbfb44]: https://github.com/hiqdev/yii2-theme-adminlte/commit/2bbfb44
+[15ef08e]: https://github.com/hiqdev/yii2-theme-adminlte/commit/15ef08e
