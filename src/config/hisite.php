@@ -20,7 +20,7 @@ return [
             'translations' => [
                 'adminlte' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
-                    'basePath' => '@hipanel/themes/adminlte/messages',
+                    'basePath' => '@hiqdev/themes/adminlte/messages',
                     'fileMap' => [
                         'adminlte' => 'adminlte.php',
                     ],
