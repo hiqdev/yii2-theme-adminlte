@@ -92,7 +92,7 @@ JS
                 ],
                 'encodeLabels' => false,
                 'tag'          => 'ol',
-                'links'        => isset($this->breadcrumbs) ? $this->breadcrumbs->getItemsArray() : null,
+                'links'        => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : null,
             ]) ?>
         </section>
 
