@@ -3,9 +3,10 @@
 /**
  * Theme main layout.
  *
- * @var frontend\components\View View
- * @var string                   Content
+ * @var yii\web\View View
+ * @var string Content
  */
+
 use hipanel\widgets\Alert;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
@@ -25,14 +26,14 @@ $(document).on('click', 'a[data-toggle="control-sidebar"]', function(event) {
 JS
 );
 ?>
-<?php $this->beginPage(); ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
 <body class="sidebar-mini <?= Yii::$app->themeManager->getSettings()->getBodyClasses() ?>">
-<?php $this->beginBody(); ?>
+<?php $this->beginBody() ?>
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- The Right Sidebar -->
@@ -62,7 +63,7 @@ JS
                 <span class="icon-bar"></span>
             </a>
             <div class="navbar-custom-menu">
-                <?= $this->render('navbar-custom-menu'); ?>
+                <?= $this->render('navbar-custom-menu') ?>
             </div>
         </nav>
     </header>
@@ -71,7 +72,7 @@ JS
 
     <!-- Left side column. contains the sidebar -->
 
-    <?= $this->render('sidebar'); ?>
+    <?= $this->render('sidebar') ?>
 
     <!-- =============================================== -->
 
@@ -83,7 +84,7 @@ JS
                 <?= $this->title ?>
                 <?php if (isset($this->subtitle)) : ?>
                     <small><?= $this->subtitle ?></small>
-                <?php endif; ?>
+                <?php endif ?>
             </h1>
             <?= Breadcrumbs::widget([
                 'homeLink' => [
@@ -98,7 +99,7 @@ JS
 
         <!-- Main content -->
         <section class="content container-fluid"><div class="row"><div class="col-md-12">
-            <?= Alert::widget(); ?>
+            <?= Alert::widget() ?>
             <?= $content ?>
         </div></div></section>
     </div><!-- /.content-wrapper -->
@@ -112,10 +113,10 @@ JS
                 <?php endif ?>
             <?php endif ?>
         </div>
-        <strong>Copyright &copy; <?= $this->render('//layouts/copyrightYears') ?> <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']); ?>.</strong> All rights reserved.
+        <strong>Copyright &copy; <?= $this->render('//layouts/copyrightYears') ?> <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']) ?>.</strong> All rights reserved.
     </footer>
 </div><!-- ./wrapper -->
-<?php $this->endBody(); ?>
+<?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage(); ?>
+<?php $this->endPage() ?>

@@ -1,13 +1,13 @@
 <?php
 
-/**
- * Theme main layout.
- *
- * @var frontend\components\View View
- * @var string $content Content
- */
 use hiqdev\pnotify\Alert;
 use yii\helpers\Html;
+use yii\web\View;
+
+/**
+ * @var yii\web\View View
+ * @var string $content Content
+ */
 
 $this->registerJs(<<<'JS'
 $(function () {
@@ -18,9 +18,10 @@ $(function () {
         });
     });
 JS
-, \yii\web\View::POS_READY);
+, View::POS_READY);
+
 ?>
-<?php $this->beginPage(); ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,12 +30,12 @@ JS
 <!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
 
 <?php if (isset($this->blocks['bodyClass'])) : ?>
-    <?= '<body class="' . $this->blocks['bodyClass'] . '">'; ?>
+    <?= '<body class="' . $this->blocks['bodyClass'] . '">' ?>
 <?php else : ?>
 <body>
 <?php endif ?>
 
-<?php $this->beginBody(); ?>
+<?php $this->beginBody() ?>
 <body class="login-page">
 
 <?= Alert::widget() ?>
@@ -44,7 +45,7 @@ JS
         <b><?= Html::a(Yii::$app->params['orgName'], ['/']) ?></b>
     </div>
     <!-- /.login-logo -->
-    <?= $content; ?>
+    <?= $content ?>
 </div>
 <!-- /.login-box -->
 
@@ -59,7 +60,7 @@ JS
     </div>
 </div>
 
-<?php $this->endBody(); ?>
+<?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage(); ?>
+<?php $this->endPage() ?>
