@@ -7,8 +7,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 ?>
-<title><?= Html::encode($this->title); ?></title>
-<?= Html::csrfMetaTags(); ?>
+<title><?= Html::encode($this->title) ?></title>
+<?= Html::csrfMetaTags() ?>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,8 +18,9 @@ use yii\helpers\Url;
 <![endif]-->
 
 <?php
+
 $this->head();
-$this->manager->registerAssets();
+Yii::$app->themeManager->registerAssets();
 
 $this->registerMetaTag(
     [

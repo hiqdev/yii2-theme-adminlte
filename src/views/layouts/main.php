@@ -31,7 +31,7 @@ JS
 <head>
     <?= $this->render('//layouts/head') ?>
 </head>
-<body class="sidebar-mini <?= $this->bodyClasses ?>">
+<body class="sidebar-mini <?= Yii::$app->themeManager->getSettings()->getBodyClasses() ?>">
 <?php $this->beginBody(); ?>
 <!-- Site wrapper -->
 <div class="wrapper">
