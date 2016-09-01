@@ -7,5 +7,7 @@
             <?php endif ?>
         <?php endif ?>
     </div>
-    <strong>&copy; <?= $this->render('//layouts/copyrightYears') ?> <?= Html::a(Yii::$app->params['orgName'], Yii::$app->params['orgUrl']) ?>.</strong> All rights reserved.
+    <strong>
+        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
+    </strong> All rights reserved.
 </footer>
