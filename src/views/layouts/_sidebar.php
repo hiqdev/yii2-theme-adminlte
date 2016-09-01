@@ -1,7 +1,6 @@
 <?php
 
 use hipanel\modules\client\models\Client;
-use hipanel\widgets\Menu;
 use yii\helpers\Url;
 
 $client = Client::findOne(Yii::$app->user->identity->id);
@@ -16,8 +15,8 @@ if ($client->balance > 0) {
 
 ?>
 
+<!-- Left side column. contains the sidebar -->
 <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
@@ -36,7 +35,7 @@ if ($client->balance > 0) {
                 <?php endif ?>
             </div>
         </div>
-        <!-- search form -->
+
         <?php if (Yii::getAlias('@domainchecker', false)) : ?>
             <?php $searchUrl = Yii::getAlias('@domainchecker', false) ? Url::to('@domainchecker/check-domain') : '/' ?>
             <form action="<?= $searchUrl ?>" method="get" class="sidebar-form">
@@ -50,15 +49,9 @@ if ($client->balance > 0) {
                 </div>
             </form>
         <?php endif ?>
-        <!-- /.search form -->
 
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <?= Menu::widget([
-            'options' => [
-                'class' => 'sidebar-menu',
-            ],
-            'items' => Yii::$app->menuManager->sidebar->getItems(),
+        <?= Yii::$app->menuManager->render('sidebar', [
+            'options' => ['class' => 'sidebar-menu'],
         ]) ?>
     </section>
-    <!-- /.sidebar -->
 </aside>
