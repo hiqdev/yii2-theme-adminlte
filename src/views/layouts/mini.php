@@ -1,6 +1,5 @@
 <?php
 
-use hiqdev\pnotify\Alert;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -24,43 +23,30 @@ JS
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->render('//layouts/head') ?>
-</head>
-<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
+    <head>
+        <?= $this->render('//layouts/_head') ?>
+    </head>
 
-<?php if (isset($this->blocks['bodyClass'])) : ?>
-    <?= '<body class="' . $this->blocks['bodyClass'] . '">' ?>
-<?php else : ?>
-<body>
-<?php endif ?>
-
-<?php $this->beginBody() ?>
-<body class="login-page">
-
-<?= Alert::widget() ?>
-
-<div class="login-box">
-    <div class="login-logo">
-        <b><?= Html::a(Yii::$app->params['orgName'], ['/']) ?></b>
-    </div>
-    <!-- /.login-logo -->
-    <?= $content ?>
-</div>
-<!-- /.login-box -->
-
-<div style="position:fixed;bottom:0;width:100%">
-    <div class="text-center small">
-        <?php if (Yii::$app->params['poweredByName']) : ?>
-            Powered by <a href="<?= Yii::$app->params['poweredByUrl'] ?>"><?= Yii::$app->params['poweredByName'] ?></a>
-            <?php if (Yii::$app->params['poweredByVersion']) : ?>
-                version <?= Yii::$app->params['poweredByVersion'] ?>
-            <?php endif ?>
+    <body class="login-page">
+    <?php $this->beginBody() ?>
+        <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
+            <?= Yii::$app->themeManager->widget('Flashes') ?>
         <?php endif ?>
-    </div>
-</div>
 
-<?php $this->endBody() ?>
-</body>
+        <div class="login-box">
+            <div class="login-logo">
+                <b><?= Html::a(Yii::$app->params['organizationName'], ['/']) ?></b>
+            </div>
+            <?= $content ?>
+        </div>
+
+        <div style="position:fixed;bottom:0;width:100%">
+            <div class="text-center small">
+                <?= Yii::$app->themeManager->widget('PoweredBy') ?>
+            </div>
+        </div>
+
+    <?php $this->endBody() ?>
+    </body>
 </html>
 <?php $this->endPage() ?>
