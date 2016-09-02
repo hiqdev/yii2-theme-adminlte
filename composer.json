@@ -45,8 +45,7 @@
     ],
     "require": {
         "cebe/yii2-gravatar": "*",
-        "hiqdev/yii2-asset-adminlte": "*",
-        "hiqdev/yii2-asset-pictonic": "*"
+        "hiqdev/yii2-asset-adminlte": "*"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0",
