@@ -22,7 +22,10 @@
 
     <!-- Main content -->
     <section class="content container-fluid"><div class="row"><div class="col-md-12">
-        <?= Yii::$app->themeManager->widget('Flashes') ?>
+        <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
+            <?= Yii::$app->themeManager->widget('Flashes') ?>
+        <?php endif ?>
+
         <?= $content ?>
     </div></div></section>
 </div>
