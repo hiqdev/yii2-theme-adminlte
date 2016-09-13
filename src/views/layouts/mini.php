@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\web\View;
 
 /**
- * @var yii\web\View View
+ * @var yii\web\View $this View
  * @var string $content Content
  */
 
@@ -27,7 +27,7 @@ JS
         <?= $this->render('//layouts/_head') ?>
     </head>
 
-    <body class="login-page">
+    <body class="<?= empty($this->blocks['bodyClass']) ? 'login-page' : $this->blocks['bodyClass'] ?>">
     <?php $this->beginBody() ?>
         <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
             <?= Yii::$app->themeManager->widget('Flashes') ?>
@@ -42,6 +42,8 @@ JS
 
         <div style="position:fixed;bottom:0;width:100%">
             <div class="text-center small">
+                <strong>&copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?></strong>. All rights reserved.
+                <br>
                 <?= Yii::$app->themeManager->widget('PoweredBy') ?>
             </div>
         </div>
