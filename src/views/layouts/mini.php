@@ -42,7 +42,7 @@ JS
 
         <div style="position:fixed;bottom:0;width:100%">
             <div class="text-center small">
-                <strong>&copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?></strong>. All rights reserved.
+                &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.
                 <br>
                 <?= Yii::$app->themeManager->widget('PoweredBy') ?>
             </div>
