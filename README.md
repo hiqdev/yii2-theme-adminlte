@@ -1,4 +1,4 @@
-Yii2 AdmniLte Theme
+Yii2 AdminLte Theme
 ===================
 
 **AdminLte Theme for hiqdev/yii2-thememanager**
