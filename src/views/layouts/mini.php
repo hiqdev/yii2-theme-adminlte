@@ -40,7 +40,7 @@ JS
             <?= $content ?>
         </div>
 
-        <div style="position:fixed;bottom:0;width:100%">
+        <div class="footer-copyright">
             <div class="text-center small">
                 &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.
                 <br>
