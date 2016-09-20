@@ -1,6 +1,5 @@
 <?php
 
-use hiqdev\assets\pictonic\PictonicAsset;
 use yii\authclient\widgets\AuthChoice;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -9,7 +8,6 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 /* @var $model \frontend\models\ResetPasswordForm */
 
-PictonicAsset::register($this);
 $this->registerCss(<<<'CSS'
     .social-button-login > a:nth-child(n+3){
         display:none;
@@ -19,31 +17,6 @@ $this->registerCss(<<<'CSS'
     }
 CSS
 );
-
-// Social Pictonic associative
-$buttonOptions = [
-    'facebook' => [
-        'icon' => 'icon-facebook',
-    ],
-    'google' => [
-        'icon' => 'icon-google',
-    ],
-    'github' => [
-        'icon' => 'icon-github-01',
-    ],
-    'linkedin' => [
-        'icon' => 'icon-linkedin',
-    ],
-    'vk' => [
-        'icon' => 'icon-rus-vk-02',
-    ],
-    'yandex' => [
-        'icon' => 'icon-rus-yandex-01',
-    ],
-    'windows' => [
-        'icon' => 'fa fa-windows',
-    ],
-];
 
 $this->blocks['bodyClass'] = 'login-page';
 $this->title = Yii::t('adminlte', 'Sign in');
@@ -79,10 +52,10 @@ CSS
                 <div class="checkbox icheck">
                     <?= $form->field($model, 'rememberMe')->checkbox([])->label(false) ?>
                 </div>
-            </div><!-- /.col -->
+            </div>
             <div class="col-xs-4">
                 <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('adminlte', 'Sign in') ?></button>
-            </div><!-- /.col -->
+            </div>
         </div>
     <?php $form->end() ?>
 
@@ -91,19 +64,21 @@ CSS
         'options' => ['class' => 'social-auth-links text-center'],
     ]) ?>
         <p>-- <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> --</p>
-    <div class="social-button-login">
-        <div class="row">
-        <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
-            <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
-            <?php $text = sprintf("<i class='%s'></i>&nbsp;%s", $buttonOptions[$name]['icon'], $client->getTitle()); ?>
-            <?php $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$name"]) ?>
+        <div class="social-button-login">
+            <div class="row">
+            <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
+                <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
+                    <?php $letter = $name==='yandex' ? 'Я' : '' ?>
+                    <?php $class = $name==='live' ? 'windows' : $name ?>
+                    <?php $text = sprintf('<i class="%s">%s</i>&nbsp;%s', "fa fa-$class", $letter, $client->getTitle()) ?>
+                    <?= $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$class"]) ?>
+                </div>
+            <?php endforeach ?>
             </div>
-        <?php endforeach ?>
         </div>
-    </div>
     <?php AuthChoice::end() ?>
 
     <?= Html::a(Yii::t('adminlte', 'I forgot my password'),      Yii::$app->params['passwordResetPage'] ?: ['request-password-reset', 'username' => $model->username]) ?><br>
     <?= Html::a(Yii::t('adminlte', 'Register a new membership'), Yii::$app->params['signupPage'] ?: ['signup']) ?>
 
-</div><!-- /.login-box-body -->
+</div>

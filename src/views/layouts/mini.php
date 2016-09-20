@@ -1,13 +1,12 @@
 <?php
 
+use yii\helpers\Html;
+use yii\web\View;
+
 /**
- * Theme main layout.
- *
- * @var frontend\components\View View
+ * @var yii\web\View $this View
  * @var string $content Content
  */
-use hiqdev\pnotify\Alert;
-use yii\helpers\Html;
 
 $this->registerJs(<<<'JS'
 $(function () {
@@ -18,48 +17,38 @@ $(function () {
         });
     });
 JS
-, \yii\web\View::POS_READY);
+, View::POS_READY);
+
 ?>
-<?php $this->beginPage(); ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->render('//layouts/head') ?>
-</head>
-<!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
+    <head>
+        <?= $this->render('//layouts/_head') ?>
+    </head>
 
-<?php if (isset($this->blocks['bodyClass'])) : ?>
-    <?= '<body class="' . $this->blocks['bodyClass'] . '">'; ?>
-<?php else : ?>
-<body>
-<?php endif ?>
-
-<?php $this->beginBody(); ?>
-<body class="login-page">
-
-<?= Alert::widget() ?>
-
-<div class="login-box">
-    <div class="login-logo">
-        <b><?= Html::a(Yii::$app->params['orgName'], ['/']) ?></b>
-    </div>
-    <!-- /.login-logo -->
-    <?= $content; ?>
-</div>
-<!-- /.login-box -->
-
-<div style="position:fixed;bottom:0;width:100%">
-    <div class="text-center small">
-        <?php if (Yii::$app->params['poweredByName']) : ?>
-            Powered by <a href="<?= Yii::$app->params['poweredByUrl'] ?>"><?= Yii::$app->params['poweredByName'] ?></a>
-            <?php if (Yii::$app->params['poweredByVersion']) : ?>
-                version <?= Yii::$app->params['poweredByVersion'] ?>
-            <?php endif ?>
+    <body class="<?= empty($this->blocks['bodyClass']) ? 'login-page' : $this->blocks['bodyClass'] ?>">
+    <?php $this->beginBody() ?>
+        <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
+            <?= Yii::$app->themeManager->widget('Flashes') ?>
         <?php endif ?>
-    </div>
-</div>
 
-<?php $this->endBody(); ?>
-</body>
+        <div class="login-box">
+            <div class="login-logo">
+                <b><?= Html::a(Yii::$app->params['organizationName'], ['/']) ?></b>
+            </div>
+            <?= $content ?>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="text-center small">
+                &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.
+                <br>
+                <?= Yii::$app->themeManager->widget('PoweredBy') ?>
+            </div>
+        </div>
+
+    <?php $this->endBody() ?>
+    </body>
 </html>
-<?php $this->endPage(); ?>
+<?php $this->endPage() ?>

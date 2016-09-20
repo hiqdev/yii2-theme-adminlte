@@ -29,13 +29,6 @@ $this->title = 'Lockscreen';
     </form><!-- /.lockscreen credentials -->
 
 </div><!-- /.lockscreen-item -->
-<!-- div class="help-block text-center">
-    Enter your password to retrieve your session
-</div -->
 <div class='text-center'>
     <b><?= Html::a('Or logout and sign in as a different user', ['/site/logout']) ?></b>
-</div>
-<div class='lockscreen-footer text-center'>
-    Copyright &copy; <?= $this->render('//layouts/copyrightYears') ?> <u><a href="<?= Yii::$app->params['orgUrl'] ?>" class='text-black'><?= Yii::$app->params['orgName'] ?></a></u><br>
-    All rights reserved
 </div>
