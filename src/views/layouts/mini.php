@@ -35,7 +35,7 @@ JS
 
         <div class="login-box">
             <div class="login-logo">
-                <b><?= Html::a(Yii::$app->params['organizationName'], ['/']) ?></b>
+                <b><?= Yii::$app->themeManager->widget('LogoLink') ?></b>
             </div>
             <?= $content ?>
         </div>
