@@ -9,7 +9,7 @@ $this->title = 'Lockscreen';
 ?>
 
 <!-- User name -->
-<div class="lockscreen-name"><?= Yii::$app->user->identity->login ?></div>
+<div class="lockscreen-name"><?= Yii::$app->user->identity->username ?></div>
 
 <!-- START LOCK SCREEN ITEM -->
 <div class="lockscreen-item">
