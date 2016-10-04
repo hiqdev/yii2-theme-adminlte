@@ -39,17 +39,17 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="row">
             <div class="col-xs-8">
-                <div class="checkbox icheck">
-                    <label>
-                        <input type="checkbox"> <?= Yii::t('adminlte', 'I agree to the') . ' ' . Html::a(Yii::t('adminlte', 'terms'), ['terms']) ?></a>
-                    </label>
+                <div class="icheck">
+                    <?= $form->field($model, 'agree')->checkbox()->label(
+                        Yii::t('adminlte', 'I agree to the') . ' ' . Html::a(Yii::t('adminlte', 'terms'), '/site/terms')
+                    ) ?>
                 </div>
-            </div><!-- /.col -->
+            </div>
             <div class="col-xs-4">
                 <button type="submit" class="btn btn-primary btn-block btn-flat"><?= Yii::t('adminlte', 'Signup') ?></button>
-            </div><!-- /.col -->
+            </div>
         </div>
     <?php ActiveForm::end(); ?>
 
     <?= Html::a(Yii::t('adminlte', 'I already have a membership'), ['confirm']) ?>
-</div><!-- /.register-box-body -->
+</div>
