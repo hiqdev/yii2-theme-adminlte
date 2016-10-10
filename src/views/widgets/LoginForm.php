@@ -4,9 +4,9 @@ use yii\authclient\widgets\AuthChoice;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $form yii\widgets\ActiveForm */
-/* @var $model \frontend\models\ResetPasswordForm */
+/** @var yii\web\View $this */
+/** @var yii\widgets\ActiveForm $form */
+/** @var LoginForm $model */
 
 $this->registerCss(<<<'CSS'
     .social-button-login > a:nth-child(n+3){
@@ -78,7 +78,13 @@ CSS
         </div>
     <?php AuthChoice::end() ?>
 
-    <?= Html::a(Yii::t('adminlte', 'I forgot my password'),      Yii::$app->params['passwordResetPage'] ?: ['request-password-reset', 'username' => $model->username]) ?><br>
-    <?= Html::a(Yii::t('adminlte', 'Register a new membership'), Yii::$app->params['signupPage'] ?: ['signup']) ?>
+    <? if ($restorePasswordPage) : ?>
+        <?= Html::a(Yii::t('adminlte', 'I forgot my password'), $restorePasswordPage) ?>
+        <br/>
+    <? endif ?>
+
+    <? if ($signupPage) : ?>
+        <?= Html::a(Yii::t('adminlte', 'Register a new membership'), $signupPage) ?>
+    <? endif ?>
 
 </div>
