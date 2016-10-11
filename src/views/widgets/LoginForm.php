@@ -78,13 +78,13 @@ CSS
         </div>
     <?php AuthChoice::end() ?>
 
-    <? if ($restorePasswordPage) : ?>
+    <?php if ($restorePasswordPage) : ?>
         <?= Html::a(Yii::t('adminlte', 'I forgot my password'), $restorePasswordPage) ?>
         <br/>
-    <? endif ?>
+    <?php endif ?>
 
-    <? if ($signupPage) : ?>
+    <?php if ($signupPage) : ?>
         <?= Html::a(Yii::t('adminlte', 'Register a new membership'), $signupPage) ?>
-    <? endif ?>
+    <?php endif ?>
 
 </div>
