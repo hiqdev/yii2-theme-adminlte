@@ -36,7 +36,7 @@ CSS
         <?php if ($model->isAttributeActive('username')) : ?>
             <div class="form-group has-feedback">
                 <?= $form->field($model, 'username')->textInput([
-                    'placeholder' => Yii::t('adminlte', 'Login or Email'),
+                    'placeholder' => $model->getAttributeLabel('username'),
                     'class' => 'form-control',
                     'autofocus' => empty($model->username) ? 'autofocus' : false,
                 ])->label(false) ?>
@@ -46,7 +46,7 @@ CSS
         <?php if ($model->isAttributeActive('email')) : ?>
             <div class="form-group has-feedback">
                 <?= $form->field($model, 'email')->textInput([
-                    'placeholder' => 'Email',
+                    'placeholder' => $model->getAttributeLabel('email'),
                     'class' => 'form-control',
                     'autofocus' => empty($model->email) ? 'autofocus' : false,
                 ])->label(false) ?>
@@ -56,7 +56,7 @@ CSS
         <?php if ($model->isAttributeActive('password')) : ?>
             <div class="form-group has-feedback">
                 <?= $form->field($model, 'password')->passwordInput([
-                    'placeholder' => Yii::t('adminlte', 'Password'),
+                    'placeholder' => $model->getAttributeLabel('password'),
                     'class' => 'form-control',
                     'autofocus' => (empty($model->password) && !empty($model->username)) ? 'autofocus' : false,
                 ])->label(false) ?>
@@ -66,23 +66,22 @@ CSS
         <?php if ($model->isAttributeActive('password_retype')) : ?>
             <div class="form-group has-feedback">
                 <?= $form->field($model, 'password_retype')->passwordInput([
-                    'placeholder' => Yii::t('adminlte', 'Retype password'),
+                    'placeholder' => $model->getAttributeLabel('password_retype'),
                     'class' => 'form-control'
                 ])->label(false) ?>
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
         <?php endif ?>
         <div class="row">
-            <?php $submitSize = 12 ?>
-            <?php if ($model->isAttributeActive('rememberMe')) : ?>
+            <?php if ($model->isAttributeActive('remember_me')) : ?>
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
-                        <?= $form->field($model, 'rememberMe')->checkbox([])->label(false) ?>
+                        <?= $form->field($model, 'remember_me')->checkbox([])->label(false) ?>
                     </div>
                 </div>
                 <?php $submitSize = 4 ?>
             <?php endif ?>
-            <div class="col-xs-<?= $submitSize ?>">
+            <div class="col-xs-<?= $submitSize ?: 12 ?>">
                 <button type="submit" class="btn btn-primary btn-block btn-flat"><?= $this->title ?></button>
             </div>
         </div>
