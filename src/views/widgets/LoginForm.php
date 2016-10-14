@@ -29,60 +29,34 @@ CSS
 ?>
 
 <div class="login-box-body">
-    <h1><?= Html::encode($this->title) ?></h1>
-    <p class="login-box-msg"><?= $widget->message ?></p>
+    <h1><?= Html::encode($widget->getText('header')) ?></h1>
+    <p class="login-box-msg"><?= $widget->getText('message') ?></p>
 
-    <?php $form = ActiveForm::begin(['id' => 'login-form']) ?>
-        <?php if ($model->isAttributeActive('username')) : ?>
+    <?php $form = ActiveForm::begin($widget->options) ?>
+        <?php foreach ($widget->getTextAttributes() as $attribute) : ?>
             <div class="form-group has-feedback">
-                <?= $form->field($model, 'username')->textInput([
-                    'placeholder' => $model->getAttributeLabel('username'),
+                <?= $form->field($model, $attribute)->textInput([
+                    'placeholder' => $model->getAttributeLabel($attribute),
                     'class' => 'form-control',
-                    'autofocus' => empty($model->username) ? 'autofocus' : false,
+                    'autofocus' => empty($model->{$attribute}) ? 'autofocus' : false,
                 ])->label(false) ?>
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <span class="fa fa-<?= $widget->detectIcon($attribute) ?> form-control-feedback"></span>
             </div>
-        <?php endif ?>
-        <?php if ($model->isAttributeActive('email')) : ?>
-            <div class="form-group has-feedback">
-                <?= $form->field($model, 'email')->textInput([
-                    'placeholder' => $model->getAttributeLabel('email'),
-                    'class' => 'form-control',
-                    'autofocus' => empty($model->email) ? 'autofocus' : false,
-                ])->label(false) ?>
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-        <?php endif ?>
-        <?php if ($model->isAttributeActive('password')) : ?>
-            <div class="form-group has-feedback">
-                <?= $form->field($model, 'password')->passwordInput([
-                    'placeholder' => $model->getAttributeLabel('password'),
-                    'class' => 'form-control',
-                    'autofocus' => (empty($model->password) && !empty($model->username)) ? 'autofocus' : false,
-                ])->label(false) ?>
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-        <?php endif ?>
-        <?php if ($model->isAttributeActive('password_retype')) : ?>
-            <div class="form-group has-feedback">
-                <?= $form->field($model, 'password_retype')->passwordInput([
-                    'placeholder' => $model->getAttributeLabel('password_retype'),
-                    'class' => 'form-control'
-                ])->label(false) ?>
-                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-            </div>
-        <?php endif ?>
+        <?php endforeach ?>
+
         <div class="row">
-            <?php if ($model->isAttributeActive('remember_me')) : ?>
+            <?php if ($attribute = $widget->getBoolAttribute()) : ?>
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
-                        <?= $form->field($model, 'remember_me')->checkbox([])->label(false) ?>
+                        <?= $form->field($model, $attribute)->checkbox([
+                            'label' => $model->getAttributeLabel($attribute),
+                        ]) ?>
                     </div>
                 </div>
                 <?php $submitSize = 4 ?>
             <?php endif ?>
             <div class="col-xs-<?= $submitSize ?: 12 ?>">
-                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= $this->title ?></button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= $widget->getText('button') ?></button>
             </div>
         </div>
     <?php $form->end() ?>
@@ -110,8 +84,8 @@ CSS
 
     <?php foreach (['restore-password', 'signup', 'login'] as $action) : ?>
         <?php if ($widget->isShown($action)) : ?>
-            <?= Html::a($widget->getText($action), $widget->getPage($action)) ?>
             <br/>
+            <?= Html::a($widget->getText($action), $widget->getPage($action)) ?>
         <?php endif ?>
     <?php endforeach ?>
 
