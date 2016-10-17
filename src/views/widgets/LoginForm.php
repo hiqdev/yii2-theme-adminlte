@@ -35,12 +35,12 @@ CSS
     <?php $form = ActiveForm::begin($widget->options) ?>
         <?php foreach ($widget->getTextAttributes() as $attribute) : ?>
             <div class="form-group has-feedback">
-                <?= $form->field($model, $attribute)->textInput([
+                <?= $form->field($model, $attribute)->input($widget->detectInputType($attribute), [
                     'placeholder' => $model->getAttributeLabel($attribute),
                     'class' => 'form-control',
                     'autofocus' => empty($model->{$attribute}) ? 'autofocus' : false,
                 ])->label(false) ?>
-                <span class="fa fa-<?= $widget->detectIcon($attribute) ?> form-control-feedback"></span>
+                <span class="fa fa-<?= $widget->detectInputIcon($attribute) ?> form-control-feedback"></span>
             </div>
         <?php endforeach ?>
 
@@ -66,7 +66,7 @@ CSS
             'baseAuthUrl' => ['auth'],
             'options' => ['class' => 'social-auth-links text-center'],
         ]) ?>
-            <p>-- <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> --</p>
+            <h4>--- &nbsp; <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> &nbsp; ---</h4>
             <div class="social-button-login">
                 <div class="row">
                 <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
