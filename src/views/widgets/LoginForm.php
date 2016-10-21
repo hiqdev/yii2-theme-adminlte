@@ -26,11 +26,20 @@ $this->registerCss(<<<'CSS'
     }
 CSS
 );
+
 ?>
 
 <div class="login-box-body">
-    <h1><?= Html::encode($widget->getText('header')) ?></h1>
-    <p class="login-box-msg"><?= $widget->getText('message') ?></p>
+    <?php if ($widget->getText('header')) : ?>
+        <h1><?= Html::encode($widget->getText('header')) ?></h1>
+    <?php endif ?>
+
+    <?php $message = $widget->getText('message') ?>
+    <?php if (strpos($message, '<') === FALSE) : ?>
+        <p class="login-box-msg"><?= $message ?></p>
+    <?php else: ?>
+        <?= $message ?>
+    <?php endif ?>
 
     <?php $form = ActiveForm::begin($widget->options) ?>
         <?php foreach ($widget->getTextAttributes() as $attribute) : ?>
