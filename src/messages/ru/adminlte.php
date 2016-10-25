@@ -17,68 +17,51 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    /// XXX TO BE MOVED to appropriate places
     'Balance: {balance}' => 'Баланс: {balance}',
+    'Black' => 'Черная',
+    'Blue' => 'Синяя',
+    'Boxed layout' => 'Компактная',
     'Check domain' => 'Проверить домен',
-    'Create ticket' => 'Создать тикет',
-    'Credit: {credit}' => 'Кредит: {credit}',
-    'Recharge account' => 'Пополнить счёт',
-
-    /// Home
-    'Home' => 'Главная',
-    'Profile' => 'Профиль',
-
-    /// Действия
-    'Save' => 'Сохранить',
-    'Send' => 'Отправить',
+    'Collapsed Sidebar' => 'Свернутая боковая панель',
     'Confirm' => 'Подтвердить',
     'Confirm connect social' => 'Подтвердить подключение',
-
-    /// Логин
+    'Create ticket' => 'Создать тикет',
+    'Credit: {credit}' => 'Кредит: {credit}',
+    'Default layout' => 'Стандартная',
+    'Ebony' => 'Эбонитовая',
+    'Email' => 'Email',
+    'Fixed layout' => 'Фиксированная',
+    'Green' => 'Зеленая',
+    'Home' => 'Главная',
+    'I agree to the' => 'Я согласен с',
+    'I already have a membership' => 'Я уже зарегистрирован',
+    'I forgot my password' => 'Я забыл мой пароль',
+    'Layout' => 'Вёрстка',
+    'Layout Settings' => 'Настройки макета',
+    'Login or Email' => 'Логин или Email',
+    'OR SIGN IN WITH' => 'ИЛИ ВОЙДИТЕ С ПОМОЩЬЮ',
+    'Password' => 'Пароль',
+    'Please choose your new password' => 'Пожалуйста, выберите новый пароль',
+    'Please contact us if you think this is a server error. Thank you.' => 'Пожалуйста, свяжитесь с нами, если вы считаете что это ошибка сервера. Спасибо.',
+    'Please fill out the following fields to signup' => 'Пожалуйста, заполните поля для регистрации',
+    'Profile' => 'Профиль',
+    'Purple' => 'Фиолетовая',
+    'Recharge account' => 'Пополнить счёт',
+    'Red' => 'Красная',
+    'Register a new membership' => 'Зарегистрироваться',
+    'Request password reset' => 'Запросить сброс пароля',
+    'Reset password' => 'Сбросить пароль',
+    'Save' => 'Сохранить',
+    'Send' => 'Отправить',
+    'Sidebar' => 'Боковая панель',
     'Sign in' => 'Войти',
     'Sign in to start your session' => 'Войдите чтобы начать работу',
     'Sign out' => 'Выйти',
     'Signup' => 'Зарегистрироваться',
-    'Email' => 'Email',
-    'Login or Email' => 'Логин или Email',
-    'OR SIGN IN WITH' => 'ИЛИ ВОЙДИТЕ С ПОМОЩЬЮ',
-
-    /// Пароль
-    'Password' => 'Пароль',
-    'Please choose your new password' => 'Пожалуйста, выберите новый пароль',
-    'I forgot my password' => 'Я забыл мой пароль',
-    'Request password reset' => 'Запросить сброс пароля',
-    'Reset password' => 'Сбросить пароль',
-
-    /// Регистрация
-    'Register a new membership' => 'Зарегистрироваться',
-    'I agree to the' => 'Я согласен с',
-    'terms' => 'условиями',
-    'I already have a membership' => 'Я уже зарегистрирован',
-    'Please fill out the following fields to signup' => 'Пожалуйста, заполните поля для регистрации',
-
-    /// Настройки
-    'Skins'             => 'Темы оформления',
-    'Black'             => 'Черная',
-    'Blue'              => 'Синяя',
-    'Ebony'             => 'Эбонитовая',
-    'Green'             => 'Зеленая',
-    'Purple'            => 'Фиолетовая',
-    'Red'               => 'Красная',
-    'Yellow'            => 'Желтая',
-    'Layout'            => 'Вёрстка',
-    'Layout Settings'   => 'Настройки макета',
-    'Default layout'    => 'Стандартная',
-    'Boxed layout'      => 'Компактная',
-    'Fixed layout'      => 'Фиксированная',
-    'Table Condensed'   => 'Компактная Таблица',
-    'Table height'      => 'Высота таблицы',
-    'Sidebar'           => 'Боковая панель',
-    'Collapsed Sidebar' => 'Свернутая боковая панель',
-    'Sidebar'           => 'Боковая панель',
-
-    /// Ошибки
+    'Skins' => 'Темы оформления',
+    'Table Condensed' => 'Компактная Таблица',
+    'Table height' => 'Высота таблицы',
     'The above error occurred while the Web server was processing your request.' => 'Во время обработки вашего запроса произошла ошибка.',
-    'Please contact us if you think this is a server error. Thank you.' => 'Пожалуйста, свяжитесь с нами, если вы считаете что это ошибка сервера. Спасибо.',
-
+    'Yellow' => 'Желтая',
+    'terms' => 'условиями',
 ];

@@ -2,6 +2,8 @@
 
 return [
     'languages' => ['ru'],
-    'sourcePath' => '@hiqdev/themes/adminlte',
-    'messagePath' => '@hiqdev/themes/adminlte/messages',
+    'sourcePath' => dirname(__DIR__),
+    'messagePath' => dirname(__DIR__) . '/messages',
+    'sort' => true,
+    'markUnused' => false,
 ];
