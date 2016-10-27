@@ -1,6 +1,6 @@
 <?php
 
-use yii\helpers\Html;
+use hiqdev\yii2\language\widgets\LanguageMenu;
 use yii\web\View;
 
 /**
@@ -42,6 +42,10 @@ JS
 
         <div class="footer-copyright">
             <div class="text-center small">
+                <?= Yii::$app->themeManager->widget([
+                    'class' => 'LanguageMenu',
+                    'view' => 'miniLanguageMenu',
+                ]) ?>
                 &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.
                 <br>
                 <?= Yii::$app->themeManager->widget('PoweredBy') ?>
