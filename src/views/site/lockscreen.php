@@ -4,7 +4,7 @@ use hiqdev\themes\adminlte\widgets\Gravatar;
 use yii\helpers\Html;
 
 $this->blocks['bodyClass'] = 'lockscreen';
-$this->title = 'Lockscreen';
+$this->title = Yii::t('adminlte', 'Lockscreen');
 
 ?>
 
@@ -25,10 +25,10 @@ $this->title = 'Lockscreen';
 
     <!-- lockscreen credentials (contains the form) -->
     <form class="lockscreen-credentials" action="/site/back">
-        <input type="submit" class="form-control btn" value="Return to site" />
+        <input type="submit" class="form-control btn" value="<?= Yii::t('adminlte', 'Return to the site') ?>" />
     </form><!-- /.lockscreen credentials -->
 
 </div><!-- /.lockscreen-item -->
 <div class='text-center'>
-    <b><?= Html::a('Or logout and sign in as a different user', ['/site/logout']) ?></b>
+    <b><?= Html::a(Yii::t('adminlte', 'Or log out and sign in as a different user'), ['/site/logout']) ?></b>
 </div>
