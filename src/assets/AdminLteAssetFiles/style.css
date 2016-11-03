@@ -111,6 +111,11 @@
 }
 
 /* Dshboard css */
+.small-box > .inner {
+    padding: 10px;
+    height: 9em;
+}
+
 .small-box-footer-container {
     display: flex;
     flex-direction: row;
@@ -118,6 +123,7 @@
 
 .small-box-footer-container a {
     flex-grow: 1;
+    font-size: small;
 }
 
 .small-box .small-box-footer {
