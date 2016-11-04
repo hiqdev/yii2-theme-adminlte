@@ -16,6 +16,14 @@ class AdminLteAsset extends \yii\web\AssetBundle
     public $sourcePath = '@hiqdev/themes/adminlte/assets/AdminLteAssetFiles';
 
     public $css = [
+        '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
+        'hiam.css',
         'style.css',
+    ];
+
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
     ];
 }
