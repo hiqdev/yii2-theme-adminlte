@@ -50,9 +50,7 @@ if ($client->balance > 0) {
             </form>
         <?php endif ?>
 
-        <?= Yii::$app->menuManager->render('sidebar', [
-            'class' => \hipanel\widgets\Menu::class,
-            'options' => ['class' => 'sidebar-menu'],
-        ]) ?>
+        <?= Yii::$app->menuManager->render('sidebar') ?>
+
     </section>
 </aside>
