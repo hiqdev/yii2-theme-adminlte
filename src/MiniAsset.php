@@ -2,6 +2,7 @@
 
 namespace hiqdev\themes\adminlte;
 
+use hiqdev\assets\icheck\iCheckAsset;
 use yii\web\AssetBundle;
 
 class MiniAsset extends AssetBundle
@@ -12,7 +13,12 @@ class MiniAsset extends AssetBundle
         'css/mini.css',
     ];
 
+    public $js = [
+        '//use.fontawesome.com/c66be52008.js'
+    ];
+
     public $depends = [
         MainAsset::class,
+        iCheckAsset::class,
     ];
 }
