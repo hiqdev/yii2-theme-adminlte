@@ -18,9 +18,4 @@ namespace hiqdev\themes\adminlte;
 class AdminLteTheme extends \hiqdev\thememanager\Theme
 {
     public $label = 'AdminLte';
-
-    public $assets = [
-        \hiqdev\assets\adminlte\AdminLteAsset::class,
-        \hiqdev\themes\adminlte\assets\AdminLteAsset::class,
-    ];
 }

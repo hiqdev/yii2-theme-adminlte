@@ -1,13 +1,13 @@
 <?php
 
-use hiqdev\yii2\language\widgets\LanguageMenu;
+use hiqdev\themes\adminlte\MiniAsset;
 use yii\web\View;
 
 /**
  * @var yii\web\View $this View
  * @var string $content Content
  */
-
+MiniAsset::register($this);
 $this->registerJs(<<<'JS'
 $(function () {
     $('input').iCheck({

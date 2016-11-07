@@ -9,21 +9,22 @@
  * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
  */
 
-namespace hiqdev\themes\adminlte\assets;
+namespace hiqdev\themes\adminlte;
 
-class AdminLteAsset extends \yii\web\AssetBundle
+use hiqdev\assets\adminlte\AdminLteAsset;
+
+class MainAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@hiqdev/themes/adminlte/assets/AdminLteAssetFiles';
+    public $sourcePath = '@hiqdev/themes/adminlte/assets';
 
     public $css = [
-        '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
-        'hiam.css',
-        'style.css',
+        'css/main.css',
     ];
 
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+        AdminLteAsset::class,
     ];
 }

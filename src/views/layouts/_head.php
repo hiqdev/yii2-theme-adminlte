@@ -3,10 +3,13 @@
 /**
  * Head layout.
  */
+
+use hiqdev\themes\adminlte\MainAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
 Yii::$app->themeManager->registerAssets();
+MainAsset::register($this);
 
 // Collapse Side bar
 $this->registerJs(<<<'JS'
