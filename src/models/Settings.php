@@ -89,31 +89,31 @@ class Settings extends \hiqdev\thememanager\models\Settings
             [
                 'attribute' => 'skin-red',
                 'label'     => Yii::t('adminlte', 'Red'),
-                'color'     => '#367fa9',
+                'color'     => '#dd4b39',
                 'bg'        => 'bg-red',
             ],
             [
                 'attribute' => 'skin-green',
                 'label'     => Yii::t('adminlte', 'Green'),
-                'color'     => '#367fa9',
+                'color'     => '#00a65a',
                 'bg'        => 'bg-green',
             ],
             [
                 'attribute' => 'skin-blue',
                 'label'     => Yii::t('adminlte', 'Blue'),
-                'color'     => '#367fa9',
+                'color'     => '#3c8dbc',
                 'bg'        => 'bg-light-blue',
             ],
             [
                 'attribute' => 'skin-purple',
                 'label'     => Yii::t('adminlte', 'Purple'),
-                'color'     => '#367fa9',
+                'color'     => '#605ca8',
                 'bg'        => 'bg-purple',
             ],
             [
                 'attribute' => 'skin-yellow',
                 'label'     => Yii::t('adminlte', 'Yellow'),
-                'color'     => '#367fa9',
+                'color'     => '#f39c12',
                 'bg'        => 'bg-yellow',
             ],
             /*[
