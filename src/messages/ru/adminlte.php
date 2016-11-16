@@ -19,7 +19,6 @@
 return [
     'Balance: {balance}' => 'Баланс: {balance}',
     'Blue' => 'Синяя',
-    'Check domain' => 'Проверить домен',
     'Collapsed Sidebar' => 'Свернутая боковая панель',
     'Create ticket' => 'Создать тикет',
     'Credit: {credit}' => 'Кредит: {credit}',
