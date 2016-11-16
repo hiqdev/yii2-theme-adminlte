@@ -11,14 +11,16 @@
 
 use cebe\gravatar\Gravatar;
 
-if (Yii::$app->user->identity->email) {
-    echo Gravatar::widget([
-        'email'        => isset($email) ? $email : Yii::$app->user->identity->email,
-        'defaultImage' => 'identicon',
-        'options'      => [
-            'alt'   => isset($alt) ? $alt : Yii::$app->user->identity->username,
-            'class' => !isset($class) ? 'img-circle' : $class,
-        ],
-        'size'         => !isset($size) ? 25 : $size,
-    ]);
+if (empty($email) && isset(Yii::$app->user->identity->email)) {
+    $email = Yii::$app->user->identity->email;
 }
+
+echo Gravatar::widget([
+    'email'        => $email,
+    'defaultImage' => 'identicon',
+    'options'      => [
+        'alt'   => isset($alt) ? $alt : Yii::$app->user->identity->username,
+        'class' => !isset($class) ? 'img-circle' : $class,
+    ],
+    'size'         => !isset($size) ? 25 : $size,
+]);
