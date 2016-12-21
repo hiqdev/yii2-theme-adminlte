@@ -33,7 +33,7 @@ use hiqdev\thememanager\menus\AbstractNavbarMenu;
             <span class="icon-bar"></span>
         </a>
         <div class="navbar-custom-menu">
-            <?= AbstractNavbarMenu::create()->widget([
+            <?= AbstractNavbarMenu::widget([], [
                'options' => [
                    'class' => 'nav navbar-nav',
                ],

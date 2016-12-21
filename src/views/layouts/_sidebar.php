@@ -15,6 +15,6 @@ use hiqdev\thememanager\menus\AbstractSidebarMenu;
                 <?= $this->render('//layouts/_userinfo') ?>
             </div>
         </div>
-        <?= AbstractSidebarMenu::create()->widget() ?>
+        <?= AbstractSidebarMenu::widget() ?>
     </section>
 </aside>

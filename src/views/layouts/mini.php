@@ -47,7 +47,7 @@ JS
         <div class="footer-copyright">
             <div class="text-center small">
                 <?php if (Yii::$container->has(AbstractLanguageMenu::class)) : ?>
-                    <?= AbstractLanguageMenu::create()->widget() ?>
+                    <?= AbstractLanguageMenu::widget() ?>
                 <?php endif ?>
                 &copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>. All rights reserved.
                 <br>
