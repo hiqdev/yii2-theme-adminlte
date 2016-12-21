@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\Menu;
 
 ?>
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -9,17 +10,27 @@ use yii\helpers\Html;
 </a>
 <ul class="dropdown-menu">
     <li class="user-header">
-        <?= $header ?>
+        <?= $header['label'] ?>
     </li>
     <li class="user-body">
-        <?= $body ?>
+        <?= Menu::widget([
+            'items' => $items,
+            'itemOptions' => [
+                'tag' => 'div',
+                'class' => 'col-xs-6 text-center',
+            ],
+            'linkTemplate' => '<a href="{url}" class="btn btn-default btn-xs btn-flat">{label}</a>',
+            'options' => [
+                'tag' => false,
+            ],
+        ]) ?>
     </li>
     <li class="user-footer">
         <div class="pull-left">
-            <?= Html::a(Yii::t('adminlte', 'Profile'), ['/site/profile'], ['class' => 'btn btn-primary btn-flat']) ?>
+            <?= Html::a($profile['label'], $profile['url'], ['class' => 'btn btn-primary btn-flat']) ?>
         </div>
         <div class="pull-right">
-            <?= Html::a(Yii::t('adminlte', 'Sign out'), ['/site/logout'], ['class' => 'btn btn-danger btn-flat']) ?>
+            <?= Html::a($logout['label'], $logout['url'], ['class' => 'btn btn-danger btn-flat']) ?>
         </div>
     </li>
 </ul>

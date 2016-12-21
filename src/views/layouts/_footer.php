@@ -1,4 +1,11 @@
+<?php
+
+use hiqdev\thememanager\widgets\CopyrightYears;
+use hiqdev\thememanager\widgets\OrganizationLink;
+use hiqdev\thememanager\widgets\PoweredBy;
+
+?>
 <footer class="main-footer">
-    <div class="pull-right hidden-xs"><?= Yii::$app->themeManager->widget('PoweredBy') ?></div>
-    <strong>&copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?></strong>. All rights reserved.
+    <div class="pull-right hidden-xs"><?= PoweredBy::widget() ?></div>
+    <strong>&copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?></strong>. All rights reserved.
 </footer>

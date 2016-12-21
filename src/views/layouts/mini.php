@@ -1,6 +1,12 @@
 <?php
 
 use hiqdev\themes\adminlte\MiniAsset;
+use hiqdev\thememanager\menus\AbstractLanguageMenu;
+use hiqdev\thememanager\widgets\Flashes;
+use hiqdev\thememanager\widgets\LogoLink;
+use hiqdev\thememanager\widgets\CopyrightYears;
+use hiqdev\thememanager\widgets\OrganizationLink;
+use hiqdev\thememanager\widgets\PoweredBy;
 use yii\web\View;
 
 /**
@@ -29,26 +35,23 @@ JS
 
     <body class="<?= empty($this->blocks['bodyClass']) ? 'login-page' : $this->blocks['bodyClass'] ?>">
     <?php $this->beginBody() ?>
-        <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
-            <?= Yii::$app->themeManager->widget('Flashes') ?>
-        <?php endif ?>
+        <?= Flashes::widget() ?>
 
         <div class="login-box">
             <div class="login-logo">
-                <b><?= Yii::$app->themeManager->widget('LogoLink') ?></b>
+                <b><?= LogoLink::widget() ?></b>
             </div>
             <?= $content ?>
         </div>
 
         <div class="footer-copyright">
             <div class="text-center small">
-                <?= Yii::$app->themeManager->widget([
-                    'class' => 'LanguageMenu',
-                    'view' => 'miniLanguageMenu',
-                ]) ?>
-                &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.
+                <?php if (Yii::$container->has(AbstractLanguageMenu::class)) : ?>
+                    <?= AbstractLanguageMenu::create()->render() ?>
+                <?php endif ?>
+                &copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>. All rights reserved.
                 <br>
-                <?= Yii::$app->themeManager->widget('PoweredBy') ?>
+                <?= PoweredBy::widget() ?>
             </div>
         </div>
 

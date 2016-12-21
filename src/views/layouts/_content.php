@@ -1,3 +1,9 @@
+<?php
+
+use yii\widgets\Breadcrumbs;
+use hiqdev\thememanager\widgets\Flashes;
+
+?>
 <!-- Right side column. Contains the navbar and content of the page -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -8,8 +14,7 @@
                 <small><?= $this->params['subtitle'] ?></small>
             <?php endif ?>
         </h1>
-        <?= Yii::$app->themeManager->widget([
-            'class' => 'Breadcrumbs',
+        <?= Breadcrumbs::widget([
             'homeLink' => [
                 'label' => '<i class="fa fa-dashboard"></i> ' . Yii::t('adminlte', 'Home'),
                 'url'   => '/',
@@ -22,9 +27,7 @@
 
     <!-- Main content -->
     <section class="content container-fluid"><div class="row"><div class="col-md-12">
-        <?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
-            <?= Yii::$app->themeManager->widget('Flashes') ?>
-        <?php endif ?>
+        <?= Flashes::widget() ?>
 
         <?= $content ?>
     </div></div></section>
