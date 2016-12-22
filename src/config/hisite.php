@@ -28,4 +28,11 @@ return [
             ],
         ],
     ],
+    'container' => [
+        'definitions' => [
+            \hiqdev\thememanager\widgets\SidebarMenu::class => [
+                'class' => \hiqdev\themes\adminlte\widgets\SidebarMenu::class,
+            ],
+        ],
+    ],
 ];
