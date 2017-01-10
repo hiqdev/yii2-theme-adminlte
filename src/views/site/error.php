@@ -11,7 +11,7 @@ $this->title = $name;
 $code = ($exception->statusCode);
 $textColorClass = $code < 500 ? 'text-yellow' : 'text-red';
 $alertColorClass = $code < 500 ? 'alert-warning' : 'alert-danger';
-$message = $exception->getMessage() ? : $message;
+$message = $exception->getMessage() ?: $message;
 ?>
 
 <div class="error-page">

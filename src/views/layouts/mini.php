@@ -1,16 +1,16 @@
 <?php
 
-use hiqdev\themes\adminlte\MiniAsset;
 use hiqdev\thememanager\menus\AbstractLanguageMenu;
+use hiqdev\thememanager\widgets\CopyrightYears;
 use hiqdev\thememanager\widgets\Flashes;
 use hiqdev\thememanager\widgets\LogoLink;
-use hiqdev\thememanager\widgets\CopyrightYears;
 use hiqdev\thememanager\widgets\OrganizationLink;
 use hiqdev\thememanager\widgets\PoweredBy;
+use hiqdev\themes\adminlte\MiniAsset;
 use yii\web\View;
 
 /**
- * @var yii\web\View $this View
+ * @var yii\web\View View
  * @var string $content Content
  */
 MiniAsset::register($this);

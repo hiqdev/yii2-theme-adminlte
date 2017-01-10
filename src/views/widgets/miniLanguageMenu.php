@@ -3,7 +3,6 @@
 /** @var array $languages */
 /** @var string $language */
 /** @var array|mixed $selectUrl */
-
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -21,7 +20,7 @@ $out = '';
             }
             $out .= $delimiter;
         }
-        print rtrim($out, $delimiter);
+        echo rtrim($out, $delimiter);
         ?>
     </ul>
 <?php endif; ?>

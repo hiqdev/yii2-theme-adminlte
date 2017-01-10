@@ -8,7 +8,6 @@ use yii\widgets\ActiveForm;
 /** @var yii\widgets\ActiveForm $form */
 /** @var yii\base\Model $model */
 /** @var yii\base\Widget $widget */
-
 $this->registerCss(<<<'CSS'
     .social-button-login > a:nth-child(n+3){
         display:none;
@@ -35,7 +34,7 @@ CSS
     <?php endif ?>
 
     <?php $message = $widget->getText('message') ?>
-    <?php if (strpos($message, '<') === FALSE) : ?>
+    <?php if (strpos($message, '<') === false) : ?>
         <p class="login-box-msg"><?= $message ?></p>
     <?php else: ?>
         <?= $message ?>
@@ -80,8 +79,8 @@ CSS
                 <div class="row">
                 <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
                     <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
-                        <?php $letter = $name==='yandex' ? 'Я' : '' ?>
-                        <?php $class = $name==='live' ? 'windows' : $name ?>
+                        <?php $letter = $name === 'yandex' ? 'Я' : '' ?>
+                        <?php $class = $name === 'live' ? 'windows' : $name ?>
                         <?php $text = sprintf('<i class="%s">%s</i>&nbsp;%s', "fa fa-$class", $letter, $client->getTitle()) ?>
                         <?= $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$class"]) ?>
                     </div>

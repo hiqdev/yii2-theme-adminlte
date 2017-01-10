@@ -35,7 +35,7 @@ $h4class = 'text-light-blue';
 //);
 
 /// move to asset
-$this->registerJs(<<<JS
+$this->registerJs(<<<'JS'
 var my_skins = ["skin-blue", "skin-black", "skin-red", "skin-yellow", "skin-purple", "skin-green", 'skin-ebony'];
 var my_layout = ["fixed", "layout-boxed"];
 function change_layout(cls) {
@@ -63,27 +63,29 @@ JS
 , \yii\web\View::POS_END);
 ?>
 
-<?php Pjax::begin(array_merge(Yii::$app->params['pjax'], ['enablePushState' => false])); ?>
-<?php $form = ActiveForm::begin(['action' => '/thememanager/settings', 'options' => ['class' => 'skin-form', 'data-pjax' => 1]]); ?>
+<?php Pjax::begin(array_merge(Yii::$app->params['pjax'], ['enablePushState' => false])) ?>
+<?php $form = ActiveForm::begin(['action' => '/thememanager/settings', 'options' => ['class' => 'skin-form', 'data-pjax' => 1]]) ?>
     <?= Html::tag('h4', Yii::t('adminlte', 'Layout'), ['class' => 'control-sidebar-heading']) ?>
-    <?= $form->field($model, 'layout')->label(false)->radioList($model->formLayoutData(), ['item' => function ($index, $label, $name, $checked, $value) {
-        return '<div class="radio">' . Html::radio($name, $checked, ['label' => $label, 'value' => $value, 'onchange' => new JsExpression('change_layout(this.value);')]) . '</div>';
-    }]); ?>
+    <?= $form->field($model, 'layout')->label(false)->radioList($model->formLayoutData(), [
+        'item' => function ($index, $label, $name, $checked, $value) {
+            return '<div class="radio">' . Html::radio($name, $checked, ['label' => $label, 'value' => $value, 'onchange' => new JsExpression('change_layout(this.value);')]) . '</div>';
+        },
+    ]) ?>
 
     <?= Html::tag('h4', Yii::t('adminlte', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
-    <?= $form->field($model, 'table_condensed')->checkbox(); ?>
+    <?= $form->field($model, 'table_condensed')->checkbox() ?>
 
     <?= Html::tag('h4', Yii::t('adminlte', 'Sidebar'), ['class' => 'control-sidebar-heading']) ?>
-    <?= $form->field($model, 'collapsed_sidebar')->checkbox(['onchange' => new JsExpression('change_layout("sidebar-collapse");')]); ?>
+    <?= $form->field($model, 'collapsed_sidebar')->checkbox(['onchange' => new JsExpression('change_layout("sidebar-collapse");')]) ?>
 
     <?= Html::tag('h4', Yii::t('adminlte', 'Skins'), ['class' => 'control-sidebar-heading']) ?>
     <ul class="list-unstyled clearfix">
         <?php foreach ($model->skinSampleArray() as $itemData) : ?>
-            <?= $this->render('_skin-sample', ['data' => $itemData]); ?>
-        <?php endforeach; ?>
+            <?= $this->render('_skin-sample', ['data' => $itemData]) ?>
+        <?php endforeach ?>
     </ul>
-    <?= $form->field($model, 'skin')->hiddenInput()->label(false); ?>
+    <?= $form->field($model, 'skin')->hiddenInput()->label(false) ?>
     <div class="clearfix"></div>
-    <?= Html::submitButton(Yii::t('adminlte', 'Save'), ['class' => 'btn btn-primary btn-block']); ?>
-<?php $form->end(); ?>
-<?php Pjax::end(); ?>
+    <?= Html::submitButton(Yii::t('adminlte', 'Save'), ['class' => 'btn btn-primary btn-block']) ?>
+<?php $form->end() ?>
+<?php Pjax::end() ?>

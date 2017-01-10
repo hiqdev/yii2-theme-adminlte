@@ -3,7 +3,6 @@
 /**
  * Head layout.
  */
-
 use hiqdev\themes\adminlte\MainAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;

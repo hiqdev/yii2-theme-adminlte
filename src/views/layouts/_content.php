@@ -1,7 +1,7 @@
 <?php
 
-use yii\widgets\Breadcrumbs;
 use hiqdev\thememanager\widgets\Flashes;
+use yii\widgets\Breadcrumbs;
 
 ?>
 <!-- Right side column. Contains the navbar and content of the page -->
