@@ -140,3 +140,23 @@
     color: #fff;
     background: rgba(0, 0, 0, 0.15);
 }
+
+/* Ticket title fix */
+
+@media (min-width: 1290px) {
+    .content-header > h1 {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1289px) {
+    .content-header > h1 {
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-header > h1 {
+        width: 100%;
+    }
+}
