@@ -119,8 +119,7 @@ i.fa.fa-yandex {
 .btn-yandex.focus,
 .btn-yandex:active,
 .btn-yandex.active,
-.open > .dropdown-toggle.btn-yandex,
-:not(.btn-yandex i) {
+.open > .dropdown-toggle.btn-yandex {
     color: #d83933;
     background-color: #ffdb4c;
     border-color: rgba(191, 153, 0, 0.2);
