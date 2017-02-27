@@ -55,6 +55,10 @@
     animation: pace-spinner 400ms linear infinite;
 }
 
+.bootstrap-switch {
+    z-index: auto;
+}
+
 @-webkit-keyframes pace-spinner {
     0% {
         -webkit-transform: rotate(0deg);
