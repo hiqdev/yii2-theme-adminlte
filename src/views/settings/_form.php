@@ -72,6 +72,9 @@ JS
         },
     ]) ?>
 
+    <?= Html::tag('h4', $model->getAttributeLabel('filterOrientation'), ['class' => 'control-sidebar-heading']) ?>
+    <?= $form->field($model, 'filterOrientation')->label(false)->radioList($model->orientationOptions()) ?>
+
     <?= Html::tag('h4', Yii::t('adminlte', 'Table height'), ['class' => 'control-sidebar-heading']) ?>
     <?= $form->field($model, 'table_condensed')->checkbox() ?>
 
