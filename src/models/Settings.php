@@ -45,12 +45,29 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public $collapsed_sidebar;
 
     /**
+     * @var string
+     */
+    public $filterOrientation;
+
+    /**
      * @return array
      */
     public function rules()
     {
         return [
             [['layout', 'skin', 'table_condensed', 'collapsed_sidebar'], 'safe'],
+            [['filterOrientation'], 'in', 'range' => [self::ORIENTATION_VERTICAL, self::ORIENTATION_HORIZONTAL]],
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function orientationOptions()
+    {
+        return [
+            self::ORIENTATION_HORIZONTAL => Yii::t('adminlte', 'Horizontal'),
+            self::ORIENTATION_VERTICAL   => Yii::t('adminlte', 'Vertical'),
         ];
     }
 
@@ -73,9 +90,10 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
-            'table_condensed' => Yii::t('adminlte', 'Table Condensed'),
+            'verifyCode'        => 'Verification Code',
+            'table_condensed'   => Yii::t('adminlte', 'Table Condensed'),
             'collapsed_sidebar' => Yii::t('adminlte', 'Collapsed Sidebar'),
+            'filterOrientation' => Yii::t('adminlte', 'Search position'),
         ];
     }
 
