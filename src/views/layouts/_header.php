@@ -1,6 +1,7 @@
 <?php
 
 use hiqdev\thememanager\menus\AbstractNavbarMenu;
+use hiqdev\thememanager\widgets\LogoLink;
 
 ?>
 
@@ -19,10 +20,7 @@ use hiqdev\thememanager\menus\AbstractNavbarMenu;
 
 <!-- header logo: style can be found in header.less -->
 <header class="main-header">
-    <a href="<?= Yii::$app->homeUrl ?>" class="logo">
-        <span class="logo-mini">&nbsp;</span>
-        <span class="logo-lg">&nbsp;</span>
-    </a>
+    <?= LogoLink::widget() ?>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
