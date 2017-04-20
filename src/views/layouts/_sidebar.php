@@ -1,6 +1,15 @@
 <?php
 
 use hiqdev\thememanager\menus\AbstractSidebarMenu;
+use yii\helpers\Url;
+
+$this->registerCss("
+.user-panel > .image img {
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+");
 
 ?>
 <!-- Left side column. contains the sidebar -->
@@ -9,7 +18,9 @@ use hiqdev\thememanager\menus\AbstractSidebarMenu;
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <?= $this->render('//layouts/gravatar', ['size' => 45]) ?>
+                <a href="<?= Url::toRoute(['/site/profile']) ?>">
+                    <?= $this->render('//layouts/gravatar', ['size' => 45]) ?>
+                </a>
             </div>
             <div class="pull-left info">
                 <?= $this->render('//layouts/_userinfo') ?>
