@@ -66,8 +66,8 @@ class Settings extends \hiqdev\thememanager\models\Settings
     public function orientationOptions()
     {
         return [
-            self::ORIENTATION_HORIZONTAL => Yii::t('adminlte', 'Horizontal'),
-            self::ORIENTATION_VERTICAL   => Yii::t('adminlte', 'Vertical'),
+            self::ORIENTATION_HORIZONTAL => Yii::t('adminlte', '"Advanced search" on the left'),
+            self::ORIENTATION_VERTICAL   => Yii::t('adminlte', '"Advanced Search" on top'),
         ];
     }
 

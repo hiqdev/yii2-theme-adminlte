@@ -39,4 +39,6 @@ return [
     'Table height' => 'Высота таблицы',
     'The above error occurred while the Web server was processing your request.' => 'Во время обработки вашего запроса произошла ошибка.',
     'Yellow' => 'Желтая',
+    '"Advanced search" on the left' => '"Расширенный поиск" слева',
+    '"Advanced Search" on top' => '"Расширенный поиск" сверху',
 ];
