@@ -3,13 +3,13 @@
 use hiqdev\thememanager\menus\AbstractSidebarMenu;
 use yii\helpers\Url;
 
-$this->registerCss("
+$this->registerCss('
 .user-panel > .image img {
     width: 100%;
     max-width: 45px;
     height: auto;
 }
-");
+');
 
 ?>
 <!-- Left side column. contains the sidebar -->

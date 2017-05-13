@@ -5,11 +5,11 @@ use yii\helpers\Html;
 /** @var array $items */
 /** @var \yii\web\View $this */
 /** @var \hipanel\faq\widgets\Faq $this ->context */
-$this->registerCss("
+$this->registerCss('
 #faq .box.box-solid > .box-header a:hover {
     background: none;
 }
-");
+');
 
 ?>
 <div id="faq" class="nav-tabs-custom faq-categories">

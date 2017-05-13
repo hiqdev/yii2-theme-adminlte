@@ -1,6 +1,6 @@
 <?php
 /**
- * AdminLte Theme for hiqdev/yii2-thememanager
+ * AdminLte Theme for Yii2 projects
  *
  * @link      https://github.com/hiqdev/yii2-theme-adminlte
  * @package   yii2-theme-adminlte

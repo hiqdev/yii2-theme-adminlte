@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<EOF
-AdminLte Theme for hiqdev/yii2-thememanager
+AdminLte Theme for Yii2 projects
 
 @link      https://github.com/hiqdev/yii2-theme-adminlte
 @package   yii2-theme-adminlte
@@ -26,10 +26,9 @@ return PhpCsFixer\Config::create()
         ],
         'concat_space'                               =>  ['spacing' => 'one'],
         'array_syntax'                               =>  ['syntax' => 'short'],
-        'empty_return'                               =>  false,
+        'phpdoc_no_alias_tag'                        =>  ['replacements' => ['type' => 'var']],
         'blank_line_before_return'                   =>  false,
         'phpdoc_align'                               =>  false,
-        'phpdoc_params'                              =>  false,
         'phpdoc_scalar'                              =>  false,
         'phpdoc_separation'                          =>  false,
         'phpdoc_to_comment'                          =>  false,

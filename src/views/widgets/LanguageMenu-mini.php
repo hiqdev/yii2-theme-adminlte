@@ -1,7 +1,6 @@
 <?php
 
 /** @var array $items */
-
 use yii\helpers\Html;
 use yii\helpers\Url;
 

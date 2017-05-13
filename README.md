@@ -1,7 +1,6 @@
-Yii2 AdminLte Theme
-===================
+# Yii2 AdminLte Theme
 
-**AdminLte Theme for hiqdev/yii2-thememanager**
+**AdminLte Theme for Yii2 projects**
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/yii2-theme-adminlte/v/stable)](https://packagist.org/packages/hiqdev/yii2-theme-adminlte)
 [![Total Downloads](https://poser.pugx.org/hiqdev/yii2-theme-adminlte/downloads)](https://packagist.org/packages/hiqdev/yii2-theme-adminlte)
@@ -9,6 +8,14 @@ Yii2 AdminLte Theme
 [![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/hiqdev/yii2-theme-adminlte.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-adminlte/)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/yii2-theme-adminlte.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-adminlte/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:yii2-theme-adminlte/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:yii2-theme-adminlte/dev-master)
+
+This package provides pluggable [AdminLte] theme for [Yii2] projects.
+
+This package uses [hiqdev/yii2-thememanager] theming library.
+
+[yii2]:                     http://www.yiiframework.com/
+[adminlte]:                 https://almsaeedstudio.com/preview
+[hiqdev/yii2-thememanager]: https://github.com/hiqdev/yii2-thememanager
 
 ## Installation
 
