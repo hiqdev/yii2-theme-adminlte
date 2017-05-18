@@ -18,6 +18,7 @@ class MainAsset extends \yii\web\AssetBundle
 
     public $css = [
         'css/main.css',
+        'css/menus.css',
     ];
 
     public $depends = [
