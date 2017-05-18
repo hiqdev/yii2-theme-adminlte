@@ -35,3 +35,9 @@
   background: #f4f4f4;
   text-decoration: none;
 }
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-primary {
+  background-color: #3c8dbc;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-danger {
+  background-color: #dd4b39;
+}
