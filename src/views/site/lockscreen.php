@@ -33,5 +33,5 @@ $identity = Yii::$app->user->identity;
 
 </div><!-- /.lockscreen-item -->
 <div class='text-center'>
-    <b><?= Html::a(Yii::t('adminlte', 'Or log out and sign in as a different user'), ['/site/logout']) ?></b>
+    <?= Html::a(Yii::t('adminlte', 'Or log out and sign in as a different user'), ['/site/logout']) ?>
 </div>
