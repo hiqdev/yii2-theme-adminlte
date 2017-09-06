@@ -8,11 +8,6 @@ $this->title = Yii::t('adminlte', 'Lockscreen');
 $identity = Yii::$app->user->identity;
 
 ?>
-
-<style>
-</style>
-
-
 <div class="lockscreen-item">
     <div class="lockscreen-image">
         <?= Gravatar::widget([
