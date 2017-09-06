@@ -213,3 +213,21 @@ fieldset[disabled] .btn-windows.active {
     color: #2672ec;
     background-color: #ffffff;
 }
+
+.lockscreen.middle-box {
+    width: 200px;
+    padding-top: 110px;
+    max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+}
+
+.lockscreen-image {
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: -25px;
+    background: #fff;
+    padding: 5px;
+    z-index: 10;
+}

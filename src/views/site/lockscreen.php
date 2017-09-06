@@ -9,14 +9,33 @@ $identity = Yii::$app->user->identity;
 
 ?>
 
-<!-- User name -->
-<div class="lockscreen-name">
-    <a href="/site/back"><?= Yii::t('adminlte', 'Return to the site') ?></a>
-</div>
+<style>
+.lockscreen-container {
+    margin-top: 4em;
+}
 
-<!-- START LOCK SCREEN ITEM -->
+.lockscreen-item {
+   margin-top: 3em; 
+}
+
+.lockscreen-image {
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: -25px;
+    background: #fff;
+    padding: 5px;
+    z-index: 10;
+}
+h3 {
+    margin-top: 7em;
+    font-size: 16px;
+    text-align: center;
+}
+</style>
+
+
 <div class="lockscreen-item">
-    <!-- lockscreen image -->
     <div class="lockscreen-image">
         <?= Gravatar::widget([
             'size'  => 128,
@@ -24,14 +43,13 @@ $identity = Yii::$app->user->identity;
             'alt'   => $identity->username,
         ]) ?>
     </div>
-    <!-- /.lockscreen-image -->
-
-    <!-- lockscreen credentials (contains the form) -->
-    <form class="lockscreen-credentials" action="/site/back">
-        <input type="submit" class="form-control btn" style="font-weight:bold" value="<?= $identity->username ?>" />
-    </form><!-- /.lockscreen credentials -->
-
-</div><!-- /.lockscreen-item -->
-<div class='text-center'>
-    <?= Html::a(Yii::t('adminlte', 'Or log out and sign in as a different user'), ['/site/logout']) ?>
+</div>
+<h3><?= $identity->username ?></h3>
+<div class="lockscreen-container">
+    <div class="lockscreen-name">
+        <a href="/site/back" class="btn btn-primary"><?= Yii::t('adminlte', 'Return to the site') ?></a>
+    </div>
+    <div class='text-center' style="margin-top: 1em;">
+        <?= Html::a(Yii::t('adminlte', 'Or log out and sign in as a different user'), ['/site/logout']) ?>
+    </div>
 </div>
