@@ -10,28 +10,6 @@ $identity = Yii::$app->user->identity;
 ?>
 
 <style>
-.lockscreen-container {
-    margin-top: 4em;
-}
-
-.lockscreen-item {
-   margin-top: 3em; 
-}
-
-.lockscreen-image {
-    border-radius: 50%;
-    position: absolute;
-    left: 35%;
-    top: -25px;
-    background: #fff;
-    padding: 5px;
-    z-index: 10;
-}
-h3 {
-    margin-top: 7em;
-    font-size: 16px;
-    text-align: center;
-}
 </style>
 
 
