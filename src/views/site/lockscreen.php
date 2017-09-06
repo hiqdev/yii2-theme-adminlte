@@ -17,7 +17,7 @@ $identity = Yii::$app->user->identity;
         ]) ?>
     </div>
 </div>
-<h3><?= $identity->username ?></h3>
+<h3 class="text-bold"><?= $identity->username ?></h3>
 <div class="lockscreen-container">
     <div class="lockscreen-name">
         <a href="/site/back" class="btn btn-primary"><?= Yii::t('adminlte', 'Return to the site') ?></a>
