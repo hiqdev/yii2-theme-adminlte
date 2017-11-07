@@ -1,5 +1,12 @@
-hiqdev/yii2-theme-adminlte
---------------------------
+# hiqdev/yii2-theme-adminlte
+
+## [0.1.0] - 2017-11-07
+
+- Fixed layouts to work when not logged in ([@hiqsol])
+- Redone lockscreen page and mini layout ([@hiqsol], [@tafid], [tofid@DS5171.advancedhosters.com])
+- Fixed language menu ([@tafid], [@hiqsol])
+- Reorganized config files ([@hiqsol])
+- Fixed minor issues ([@tafid], [@SilverFire])
 
 ## [0.0.1] - 2017-01-10
 
@@ -37,5 +44,6 @@ hiqdev/yii2-theme-adminlte
 [@BladeRoot]: https://github.com/BladeRoot
 [bladeroot@hiqdev.com]: https://github.com/BladeRoot
 [bladeroot@gmail.com]: https://github.com/BladeRoot
-[Under development]: https://github.com/hiqdev/yii2-theme-adminlte/releases
+[Under development]: https://github.com/hiqdev/yii2-theme-adminlte/compare/0.0.1...HEAD
 [0.0.1]: https://github.com/hiqdev/yii2-theme-adminlte/releases/tag/0.0.1
+[0.1.0]: https://github.com/hiqdev/yii2-theme-adminlte/compare/0.0.1...0.1.0

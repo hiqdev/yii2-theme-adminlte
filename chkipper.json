@@ -11,21 +11,21 @@
         "SilverFire": {
             "name": "Dmitry Naumenko",
             "role": "Lead backend developer",
-            "email": "silverfire@hiqdev.com",
+            "email": "d.naumenko.a@gmail.com",
             "github": "https://github.com/SilverFire",
             "homepage": "http://silverfire.me/"
         },
         "tafid": {
             "name": "Andrey Klochok",
             "role": "Lead frontend developer",
-            "email": "tafid@hiqdev.com",
+            "email": "andreyklochok@gmail.com",
             "github": "https://github.com/tafid",
             "homepage": "http://hiqdev.com/"
         },
         "BladeRoot": {
             "name": "Yuriy Myronchuk",
             "role": "QA Lead",
-            "email": "bladeroot@hiqdev.com",
+            "email": "bladeroot@gmail.com",
             "github": "https://github.com/BladeRoot",
             "homepage": "http://hiqdev.com/"
         }

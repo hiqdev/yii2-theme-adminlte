@@ -1,5 +1,38 @@
-hiqdev/yii2-theme-adminlte
---------------------------
+# hiqdev/yii2-theme-adminlte
+
+## [0.1.0] - 2017-11-07
+
+- Fixed layouts to work when not logged in
+    - [27fcd45] 2017-11-07 fixed gravatar layout to work without email [@hiqsol]
+- Redone lockscreen page and mini layout
+    - [b0aefc4] 2017-09-06 removed logo-mini image when in mini layout [@hiqsol]
+    - [690ce1b] 2017-09-06 csfixed [@hiqsol]
+    - [7eac133] 2017-09-06 Moved css from lockscreen view to mini.css [@tafid]
+    - [880265f] 2017-09-06 Css merge fix [@tafid]
+    - [0923ea4] 2017-09-06 Fixed markup for mini layout [tofid@DS5171.advancedhosters.com]
+    - [654b4c0] 2017-09-04 still trying to improve lockscreen page [@hiqsol]
+    - [5ef0d40] 2017-09-04 trying to improve lockscreen page [@hiqsol]
+- Fixed language menu
+    - [1a8d9c3] 2017-06-15 Added LanguageMenu view [@tafid]
+    - [37d336a] 2017-05-18 Fixed background color for user menu buttons [@tafid]
+    - [21b405d] 2017-05-18 Fixed language menu css [@tafid]
+    - [3beea34] 2017-01-11 fixed mini LanguageMenu and renamed to `LanguageMenu-mini` [@hiqsol]
+- Reorganized config files
+    - [484c6bd] 2017-05-13 renamed `config/web` <- config/hisite [@hiqsol]
+    - [24e20a6] 2017-05-13 csfixed [@hiqsol]
+    - [3a10077] 2017-05-13 renamed `hidev.yml` [@hiqsol]
+- Fixed minor issues
+    - [72ccc46] 2017-04-26 Changed orientation messages in Settings model [@tafid]
+    - [1d54989] 2017-04-20 Made a user profile logo clickable [@tafid]
+    - [b44d057] 2017-04-13 Added view files for Faq widget [@tafid]
+    - [9f617d8] 2017-03-29 Added LogoLink view file [@tafid]
+    - [f669907] 2017-03-29 Added LogoLink widget to header [@tafid]
+    - [506e39e] 2017-03-23 Added new radioList field - filterOrientation [@tafid]
+    - [2680d27] 2017-03-23 Added new attribute filterOrientation, added rules, possible options [@tafid]
+    - [9b3ee58] 2017-03-23 translations [@tafid]
+    - [2df537d] 2017-02-27 Set z-index for bootstrap-switch to `auto` [@SilverFire]
+    - [fe4ae5f] 2017-02-27 Removed bad CSS selector for Yandex button [@SilverFire]
+    - [74fcb41] 2017-01-26 Fixed css in title of ticket width [@tafid]
 
 ## [0.0.1] - 2017-01-10
 
@@ -337,5 +370,32 @@ hiqdev/yii2-theme-adminlte
 [ca72af6]: https://github.com/hiqdev/yii2-theme-adminlte/commit/ca72af6
 [b80715b]: https://github.com/hiqdev/yii2-theme-adminlte/commit/b80715b
 [2820045]: https://github.com/hiqdev/yii2-theme-adminlte/commit/2820045
-[Under development]: https://github.com/hiqdev/yii2-theme-adminlte/releases
+[Under development]: https://github.com/hiqdev/yii2-theme-adminlte/compare/0.0.1...HEAD
 [0.0.1]: https://github.com/hiqdev/yii2-theme-adminlte/releases/tag/0.0.1
+[27fcd45]: https://github.com/hiqdev/yii2-theme-adminlte/commit/27fcd45
+[b0aefc4]: https://github.com/hiqdev/yii2-theme-adminlte/commit/b0aefc4
+[690ce1b]: https://github.com/hiqdev/yii2-theme-adminlte/commit/690ce1b
+[7eac133]: https://github.com/hiqdev/yii2-theme-adminlte/commit/7eac133
+[880265f]: https://github.com/hiqdev/yii2-theme-adminlte/commit/880265f
+[0923ea4]: https://github.com/hiqdev/yii2-theme-adminlte/commit/0923ea4
+[654b4c0]: https://github.com/hiqdev/yii2-theme-adminlte/commit/654b4c0
+[5ef0d40]: https://github.com/hiqdev/yii2-theme-adminlte/commit/5ef0d40
+[1a8d9c3]: https://github.com/hiqdev/yii2-theme-adminlte/commit/1a8d9c3
+[37d336a]: https://github.com/hiqdev/yii2-theme-adminlte/commit/37d336a
+[21b405d]: https://github.com/hiqdev/yii2-theme-adminlte/commit/21b405d
+[484c6bd]: https://github.com/hiqdev/yii2-theme-adminlte/commit/484c6bd
+[24e20a6]: https://github.com/hiqdev/yii2-theme-adminlte/commit/24e20a6
+[3a10077]: https://github.com/hiqdev/yii2-theme-adminlte/commit/3a10077
+[72ccc46]: https://github.com/hiqdev/yii2-theme-adminlte/commit/72ccc46
+[1d54989]: https://github.com/hiqdev/yii2-theme-adminlte/commit/1d54989
+[b44d057]: https://github.com/hiqdev/yii2-theme-adminlte/commit/b44d057
+[9f617d8]: https://github.com/hiqdev/yii2-theme-adminlte/commit/9f617d8
+[f669907]: https://github.com/hiqdev/yii2-theme-adminlte/commit/f669907
+[506e39e]: https://github.com/hiqdev/yii2-theme-adminlte/commit/506e39e
+[2680d27]: https://github.com/hiqdev/yii2-theme-adminlte/commit/2680d27
+[9b3ee58]: https://github.com/hiqdev/yii2-theme-adminlte/commit/9b3ee58
+[2df537d]: https://github.com/hiqdev/yii2-theme-adminlte/commit/2df537d
+[fe4ae5f]: https://github.com/hiqdev/yii2-theme-adminlte/commit/fe4ae5f
+[74fcb41]: https://github.com/hiqdev/yii2-theme-adminlte/commit/74fcb41
+[3beea34]: https://github.com/hiqdev/yii2-theme-adminlte/commit/3beea34
+[0.1.0]: https://github.com/hiqdev/yii2-theme-adminlte/compare/0.0.1...0.1.0
