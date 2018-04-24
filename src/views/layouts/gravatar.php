@@ -10,10 +10,6 @@
 
 use cebe\gravatar\Gravatar;
 
-if (empty($email)) {
-    $email = Yii::$app->user->identity->email;
-}
-
 echo Gravatar::widget(array_filter([
     'email'        => $email,
     'emailHash'    => empty($email) ? md5('') : null,
