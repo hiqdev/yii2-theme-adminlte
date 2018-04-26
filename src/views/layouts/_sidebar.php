@@ -19,7 +19,10 @@ $this->registerCss('
         <div class="user-panel">
             <div class="pull-left image">
                 <a href="<?= Url::toRoute(['/site/profile']) ?>">
-                    <?= $this->render('//layouts/gravatar', ['size' => 45]) ?>
+                    <?= $this->render('//layouts/gravatar', [
+                        'email' => Yii::$app->user->identity->email ?? null,
+                        'size'  => 45,
+                    ]) ?>
                 </a>
             </div>
             <div class="pull-left info">

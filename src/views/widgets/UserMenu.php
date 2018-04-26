@@ -5,7 +5,10 @@ use yii\widgets\Menu;
 
 ?>
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    <?= $this->render('//layouts/gravatar', ['class' => 'user-image']) ?>
+    <?= $this->render('//layouts/gravatar', [
+        'email' => Yii::$app->user->identity->email ?? null,
+        'class' => 'user-image',
+    ]) ?>
     <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
 </a>
 <ul class="dropdown-menu">
