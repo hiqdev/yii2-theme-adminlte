@@ -20,7 +20,7 @@ $this->registerCss('
             <div class="pull-left image">
                 <a href="<?= Url::toRoute(['/site/profile']) ?>">
                     <?= $this->render('//layouts/gravatar', [
-                        'email' => Yii::$app->user->identity->email,
+                        'email' => isset(Yii::$app->user->identity->email) ? Yii::$app->user->identity->email : null,
                         'size'  => 45,
                     ]) ?>
                 </a>
