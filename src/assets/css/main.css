@@ -164,3 +164,40 @@
         width: 100%;
     }
 }
+
+/** FIX Sidebar Menu by new AdminLTE version 2.4.0 **/
+
+.sidebar-menu li > a > .fa-angle-left, .sidebar-menu li > a > .pull-right-container > .fa-angle-left {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-right: 10px;
+    -webkit-transition: transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease
+}
+
+.sidebar-menu li > a > .fa-angle-left {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px
+}
+
+.sidebar-menu li.treeview.active > a > .fa-angle-left, .sidebar-menu li.treeview.active > a > .pull-right-container > .fa-angle-left {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+.sidebar-menu li > a {
+    position: relative
+}
+
+.sidebar-menu li > a > .pull-right-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -7px
+}
