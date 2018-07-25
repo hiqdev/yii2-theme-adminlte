@@ -53,7 +53,7 @@ CSS
         <?php endforeach ?>
 
         <div class="row">
-            <?php if ($attribute = $widget->getBoolAttribute()) : ?>
+            <?php foreach ($widget->getBoolAttributes() as $attribute) : ?>
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <?= $form->field($model, $attribute)->checkbox([
@@ -62,7 +62,7 @@ CSS
                     </div>
                 </div>
                 <?php $submitSize = 4 ?>
-            <?php endif ?>
+            <?php endforeach; ?>
             <div class="col-xs-<?= $submitSize ?: 12 ?>">
                 <button type="submit" class="btn btn-primary btn-block btn-flat"><?= $widget->getText('button') ?></button>
             </div>
