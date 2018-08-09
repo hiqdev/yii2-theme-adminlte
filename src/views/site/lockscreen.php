@@ -11,9 +11,10 @@ $identity = Yii::$app->user->identity;
 <div class="lockscreen-item">
     <div class="lockscreen-image">
         <?= Gravatar::widget([
-            'size'  => 128,
-            'email' => $identity->email,
-            'alt'   => $identity->username,
+            'size'   => 128,
+            'email'  => $identity->email,
+            'alt'    => $identity->username,
+            'secure' => true
         ]) ?>
     </div>
 </div>
