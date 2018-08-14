@@ -14,16 +14,6 @@ use yii\web\View;
  * @var string $content Content
  */
 MiniAsset::register($this);
-$this->registerJs(<<<'JS'
-$(function () {
-    $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
-        });
-    });
-JS
-, View::POS_READY);
 
 ?>
 <?php $this->beginPage() ?>
