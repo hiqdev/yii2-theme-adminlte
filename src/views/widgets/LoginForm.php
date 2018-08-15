@@ -55,9 +55,10 @@ CSS
         <div class="row">
             <?php foreach ($widget->getBoolAttributes() as $attribute) : ?>
                 <div class="col-xs-8">
-                    <div class="checkbox icheck">
+                    <div>
                         <?= $form->field($model, $attribute)->checkbox([
                             'label' => $model->getAttributeLabel($attribute),
+                            'class' => 'option-input',
                         ]) ?>
                     </div>
                 </div>

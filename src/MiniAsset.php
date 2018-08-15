@@ -10,7 +10,6 @@
 
 namespace hiqdev\themes\adminlte;
 
-use hiqdev\assets\icheck\iCheckAsset;
 use yii\web\AssetBundle;
 
 class MiniAsset extends AssetBundle
@@ -27,6 +26,6 @@ class MiniAsset extends AssetBundle
 
     public $depends = [
         MainAsset::class,
-        iCheckAsset::class,
+        CheckboxStyleAsset::class,
     ];
 }
