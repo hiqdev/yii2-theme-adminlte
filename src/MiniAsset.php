@@ -10,6 +10,7 @@
 
 namespace hiqdev\themes\adminlte;
 
+use hipanel\assets\CheckboxStyleAsset;
 use yii\web\AssetBundle;
 
 class MiniAsset extends AssetBundle
