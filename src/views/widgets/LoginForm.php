@@ -30,7 +30,7 @@ CSS
 
 <div class="login-box-body">
     <?php if ($widget->getText('header')) : ?>
-        <h1><?= Html::encode($widget->getText('header')) ?></h1>
+        <h1 class="text-center"><?= Html::encode($widget->getText('header')) ?></h1>
     <?php endif ?>
 
     <?php $message = $widget->getText('message') ?>
@@ -64,8 +64,8 @@ CSS
                 </div>
                 <?php $submitSize = 4 ?>
             <?php endforeach; ?>
-            <div class="col-xs-<?= $submitSize ?: 12 ?>">
-                <button type="submit" class="btn btn-primary btn-block btn-flat"><?= $widget->getText('button') ?></button>
+            <div class="col-xs-<?= $submitSize ?? 12 ?>">
+                <button type="submit" class="btn btn-primary btn-block"><?= $widget->getText('button') ?></button>
             </div>
         </div>
     <?php $form->end() ?>
@@ -75,9 +75,9 @@ CSS
             'baseAuthUrl' => ['auth'],
             'options' => ['class' => 'social-auth-links text-center'],
         ]) ?>
-            <h4>--- &nbsp; <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> &nbsp; ---</h4>
-            <div class="social-button-login">
-                <div class="row">
+        <h4>--- &nbsp; <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> &nbsp; ---</h4>
+        <div class="social-button-login">
+            <div class="row">
                 <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
                     <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
                         <?php $letter = $name === 'yandex' ? 'Я' : '' ?>
@@ -86,16 +86,19 @@ CSS
                         <?= $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$class"]) ?>
                     </div>
                 <?php endforeach ?>
-                </div>
             </div>
+        </div>
         <?php AuthChoice::end() ?>
     <?php endif ?>
 
-    <?php foreach (['restore-password', 'signup', 'login'] as $action) : ?>
-        <?php if ($widget->isShown($action)) : ?>
-            <br/>
-            <?= Html::a($widget->getText($action), $widget->getPage($action)) ?>
-        <?php endif ?>
-    <?php endforeach ?>
+    <div style="margin-top: 20px">
+        <?php foreach ([
+                           'restore-password' => 'btn-default', 'signup' => 'btn-primary', 'login' => 'btn-default',
+                       ] as $action => $css) : ?>
+            <?php if ($widget->isShown($action)) : ?>
+                <?= Html::a($widget->getText($action), $widget->getPage($action), ['class' => 'btn btn-block ' . $css]) ?>
+            <?php endif ?>
+        <?php endforeach ?>
+    </div>
 
 </div>
