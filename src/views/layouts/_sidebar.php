@@ -1,7 +1,12 @@
 <?php
 
 use hiqdev\thememanager\menus\AbstractSidebarMenu;
+use hiqdev\themes\adminlte\assets\SidebarOpener;
 use yii\helpers\Url;
+
+//SidebarOpener::register($this); // todo: need to finish
+
+$this->registerJs('$("aside.main-sidebar > .sidebar > .sidebar-menu").sidebarOpener();');
 
 $this->registerCss('
 .user-panel > .image img {
