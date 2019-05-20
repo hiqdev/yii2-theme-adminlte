@@ -8,7 +8,7 @@ $delimiter = '&nbsp;·&nbsp;';
 $out = '';
 
 ?>
-<?php if (is_array($items)) : ?>
+<?php if (is_array($items) && count($items)>1) : ?>
     <ul class="list-inline">
         <?php
         foreach ($items as $code => $item) {
