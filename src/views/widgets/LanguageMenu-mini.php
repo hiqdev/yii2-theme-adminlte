@@ -1,17 +1,16 @@
 <?php
 
-/** @var array $items */
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 $delimiter = '&nbsp;·&nbsp;';
 $out = '';
 
+/** @var array $items */
+
 ?>
 <?php if (is_array($items) && count($items)>1) : ?>
     <ul class="list-inline">
-        <?php
-        foreach ($items as $code => $item) {
+        <?php foreach ($items as $code => $item) {
             if ($out) {
                 $out .= $delimiter;
             }
@@ -20,8 +19,7 @@ $out = '';
             } else {
                 $out .= Html::tag('li', Html::a($item['label'], $item['url']));
             }
-        }
-        echo $out;
-        ?>
+        } ?>
+        <?= $out ?>
     </ul>
 <?php endif ?>
