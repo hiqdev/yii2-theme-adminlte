@@ -75,14 +75,17 @@ CSS
             'baseAuthUrl' => ['auth'],
             'options' => ['class' => 'social-auth-links text-center'],
         ]) ?>
-        <h4>--- &nbsp; <?= Yii::t('adminlte', 'OR SIGN IN WITH') ?> &nbsp; ---</h4>
+        <h4>--- &nbsp; <?= Yii::t('adminlte', 'OR') ?> &nbsp; ---</h4>
         <div class="social-button-login">
             <div class="row">
                 <?php foreach ($authAuthChoice->getClients() as $name => $client): ?>
-                    <div class="col-md-6 col-xs-12" style="margin-bottom: 0.5em">
+                    <div class="col-md-12 col-xs-12" style="margin-bottom: 0.5em">
                         <?php $letter = $name === 'yandex' ? 'Я' : '' ?>
-                        <?php $class = $name === 'live' ? 'windows' : $name ?>
-                        <?php $text = sprintf('<i class="%s">%s</i>&nbsp;%s', "fa fa-$class", $letter, $client->getTitle()) ?>
+                        <?php $class  = $name === 'live' ? 'windows' : $name ?>
+                        <?php $signin = Yii::t('adminlte', 'Sign in using') ?>
+
+                        <?php $text = sprintf('%s <i class="%s">%s</i>&nbsp;%s', $signin, "fa fa-$class", $letter, $client->getTitle()) ?>
+
                         <?= $authAuthChoice->clientLink($client, $text, ['class' => "btn btn-block btn-social btn-$class"]) ?>
                     </div>
                 <?php endforeach ?>
