@@ -19,7 +19,7 @@ class SidebarMenu extends \hiqdev\yii2\menus\widgets\Menu
     /**
      * {@inheritdoc}
      */
-    public $linkTemplate = '<a href="{url}" {linkOptions} >{icon} <span>{label}</span> {arrow}</a>';
+    public $linkTemplate = '<a href="{url}" {linkOptions}>{icon} <span>{label}</span> {arrow}</a>';
 
     /**
      * {@inheritdoc}
