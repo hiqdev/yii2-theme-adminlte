@@ -411,3 +411,7 @@
     overflow-y: auto;
     padding-bottom: 50px
 }
+
+.table-responsive .table-striped tfoot {
+    border-top: 2px solid grey;
+}
