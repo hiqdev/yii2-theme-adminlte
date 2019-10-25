@@ -1,5 +1,6 @@
 <?php
 
+use vintage\recaptcha\widgets\InvisibleRecaptcha;
 use yii\authclient\widgets\AuthChoice;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -51,6 +52,16 @@ CSS
                 <span class="fa fa-<?= $widget->detectInputIcon($attribute) ?> form-control-feedback"></span>
             </div>
         <?php endforeach ?>
+
+        <?php if (!empty($widget->captcha) && $widget->captcha): ?>
+            <div class="form-group">
+                <div>
+                    <?= InvisibleRecaptcha::widget([
+                        'formSelector' => $widget->options['id'] ?? 'form',
+                    ]) ?>
+                </div>
+            </div>
+        <?php endif ?>
 
         <div class="row">
             <?php foreach ($widget->getBoolAttributes() as $attribute) : ?>
