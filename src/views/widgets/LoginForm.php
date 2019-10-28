@@ -55,11 +55,9 @@ CSS
 
         <?php if (!empty($widget->captcha) && $widget->captcha): ?>
             <div class="form-group">
-                <div>
-                    <?= InvisibleRecaptcha::widget([
-                        'formSelector' => $widget->options['id'] ?? 'form',
-                    ]) ?>
-                </div>
+                <?= InvisibleRecaptcha::widget([
+                    'formSelector' => '#' . ($widget->options['id'] ?? 'form'),
+                ]) ?>
             </div>
         <?php endif ?>
 
