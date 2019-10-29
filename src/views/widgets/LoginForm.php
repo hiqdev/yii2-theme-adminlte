@@ -53,7 +53,7 @@ CSS
             </div>
         <?php endforeach ?>
 
-        <?php if (!empty($widget->captcha) && $widget->captcha): ?>
+        <?php if (!empty($widget->isCaptchaRequired) && $widget->isCaptchaRequired): ?>
             <div class="form-group">
                 <?= InvisibleRecaptcha::widget([
                     'formSelector' => '#' . ($widget->options['id'] ?? 'form'),
