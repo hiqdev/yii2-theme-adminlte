@@ -26,9 +26,18 @@ use yii\widgets\Breadcrumbs;
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid"><div class="row"><div class="col-md-12">
-        <?= Flashes::widget() ?>
+    <section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <?= Flashes::widget() ?>
 
-        <?= $content ?>
-    </div></div></section>
+                <?= $content ?>
+            </div>
+            <?php if ($this->blocks['ad-banner.dashboard']) : ?>
+                <div class="col-md-12 text-center">
+                    <?= $this->blocks['ad-banner.dashboard'] ?>
+                </div>
+            <?php endif ?>
+        </div>
+    </section>
 </div>
