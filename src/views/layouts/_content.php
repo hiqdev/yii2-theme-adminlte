@@ -1,5 +1,6 @@
 <?php
 
+use hipanel\widgets\Banner;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
 
@@ -26,9 +27,16 @@ use yii\widgets\Breadcrumbs;
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid"><div class="row"><div class="col-md-12">
-        <?= Flashes::widget() ?>
+    <section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <?= Flashes::widget() ?>
 
-        <?= $content ?>
-    </div></div></section>
+                <?= $content ?>
+            </div>
+            <div class="col-md-12 text-center">
+                <?= Banner::widget(['isSidebar' => false]) ?>
+            </div>
+        </div>
+    </section>
 </div>

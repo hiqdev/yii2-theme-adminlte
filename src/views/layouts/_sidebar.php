@@ -1,5 +1,6 @@
 <?php
 
+use hipanel\widgets\Banner;
 use hiqdev\thememanager\menus\AbstractSidebarMenu;
 use yii\helpers\Url;
 
@@ -30,5 +31,6 @@ $this->registerCss('
             </div>
         </div>
         <?= AbstractSidebarMenu::widget() ?>
+        <?= Banner::widget() ?>
     </section>
 </aside>
