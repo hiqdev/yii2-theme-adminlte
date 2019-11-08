@@ -1,6 +1,6 @@
 <?php
 
-use hipanel\widgets\Banner;
+use hipanel\widgets\AdBanner;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
 
@@ -35,7 +35,7 @@ use yii\widgets\Breadcrumbs;
                 <?= $content ?>
             </div>
             <div class="col-md-12 text-center">
-                <?= Banner::widget(['isSidebar' => false]) ?>
+                <?= AdBanner::widget() ?>
             </div>
         </div>
     </section>
