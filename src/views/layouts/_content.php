@@ -1,6 +1,5 @@
 <?php
 
-use hipanel\widgets\AdBanner;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
 
@@ -34,9 +33,11 @@ use yii\widgets\Breadcrumbs;
 
                 <?= $content ?>
             </div>
-            <div class="col-md-12 text-center">
-                <?= AdBanner::widget() ?>
-            </div>
+            <?php if ($this->blocks['ad-banner.dashboard']) : ?>
+                <div class="col-md-12 text-center">
+                    <?= $this->blocks['ad-banner.dashboard'] ?>
+                </div>
+            <?php endif ?>
         </div>
     </section>
 </div>

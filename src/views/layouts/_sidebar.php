@@ -1,6 +1,5 @@
 <?php
 
-use hipanel\widgets\SidebarAdBanner;
 use hiqdev\thememanager\menus\AbstractSidebarMenu;
 use yii\helpers\Url;
 
@@ -31,6 +30,8 @@ $this->registerCss('
             </div>
         </div>
         <?= AbstractSidebarMenu::widget() ?>
-        <?= SidebarAdBanner::widget() ?>
+        <?php if ($this->blocks['ad-banner.sidebar']) : ?>
+            <?= $this->blocks['ad-banner.sidebar'] ?>
+        <?php endif ?>
     </section>
 </aside>
