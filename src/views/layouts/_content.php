@@ -1,11 +1,13 @@
 <?php
 
+use hiqdev\thememanager\widgets\AlertWidget;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
 
 ?>
 <!-- Right side column. Contains the navbar and content of the page -->
 <div class="content-wrapper">
+    <?= AlertWidget::widget() ?>
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
