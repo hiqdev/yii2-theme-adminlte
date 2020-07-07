@@ -14,7 +14,7 @@ use hiqdev\assets\adminlte\AdminLteAsset;
 
 class MainAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@hiqdev/themes/adminlte/assets';
+    public $sourcePath = __DIR__ . '/assets';
 
     public $css = [
         'css/main.css',

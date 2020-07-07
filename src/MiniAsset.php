@@ -14,7 +14,7 @@ use yii\web\AssetBundle;
 
 class MiniAsset extends AssetBundle
 {
-    public $sourcePath = '@hiqdev/themes/adminlte/assets';
+    public $sourcePath = __DIR__ . '/assets';
 
     public $css = [
         'css/mini.css',
