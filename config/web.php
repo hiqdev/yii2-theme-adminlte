@@ -19,7 +19,7 @@ return [
             'translations' => [
                 'adminlte' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
-                    'basePath' => '@hiqdev/themes/adminlte/messages',
+                    'basePath' => dirname(__DIR__) . '/src/messages',
                     'fileMap' => [
                         'adminlte' => 'adminlte.php',
                     ],

@@ -7,7 +7,7 @@ class CheckboxStyleAsset extends \yii\web\AssetBundle
     /**
      * {@inheritdoc}
      */
-    public $sourcePath = '@hiqdev/themes/adminlte/css';
+    public $sourcePath = __DIR__ . '/css';
 
     /**
      * {@inheritdoc}
