@@ -41,7 +41,7 @@
     position: fixed;
     z-index: 2000;
     top: 15px;
-    right: 15px;
+    right: 50%;
     width: 14px;
     height: 14px;
     border: solid 2px transparent;
@@ -53,6 +53,12 @@
     -ms-animation: pace-spinner 400ms linear infinite;
     -o-animation: pace-spinner 400ms linear infinite;
     animation: pace-spinner 400ms linear infinite;
+}
+
+@media (max-width: 747px) {
+    .pace .pace-activity {
+        right: 15px;
+    }
 }
 
 .bootstrap-switch {
