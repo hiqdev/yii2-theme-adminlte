@@ -7,12 +7,12 @@ use yii\helpers\Html;
     <?php if (empty($image)) : ?>
         <span class="logo-text"><?= $name ?></span>
     <?php else : ?>
-        <?php if ($smallImage) : ?>
+        <?php if (!empty($smallImage)) : ?>
             <span class="logo-mini">
                 <?= Html::img($smallImage, $smallImageOptions) ?>
             </span>
         <?php endif ?>
-        <?php if ($image) : ?>
+        <?php if (!empty($image)) : ?>
             <span class="logo-lg">
                 <?= Html::img($image, $imageOptions) ?>
             </span>
