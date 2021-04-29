@@ -421,3 +421,9 @@
 .table-responsive .table-striped tfoot {
     border-top: 2px solid grey;
 }
+
+.table-ultra-condensed > thead > tr > th, .table-ultra-condensed > tbody > tr > th,
+.table-ultra-condensed > tfoot > tr > th, .table-ultra-condensed > thead > tr > td,
+.table-ultra-condensed > tbody > tr > td, .table-ultra-condensed > tfoot > tr > td {
+    padding: 3px;
+}

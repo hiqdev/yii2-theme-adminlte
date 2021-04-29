@@ -160,7 +160,7 @@ class Settings extends \hiqdev\thememanager\models\Settings
     {
         switch ($name) {
             case 'table_condensed':
-                return $value ? 'table-condensed' : '';
+                return $value ? 'table-ultra-condensed' : '';
                 break;
             case 'collapsed_sidebar':
                 return $value ? 'sidebar-collapse' : '';
