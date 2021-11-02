@@ -10,6 +10,10 @@
 
 namespace hiqdev\themes\adminlte;
 
+use Yii;
+use yii\helpers\FileHelper;
+use yii\helpers\Html;
+
 /**
  * Class for this theme.
  * It's almost empty cause inheritance does all the tricks.
@@ -17,4 +21,12 @@ namespace hiqdev\themes\adminlte;
 class AdminLteTheme extends \hiqdev\thememanager\Theme
 {
     public $label = 'AdminLte';
+
+    public function favicon(): string
+    {
+        $icon = Yii::getAlias(Yii::$app->params['favicon.ico']);
+        $mimeType = FileHelper::getMimeType($icon);
+
+        return Html::tag('link', null, ['rel' => 'shortcut icon', 'type' => $mimeType, 'href' => Yii::$app->assetManager->getPublishedUrl($icon)]);
+    }
 }
