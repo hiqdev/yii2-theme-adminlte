@@ -10,7 +10,7 @@
 
 namespace hiqdev\themes\adminlte;
 
-use Yii;
+use hiqdev\yii\compat\yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Html;
 
@@ -24,9 +24,11 @@ class AdminLteTheme extends \hiqdev\thememanager\Theme
 
     public function favicon(): string
     {
-        $icon = Yii::getAlias(Yii::$app->params['favicon.ico']);
-        $mimeType = FileHelper::getMimeType($icon);
+        $path = yii::getAlias(yii::getApp()->params['favicon.ico']);
+        $mimeType = FileHelper::getMimeTypeByExtension($path);
+        $publishedPath = yii::getApp()->assetManager->publish($path);
+        $url = $publishedPath[1];
 
-        return Html::tag('link', null, ['rel' => 'shortcut icon', 'type' => $mimeType, 'href' => Yii::$app->assetManager->getPublishedUrl($icon)]);
+        return Html::tag('link', null, ['rel' => 'shortcut icon', 'type' => $mimeType, 'href' => $url]);
     }
 }
