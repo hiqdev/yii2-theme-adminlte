@@ -24,6 +24,10 @@ $this->registerCss(<<<'CSS'
     .checkbox label {
         padding-left: 0px;
     }
+    .checkboxes label {
+        text-indent: -25px;
+        padding-left: 25px;
+    }
 CSS
 );
 
@@ -61,9 +65,9 @@ CSS
             </div>
         <?php endif ?>
 
-        <div class="row">
+        <div class="row checkboxes">
             <?php foreach ($widget->getBoolAttributes() as $attribute) : ?>
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div>
                         <?= $form->field($model, $attribute)->checkbox([
                             'label' => $model->getAttributeLabel($attribute),
@@ -73,7 +77,7 @@ CSS
                 </div>
                 <?php $submitSize = 4 ?>
             <?php endforeach; ?>
-            <div class="col-xs-<?= $submitSize ?? 12 ?>">
+            <div class="col-xs-12">
                 <button type="submit" class="btn btn-primary btn-block"><?= $widget->getText('button') ?></button>
             </div>
         </div>
