@@ -9,7 +9,7 @@ use yii\widgets\Menu;
         'email' => Yii::$app->user->identity->email ?? null,
         'class' => 'user-image',
     ]) ?>
-    <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
+    <span class="hidden-xs"><?= !is_null(Yii::$app->user->identity) ? Yii::$app->user->identity->username : '' ?></span>
 </a>
 <ul class="dropdown-menu">
     <li class="user-header">
