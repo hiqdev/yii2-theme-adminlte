@@ -15,7 +15,7 @@ echo Gravatar::widget(array_filter([
     'emailHash'    => empty($email) ? md5('') : null,
     'defaultImage' => empty($email) ? null : 'identicon',
     'options'      => [
-        'alt'   => empty($alt) ? Yii::$app->user->identity->username : $alt,
+        'alt'   => empty($alt) ? (Yii::$app->user->identity->username ?? 'anonym' ) : $alt,
         'class' => empty($class) ? 'img-circle' : $class,
     ],
     'size'         => empty($size) ? 25 : $size,
