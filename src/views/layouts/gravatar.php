@@ -11,12 +11,13 @@
 use cebe\gravatar\Gravatar;
 
 echo Gravatar::widget(array_filter([
-    'email'        => $email,
-    'emailHash'    => empty($email) ? md5('') : null,
+    'email' => $email,
+    'secure' => true,
+    'emailHash' => empty($email) ? md5('') : null,
     'defaultImage' => empty($email) ? null : 'identicon',
-    'options'      => [
-        'alt'   => empty($alt) ? (Yii::$app->user->identity->username ?? 'anonym' ) : $alt,
+    'options' => [
+        'alt' => empty($alt) ? (Yii::$app->user->identity->username ?? 'anonym') : $alt,
         'class' => empty($class) ? 'img-circle' : $class,
     ],
-    'size'         => empty($size) ? 25 : $size,
+    'size' => empty($size) ? 25 : $size,
 ]));

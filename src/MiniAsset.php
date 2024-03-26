@@ -21,7 +21,7 @@ class MiniAsset extends AssetBundle
     ];
 
     public $js = [
-        '//use.fontawesome.com/c66be52008.js',
+        'https://use.fontawesome.com/c66be52008.js',
     ];
 
     public $depends = [
