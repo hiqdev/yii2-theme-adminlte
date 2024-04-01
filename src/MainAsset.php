@@ -10,7 +10,9 @@
 
 namespace hiqdev\themes\adminlte;
 
+use hipanel\assets\BootstrapAsset;
 use hiqdev\assets\adminlte\AdminLteAsset;
+use yii\web\YiiAsset;
 
 class MainAsset extends \yii\web\AssetBundle
 {
@@ -22,9 +24,8 @@ class MainAsset extends \yii\web\AssetBundle
     ];
 
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
+        YiiAsset::class,
+        BootstrapAsset::class,
         AdminLteAsset::class,
     ];
 }

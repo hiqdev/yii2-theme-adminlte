@@ -18,6 +18,7 @@ echo Gravatar::widget(array_filter([
     'options' => [
         'alt' => empty($alt) ? (Yii::$app->user->identity->username ?? 'anonym') : $alt,
         'class' => empty($class) ? 'img-circle' : $class,
+        'loading' => 'lazy',
     ],
     'size' => empty($size) ? 25 : $size,
 ]));
