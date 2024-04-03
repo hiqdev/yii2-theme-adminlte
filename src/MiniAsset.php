@@ -10,6 +10,7 @@
 
 namespace hiqdev\themes\adminlte;
 
+use hipanel\assets\FontAwesome;
 use yii\web\AssetBundle;
 
 class MiniAsset extends AssetBundle
@@ -21,11 +22,12 @@ class MiniAsset extends AssetBundle
     ];
 
     public $js = [
-        'https://use.fontawesome.com/c66be52008.js',
+//        'https://use.fontawesome.com/c66be52008.js',
     ];
 
     public $depends = [
-        MainAsset::class,
-        CheckboxStyleAsset::class,
+//        CheckboxStyleAsset::class,
+//        FontAwesome::class,
+//        MainAsset::class,
     ];
 }
