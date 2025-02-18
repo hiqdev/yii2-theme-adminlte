@@ -3,6 +3,7 @@
 use hiqdev\thememanager\widgets\AlertWidget;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
+use Yii;
 
 ?>
 <!-- Right side column. Contains the navbar and content of the page -->
@@ -32,6 +33,10 @@ use yii\widgets\Breadcrumbs;
         <div class="row">
             <div class="col-md-12">
                 <?= Flashes::widget() ?>
+                <?php if (Yii::getAlias('@kyc', false) !== false) : ?>
+                    <?= \hipanel\modules\kyc\widgets\KYCNotification::widget([
+                    ]) ?>
+                <?php endif ?>
 
                 <?= $content ?>
             </div>
