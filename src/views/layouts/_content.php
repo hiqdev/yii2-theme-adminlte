@@ -33,10 +33,6 @@ use Yii;
         <div class="row">
             <div class="col-md-12">
                 <?= Flashes::widget() ?>
-                <?php if (Yii::getAlias('@kyc', false) !== false) : ?>
-                    <?= \hipanel\modules\kyc\widgets\KYCNotification::widget([
-                    ]) ?>
-                <?php endif ?>
 
                 <?= $content ?>
             </div>
