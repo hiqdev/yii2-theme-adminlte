@@ -39,7 +39,7 @@ CSS
     <?php endif ?>
 
     <?php $message = $widget->getText('message') ?>
-    <?php if (strpos($message ?? '', '<') === false) : ?>
+    <?php if (!empty($message) && strpos($message, '<') === false) : ?>
         <p class="login-box-msg"><?= $message ?></p>
     <?php else: ?>
         <?= $message ?>
