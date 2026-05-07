@@ -3,7 +3,6 @@
 use hiqdev\thememanager\widgets\AlertWidget;
 use hiqdev\thememanager\widgets\Flashes;
 use yii\widgets\Breadcrumbs;
-use Yii;
 
 ?>
 <!-- Right side column. Contains the navbar and content of the page -->
